@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<br>
+<br>
+
+
+<div class='container'>
+  <p align='center'>
+  <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{% static 'plogo1.png' %}">
+  </p>
+<h1 class='display-5' align='center'>Basic Python</h1>
+<p class='muted' align='right'>- By Python Hunt</p>
+<hr>
+    <div class="px-4 py-5 my-5 text-center">
+      <h1 class="display-5 fw-bold">Why Python is really cool?</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Python is a High Programming Language and it is the best language for the beginners to begin their Programming Journey
+        It's a dynamically typed language, has beautiful Object-Oriented Programming, and it has lots of useful packages which is used widely in Data Science and Artificial Intelligence.</p>
+
+      </div>
+    </div>
+
+<div class="container px-4 py-5" id="featured-3">
+  <hr>
+  <br>
+  <h2 class="" align='center'>Basic Definitions</h2>
+  <br>
+  <hr>
+  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    <div class="feature col">
+      <div class="feature-icon bg-primary bg-gradient">
+        <svg class="bi" width="1em" height="1em"><use xlink:href="#"/></svg>
+      </div>
+      <h2>Variables</h2>
+      <p>The variables are the containers that store literals and values in it.</p>
+      <hr>
+    </div>
+    <div class="feature col">
+      <div class="feature-icon bg-primary bg-gradient">
+        <svg class="bi" width="1em" height="1em"><use xlink:href="#"/></svg>
+      </div>
+      <h2>Keywords</h2>
+      <p>The keywords are the reserved words in python or any programming language which has it's own meaning.
+      There are 33 reserved keywords in python.</p>
+      <hr>
+    </div>
+    <div class="feature col">
+      <div class="feature-icon bg-primary bg-gradient">
+        <svg class="bi" width="1em" height="1em"><use xlink:href="#"/></svg>
+      </div>
+      <h2>Built in Functions</h2>
+      <p>Functions are the block of code which performs a certain task and it can be re-used again.<br>
+      Built in functions are the functions which are already reserved and created in python. The functions which is created by the programmer or the use is called user defined functions.</p>
+      <hr>
+    </div>
+  </div>
+</div>
+<hr>
+<br>
+<h1 class='display-5 fw-bold lh-1 mb-3' align='center'>Don't have python in your PC?!</h1><br>
+<h5 align='center'>Check out our Python3 installation page to install Python!</h5><br>
+<p align='center'>
+<a href="{% url 'installpy' %}" class="btn btn-primary btn-lg px-4 me-md-2" type="button">Installation Page</a>
+</p>
+<br>
+<hr>
+</div>
+
+{% endblock %}

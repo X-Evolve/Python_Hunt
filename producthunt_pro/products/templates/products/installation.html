@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<h1 class='display-6' align='center'>Python3 Installation <h1>
+<h6 align='center'>Here we are gonna install Python (3.9.7 on Windows and 3.8.10 on MacOS)!</h6>
+  <br>
+<div class='container'>
+<hr>
+<div class="b-example-divider"></div>
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="{% static 'py3version.png' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Install Python directly on your PC!</h1>
+        <p class="lead">The installation of python is simple! Just click the download button (Direct link to install from python.org website) below and download the latest python 3.9.7!</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a type="button" class="btn btn-primary btn-lg px-4 me-md-2" href='https://www.python.org/ftp/python/3.9.7/python-3.9.7-amd64.exe'>Download Python 3.9.7 for Windows</a>
+          <a type="button" class="btn btn-primary btn-lg px-4 me-md-2" href='https://www.python.org/ftp/python/3.8.10/python-3.8.10-macosx10.9.pkg'>Download Python 3.8.10 for MacOS</a><br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<br>
+<hr>
+<br>
+<h2 align='center'> Follow the steps Below! </h2>
+<br>
+<hr>
+<div class="container col-xxl-8 px-4 py-5">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="{% static 'step1.jpg' %}" class="d-block mx-lg-auto img-fluid" width="1000" height="800" loading="lazy">
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold lh-1 mb-3">Step 1: <br><br> Open Python from your downloads </h1>
+      <p class="lead">Click on the Install Now button to get python installed on your computer!</p>
+
+    </div>
+  </div>
+</div>
+<hr>
+
+<div class="container col-xxl-8 px-4 py-5">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="{% static 'step2.jpg' %}" class="d-block mx-lg-auto img-fluid" width="1000" height="800" loading="lazy">
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold lh-1 mb-3">Step 2: <br><br> Wait for the Installation </h1>
+      <p class="lead">Give sufficient time for the installation</p>
+
+    </div>
+  </div>
+</div>
+<hr>
+
+<div class="container col-xxl-8 px-4 py-5">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="{% static 'step3.jpg' %}" class="d-block mx-lg-auto img-fluid" width="1000" height="800" loading="lazy">
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold lh-1 mb-3">Step 3: <br><br> Click on Close button </h1>
+      <p class="lead">Now open start menu and type IDLE on the search box and open it!</p>
+
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container col-xxl-8 px-4 py-5">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="{% static 'step4.jpg' %}" class="d-block mx-lg-auto img-fluid" width="1000" height="800" loading="lazy">
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold lh-1 mb-3">Boom! You Have installed python successfully on your PC! </h1>
+      <p class="lead">Congrats once again!</p>
+
+    </div>
+  </div>
+</div>
+</div>
+
+<p align='center'>
+<a type="button" class="btn btn-primary btn-lg px-4 me-md-2" href="{% url 'home' %}">Go to HomePage!</a>
+</p>
+{% endblock %}

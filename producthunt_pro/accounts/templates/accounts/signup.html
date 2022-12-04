@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<p align='center'>
+<img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{% static 'plogo1.png' %}">
+</p>
+{% if error %}
+<br>
+<h6 class='display-6' align='center'>{{error}}</h6>
+<br>
+<br>
+{% endif %}
+<div class='center'>
+  <h1 class='display-6'>Signup!</h1>
+<form method="POST" action="{% url 'signup' %}">
+{% csrf_token %}
+<br>
+Username:
+<br>
+<input type="text" name="username" />
+<br>
+<br>
+Password:
+<br>
+<input type="password" name="passwd" />
+<br>
+<br>
+Confirm Password:
+<br>
+<input type="password" name="cpasswd" />
+<br>
+<br>
+<input class='btn btn-primary' type='submit' value='Sign up!'>
+
+  </form>
+</div>
+<br>
+<h6 align='center'>Don't have an account? <a href='{% url "login" %}'>Log in!</a></h6>
+
+
+{% endblock %}
