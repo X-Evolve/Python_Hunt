@@ -1,9 +1,10 @@
 
 </head>
 <body>
-  <h1>This is an OpenSoure Website</h1>
+  <h1>Python Hunt is an OpenSoure Website 💙</h1>
    <p>Hello opensource developers! We have initiated a website called Python Hunt to make learning python even more easier. This is a Django project where you can contribute web pages explaining various concepts in python as mentioned in issues. Make sure that the templates must have same kind of design everywhere to maintain uniformity. Please refer the below documentation for running the website on your system.</p>
-  
+ 
+ <p>Kindly consider leaving a ⭐ if you like the repository</p>
 <p>Happy Coding!</p>
   
 
@@ -56,6 +57,10 @@
       <h3>Fork this repository and move inside it</h3>
       <pre><code>git clone https://github.com/X-Evolve/Python_Hunt.git && producthunt_pro</code></pre>
     </li>
+     <li>
+      <h3>Next, use this command for migrating stuffs for the models</h3>
+      <pre><code>python manage.py migrate</code></pre>
+    </li>
     <li>
       <h3>Next, use this command for migrating stuffs for the models</h3>
       <pre><code>python manage.py migrate</code></pre>
@@ -72,6 +77,23 @@
   </ol>
   
   <p>Congratulations! You have successfully setup your Django Web Server on your local host. You are now ready to contribute!</p>
+
+ <h2>Getting Started with Contribution</h2>
+  <ol>
+    <li>
+      <h3>Checkout to a new branch to work on an issue</h3>
+      <pre><code>git checkout -b new_work</code></pre>
+    </li>
+     <li>
+      <h3>Once you are done with the coding, then open a PR</h3>
+       <p>From the root of the project, Run the following commands:</p>
+      <pre><code>git add .</code></pre>
+       <pre><code>git commit -m "Description of your work (short one is preferred)"</code></pre>
+       <pre><code>git push origin new_work</code></pre>
+       <p>Open your forked repository in your browser and then raise a Pull Request (PR) to the main branch of this repository!</p>
+    </li>
+  </ol>
+
 
   <h2>Additional Resources</h2>
 
