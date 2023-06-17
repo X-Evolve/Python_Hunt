@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Django Installation Guide</title>
+
 </head>
 <body>
   <h1>Django Installation Guide</h1>
@@ -49,6 +44,30 @@
   </ol>
 
   <p>Congratulations! You have successfully installed Django on your system. You are now ready to start building your Django web applications.</p>
+  
+  <h2>Running this system in your local system</h2>
+  
+  <ol>
+    <li>
+      <h3>Fork this repository and move inside it</h3>
+      <pre><code>git clone https://github.com/X-Evolve/Python_Hunt.git && producthunt_pro</code></pre>
+    </li>
+    <li>
+      <h3>Next, use this command for migrating stuffs for the models</h3>
+      <pre><code>python manage.py migrate</code></pre>
+    </li>
+    <li>
+      <h3>Running the Website on your Local Host</h3>
+      <p>To run the website on your local host, use the following command:</p>
+      <pre><code>python manage.py runserver</code></pre>
+    </li>
+    <li>
+      <h3>Last Step</h3>
+      <p>Click on the url produced and it opens in your default browser</p>
+    </li>
+  </ol>
+  
+  <p>Congratulations! You have successfully setup your Django Web Server on your local host. You are now ready to contribute!</p>
 
   <h2>Additional Resources</h2>
 
