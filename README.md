@@ -4,10 +4,12 @@
   <h1>Python Hunt is an OpenSoure Website 💙</h1>
    <p>Hello opensource developers! We have initiated a website called Python Hunt to make learning python even more easier. This is a Django project where you can contribute web pages explaining various concepts in python as mentioned in issues. Make sure that the templates must have same kind of design everywhere to maintain uniformity. Please refer the below documentation for running the website on your system.</p>
  
+  <p>Add your HTML Pages here: </p>
+   <pre><code>producthunt_pro/products/templates/products/</code></pre>
  <p>Kindly consider leaving a ⭐ if you like the repository</p>
 <p>Happy Coding!</p>
-  
 
+  
   <h2>Prerequisites</h2>
 
   <p>Before installing Django, ensure that you have the following prerequisites installed on your system:</p>
@@ -93,7 +95,22 @@
        <p>Open your forked repository in your browser and then raise a Pull Request (PR) to the main branch of this repository!</p>
     </li>
   </ol>
-
+  
+  <h2>How to Add your files in the project</h2>
+  <p>If you want to add CSS or Javascript or Image files in this project, add it in static folder:</p>
+  <div class="contrainer">
+  <pre><code>producthunt_pro/producthunt/static/</code></pre>
+  <p>Import them into the code by using this: </p>
+  
+  (On the top of the HTML File)
+  <pre><code>{% load static %}</code></pre>
+  
+  (When you want to use your CSS / Javascript file)
+  <pre><code>href = "{% static 'name of the file' %}"</code></pre> 
+  
+  (When you want to use your image file)
+  <pre><code>src = "{% static 'name of the file' %}"</code></pre> 
+  </div>
 
   <h2>Additional Resources</h2>
 
