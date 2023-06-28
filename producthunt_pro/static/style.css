@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: rgb(214, 255, 214);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+    color: #333;
+}
+h2,
+h3 {
+    color: #333;
+}
+
+.flowchart {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* Updated alignment to avoid overlapping */
+    flex-wrap: wrap;
+    /* Allow wrapping of flowchart boxes */
+    margin-bottom: 20px;
+    /* Add margin at the bottom */
+}
+
+.box {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    text-align: center;
+    margin: 20px;
+}
+
+.box:before {
+    content: "";
+    display: block;
+    border-top: 1px solid #333;
+    margin-top: -1px;
+}
+
+.box:first-child:before {
+    display: none;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 10px;
+}
+
+.arrow:before {
+    content: "";
+    position: absolute;
+    border: 2px solid #333;
+    border-width: 0 2px 2px 0;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    top: 50%;
+    left: -15px;
+    margin-top: -5px;
+}
+
+.number {
+    background-color: #a1c3f2;
+}
+
+.boolean {
+    background-color: #a0e0a0;
+}
+
+.sets-mappings {
+    background-color: #f7d7a0;
+}
+
+.sequences {
+    background-color: #f7a0a0;
+}
+
+p {
+    line-height: 1.5;
+}
+
+pre {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: Consolas, monospace;
+    color: #333;
+}
+.number {
+    background-color: #a1c3f2;
+    animation: fade-in-left 0.5s ease-in-out;
+}
+
+.boolean {
+    background-color: #a0e0a0;
+    animation: fade-in-left 0.5s ease-in-out;
+}
+
+.sets-mappings {
+    background-color: #f7d7a0;
+    animation: fade-in-right 0.5s ease-in-out;
+}
+
+.sequences {
+    background-color: #f7a0a0;
+    animation: fade-in-right 0.5s ease-in-out;
+}
+@keyframes fade-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #333;
+}
+
+p {
+    line-height: 1.5;
+}
+
+pre {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+code {
+    font-family: Consolas, monospace;
+    color: #333;
+}
