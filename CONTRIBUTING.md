@@ -1,5 +1,5 @@
 
-<img src="Organizers_Kit/05_logo_set/hf10_horizontal_logos/cmyk/hf10_horz_fcl_cmyk.png" alt="My Image">
+<img src="HacktoberFest2023_Resources/05_logo_set/hf10_horizontal_logos/cmyk/hf10_horz_fcl_cmyk.png" alt="My Image">
 
 
 <h1>Python Hunt Hacktoberfest 2023 Contribution Guidelines 💙</h1>
@@ -72,5 +72,5 @@
     <p>Happy coding with Django! 🐍💙</p>
     <br>
 
-<img src="Organizers_Kit/06_banners/hf10_logo_wall/hf10_logo_wall_1920x1080.png" alt="My Image">
+<img src="HacktoberFest2023_Resources/06_banners/hf10_logo_wall/hf10_logo_wall_1920x1080.png" alt="My Image">
 
