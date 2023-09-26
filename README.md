@@ -1,6 +1,7 @@
 
 </head>
 <body>
+<img src="HacktoberFest2023_Resources/05_logo_set/hf10_horizontal_logos/cmyk/hf10_horz_fcl_cmyk.png" alt="My Image">
   <h1>Python Hunt is an OpenSoure Website 💙</h1>
    <p>Hello opensource developers! We have initiated a website called Python Hunt to make learning python even more easier. This is a Django project where you can contribute web pages explaining various concepts in python as mentioned in issues. Make sure that the templates must have same kind of design everywhere to maintain uniformity. Please refer the below documentation for running the website on your system.</p>
  
