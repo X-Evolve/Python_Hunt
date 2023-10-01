@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<head>
+    <title>History of Python</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+<div class = "container">
+    <div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5"></h1>
+
+    <div class="px-4 py-5 my-5 text-center">
+        <h1 class="display-5 fw-bold">The History of Python: A Brief Overview</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">HTML and CSS, as the foundational technologies of the World Wide Web, have played a crucial role in the dissemination of information and the development of interactive user interfaces. Python, on the other hand, is a high-level programming language known for its simplicity, readability, and versatility. Although Python and web technologies like HTML and CSS are distinct, they often intersect in web development, particularly in the backend processes.</p>
+  
+        </div>
+      </div>
+
+      <div class="px-4 py-5 my-5 text-center">
+        <h1 class="display-5 fw-bold">Python in Web Development</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">In the early days of the web, dynamic web pages were created using languages like Perl and CGI scripts. However, as web applications grew in complexity, the need for more structured and powerful languages became apparent.Python emerged as a formidable contender for web development due to its simplicity, readability, and extensive standard library. With the advent of frameworks like Django and Flask in the early 2000s, Python gained significant traction in web development. Python emerged as a formidable contender for web development due to its simplicity, readability, and extensive standard library. With the advent of frameworks like Django and Flask in the early 2000s, Python gained significant traction in web development.</p>
+  
+        </div>
+      </div>
+
+      <div class="px-4 py-5 my-5 text-center">
+        <h1 class="display-5 fw-bold">Integration with HTML and CSS</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">HTML and CSS, as the foundational technologies of the World Wide Web, have played a crucial role in the dissemination of information and the development of interactive user interfaces. Python, on the other hand, is a high-level programming language known for its simplicity, readability, and versatility. Although Python and web technologies like HTML and CSS are distinct, they often intersect in web development, particularly in the backend processes.</p>
+  
+        </div>
+      </div>
+
+
+
+
+      <div class="container px-4 py-5" id="featured-3">
+        <hr>
+        <br>
+        <h2 class="" align='center'>Basic Definitions</h2>
+        <br>
+        <hr>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          
+          <div class="feature col">
+            <div class="feature-icon bg-primary bg-gradient">
+              <svg class="bi" width="1em" height="1em"><use xlink:href="#"/></svg>
+            </div>
+            <h2>Server-Side Scripting:</h2>
+            <p>Python is commonly used for server-side scripting, where it generates dynamic content on the server before sending it to the client's web browser. This is achieved by embedding Python code within HTML files using frameworks like Django, Flask, or Pyramid.</p>
+            <pre>
+                <code>
+                    # Example using Flask:
+                    from flask import Flask
+            
+                    app = Flask(__name__)
+            
+                    @app.route('/')
+                    def hello_world():
+                        return '&lt;h1&gt;Hello, World!&lt;/h1&gt;'
+            
+                    if __name__ == '__main__':
+                        app.run()
+                </code>
+            </pre>
+            
+            <hr>
+          </div>
+
+          <div class="feature col">
+            <div class="feature-icon bg-primary bg-gradient">
+              <svg class="bi" width="1em" height="1em"><use xlink:href="#"/></svg>
+            </div>
+            <h2>Automation and Preprocessing:</h2>
+            <p>Python can be used to automate tasks related to web development. For example, it can be employed in tasks like minifying CSS files, optimizing images, or generating HTML files from templates.</p>
+            <hr>
+          </div>
+          <div class="feature col">
+            <div class="feature-icon bg-primary bg-gradient">
+              <svg class="bi" width="1em" height="1em"><use xlink:href="#"/></svg>
+            </div>
+            <h2>Integration with HTML and CSS</h2>
+            <p>Python frameworks often incorporate templating engines like Jinja2 or Django templates. These allow developers to separate HTML/CSS templates from Python logic, enhancing code maintainability and readability.</p>
+            <pre>
+                <code>
+                    # Example using Jinja2:
+                    from jinja2 import Template
+    
+                    template = Template("&lt;h1&gt;Hello, {{ name }}!&lt;/h1&gt;")
+                    rendered_html = template.render(name="John Doe")
+                </code>
+            </pre>
+            <hr>
+          </div>
+
+        </div>
+      </div>
+      
+
+    <h2>Conclusion</h2>
+
+    <p>While Python is not inherently a markup or styling language, its versatility and simplicity have made it an invaluable tool in web development. Through server-side scripting, templating engines, and automation, Python seamlessly integrates with HTML and CSS to create dynamic and visually appealing web applications. This convergence of technologies has contributed to the continued success and popularity of Python in the ever-evolving landscape of web development.</p>
+
+</body>
+
+</div>
+</div>
+
+
+
+{% endblock %}
