@@ -1,0 +1,57 @@
+header {
+    background-color: #2e2e2e;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffffbb;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.6s;
+}
+
+body {
+    background-color: #ffffff;
+    color: #2e2e2e;
+    font-family: sans-serif;
+}
+
+pre code {
+    display: block;
+    background-color: #2e2e2e;
+    color: #ffffff;
+}
+
+.comment {
+    color: #888888
+}
+
+.string {
+    color: #77ff00
+}
+
+.number {
+    color: #56ffdd
+}
+
+.var {
+    color: #bb7bff;
+    font-weight: 700;
+}
+
+.literal {
+    color: #78A960
+}
+
+.built_in {
+    color: #00d181
+}
+
+.function {
+    color: #6bb8ff;
+    font-weight: 500;
+}
