@@ -12,3 +12,9 @@ def installpy(request):
 
 def aboutpython(request):
     return render(request, 'products/Python_Intro.html')
+
+def keywords(request):
+    return render(request, 'products/Keywords.html')
+
+def datatypes(request):
+    return render(request, 'products/python_data_types.html')
