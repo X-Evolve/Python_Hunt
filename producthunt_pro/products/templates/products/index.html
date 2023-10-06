@@ -1,138 +1,98 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Sets</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<link rel="stylesheet" href="{% static 'Python_Keywords/doc.css' %}">
-
 <body>
-    <header>
-        <h1>Python Sets - Python hunt</h1>
-    </header>
-    <section>
-        <p>Sets in Python have several important properties that make them useful for various tasks. Here, I&<span class="comment">#39;ll describe</span>
-            these properties and provide code examples to illustrate each one.</p>
-        <ol>
-            <li><strong>Uniqueness:</strong> Sets can only contain unique elements. Adding duplicate elements will not result in
-                duplicates in the set.</li>
-        </ol>
-        <pre><code class="language-python"><span class="var">my_set</span> = {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">3</span>}
-        <span class="built_in">print</span>(<span class="var">my_set</span>)  <span class="comment"># Output: {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>}</span>
-        </code></pre>
-        <ol start="2">
-            <li><strong>Unordered:</strong> Sets are unordered, meaning the order of elements is not guaranteed. It will sort elements it's own.</li>
-        </ol>
-        <pre><code class="language-python"><span class="var">my_set</span> = {<span class="number">3</span>, <span class="number">1</span>, <span class="number">2</span>}
-        <span class="built_in">print</span>(<span class="var">my_set</span>)  <span class="comment"># Output: {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>}</span>
-        </code></pre>
-        <ol start="3">
-            <li><strong>Mutable:</strong> Sets are mutable, allowing you to add and remove elements.</li>
-        </ol>
-        <pre><code class="language-python"><span class="var">my_set</span> = {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>}
-        <span class="var">my_set</span>.add(<span class="number">4</span>)
-        <span class="built_in">print</span>(<span class="var">my_set</span>)  <span class="comment"># Output: {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>}</span>
-        
-        <span class="var">my_set</span>.remove(<span class="number">2</span>)
-        <span class="built_in">print</span>(<span class="var">my_set</span>)  <span class="comment"># Output: {<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>}</span>
-        </code></pre>
-        <ol start="4">
-            <li><strong>Membership Testing:</strong> You can check if an element is present in a set using the <code>in</code>
-                operator.</li>
-        </ol>
-        <pre><code class="language-python"><span class="var">my_set</span> = {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>}
-        <span class="built_in">print</span>(2 in <span class="var">my_set</span>)  <span class="comment"># Output: True</span>
-        <span class="built_in">print</span>(4 in <span class="var">my_set</span>)  <span class="comment"># Output: False</span>
-        </code></pre>
-        <ol start="5">
-            <li><strong>Length of a Set:</strong> You can find the number of elements in a set using the <code>len()</code>
-                function.</li>
-        </ol>
-        <pre><code class="language-python"><span class="var">my_set</span> = {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>}
-        length = len(<span class="var">my_set</span>)
-        <span class="built_in">print</span>(length)  <span class="comment"># Output: 3</span>
-        </code></pre>
-        <ol start="6">
-            <li><strong>Set Operations:</strong> Sets support various set operations like union, intersection, and difference.
-            </li>
-        </ol>
-        <pre><code class="language-python">set1 = {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>}
-        set2 = {<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>}
-        
-        <span class="comment"># Union</span>
-        union_set = set1.<span class="function">union</span>(set2)
-        <span class="built_in">print</span>(union_set)  <span class="comment"># Output: {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>}</span>
-        
-        <span class="comment"># Intersection</span>
-        intersection_set = set1.<span class="function">intersection</span>(set2)
-        <span class="built_in">print</span>(intersection_set)  <span class="comment"># Output: {<span class="number">3</span>}</span>
-        
-        <span class="comment"># Difference</span>
-        difference_set = set1 - set2
-        <span class="built_in">print</span>(difference_set)  <span class="comment"># Output: {<span class="number">1</span>, <span class="number">2</span>}</span>
-        </code></pre>
-        <ol start="7">
-            <li><strong>No Duplicates:</strong> When you create a set from an iterable, it automatically removes duplicates.
-            </li>
-        </ol>
-        <pre><code class="language-python">my_list = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">4</span>]
-        <span class="var">my_set</span> = set(my_list)
-        <span class="built_in">print</span>(<span class="var">my_set</span>)  <span class="comment"># Output: {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>}</span>
-        </code></pre>
-        <ol start="8">
-            <li><strong>Set Literals:</strong> Sets can be created using curly braces <code>{}</code>. However, be careful not
-                to use empty curly braces, as they create an empty dictionary.</li>
-        </ol>
-        <pre><code class="language-python"><span class="comment"># Correct set literal</span>
-        <span class="var">my_set</span> = {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>}
-        
-        <span class="comment"># Incorrect empty dictionary</span>
-        empty_dict = {}
-        </code></pre>
-        <ol start="9">
-            <li><strong>Discard Method:</strong> The <code>discard()</code> method removes an element from a set if it exists,
-                but it does nothing if the element is not present (no error is raised).</li>
-        </ol>
-        <pre><code class="language-python"><span class="var">my_set</span> = {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>}
-        <span class="var">my_set</span>.<span class="function">discard</span>(<span class="number">2</span>)  <span class="comment"># Removes 2 from the set</span>
-        <span class="var">my_set</span>.<span class="function">discard</span>(<span class="number">4</span>)  <span class="comment"># Does nothing since 4 is not in the set</span>
-        </code></pre>
-        <p>These properties and operations make sets in Python a valuable tool for tasks that involve unique elements,
-            membership testing, and set-based operations.</p>
 
-        <h3>String in sets</h3>
-        <p>Strings can be elements of sets. However, strings are immutable, so you cannot modify them once they are
-            created. This means you cannot add or remove characters from a string in a set.</p>
-        <pre><code>
-            <span class="comment"># Creating a set of strings</span>
-            string_set = {<span class="string">"apple"</span>, <span class="string">"banana"</span>, <span class="string">"cherry"</span>}
-            
-            <span class="comment"># Adding a string to the set</span>
-            string_set.<span class="function">add</span>(<span class="string">"date"</span>)
-            
-            <span class="comment"># Checking membership with strings</span>
-            <span class="built_in">print</span>(<span class="string">"banana"</span> in string_set) <span class="comment"># Output: True</span>
-            <span class="built_in">print</span>(<span class="string">"grape"</span> in string_set) <span class="comment"># Output: False</span>
-            
-            <span class="comment"># Set operations with strings</span>
-            fruits_set = {<span class="string">"apple"</span>, <span class="string">"banana"</span>, <span class="string">"cherry"</span>}
-            berries_set = {<span class="string">"strawberry"</span>, <span class="string">"blueberry"</span>, <span class="string">"cherry"</span>}
-            
-            <span class="comment"># Union of two string sets</span>
-            combined_fruits = fruits_set.<span class="function">union</span>(berries_set)
-            <span class="built_in">print</span>(combined_fruits) <span class="comment"># Output: {'apple', 'banana', 'cherry', 'strawberry', 'blueberry'}</span>
-            
-            <span class="comment"># Intersection of two string sets</span>
-            common_fruits = fruits_set.<span class="function">intersection</span>(berries_set)
-            <span class="built_in">print</span>(common_fruits) <span class="comment"># Output: {'cherry'}</span>
-            
-            <span class="comment"># Difference between two string sets</span>
-            unique_fruits = fruits_set - berries_set
-            <span class="built_in">print</span>(unique_fruits) <span class="comment"># Output: {'apple', 'banana'}</span>
-            </code></pre>
-    </section>
+<!--NAVBAR -->
+
+  <header class="pb-3 mb-4 border-bottom " >
+    <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
+      <img src="/Open source/Python_Hunt/producthunt_pro/producthunt/static/plogo1.png" alt="logo" height = 70px width="70px">
+      <span class="fs-4">PYTHON HUNT</span>
+    </a>
+  </header>
+ 
+<!-- WELCOME SECTION-->
+
+  <div class="px-4 pt-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold text-body-emphasis">What is Python Hunt ?</h1>
+    <br>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Python Hunt is a open source website created to make python learning easier and faster. 
+      <p class="lead mb-4">This is a Django project where you can contribute web pages explaining various concepts in python to X-Evolve , a organisation in Github which aims in  fostering open-source projects that tackle real-life problems</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+        <a href="https://github.com/X-Evolve/Python_Hunt">
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Contribute </button>
+      </a>
+      </div>
+    </div>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+      <div class="container px-5">
+        <img src="/Open source/Python_Hunt/producthunt_pro/producthunt/static/plogo1.png" height="250px">
+      </div>
+    </div>
+  </div>
+
+<!-- INTRODUCTION -->
+
+  <div class="container col-xxl-8 px-4">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/Open source/Python_Hunt/producthunt_pro/producthunt/static/coverpython.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Whats Python ??</h1>
+        <br>  
+        <p class="lead">Python is a widely used general-purpose, high level programming language. It was created by Guido van Rossum in 1991 and further developed by the Python Software Foundation. </p> 
+
+        <p class = "lead">It was designed with an emphasis on code readability, and its syntax allows programmers to express their concepts in fewer lines of code./p>
+        <br>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="https://docs.python.org/3/">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2"> Python documentation</button>
+        </a>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </div>
+
+<!-- Installation page -->
+
+  <h1 class='display-5 fw-bold lh-1 mb-3' align='center'>Don't have python in your PC?!</h1><br>
+  <h5 align='center'>Check out our Python3 installation page to install Python!</h5><br>
+  <p align='center'>
+  <a href="./installation.html" class="btn btn-primary btn-lg px-4 me-md-2" type="button">Installation Page</a>
+  </p>
+  <br>
+
+  <!-- Footer-->
+
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary">© 2023 X-Evolve</span>
+      </div>
+  
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+      </ul>
+    </footer>
+  </div>
+
+<!-- JAVASCRIPT -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
