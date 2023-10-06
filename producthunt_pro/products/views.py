@@ -18,3 +18,6 @@ def keywords(request):
 
 def datatypes(request):
     return render(request, 'products/python_data_types.html')
+
+def sets(request):
+    return render(request, 'products/index.html')
