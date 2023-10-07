@@ -11,3 +11,4 @@ Pillow==10.0.0
 psycopg2-binary==2.9.1
 PyYAML==5.4.1
 sqlparse==0.4.4
+db-sqlite3==0.0.1
