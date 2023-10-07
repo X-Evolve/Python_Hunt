@@ -1,7 +1,13 @@
+asgiref==3.7.2
+attrs==23.1.0
+click==8.0.3
 Django==4.2.5
 django-crispy-forms==1.12.0
 django-environ==0.7.0
-gunicorn==20.1.0
+djangorestframework==3.14.0
+numpy==1.21.3
+pandas==2.0.3
+Pillow==10.0.0
 psycopg2-binary==2.9.1
-sqlite3==3.36.0
-
+PyYAML==5.4.1
+sqlparse==0.4.4
