@@ -1,4 +1,5 @@
 {
+    "version": 2,
     "builds": [
       {
         "src": "producthunt/wsgi.py",
@@ -16,7 +17,7 @@
     "routes": [
       {
         "src": "/static/(.*)",
-        "dest": "/staticfiles_build/$1"
+        "dest": "/static/$1"
       },
       {
         "src": "/(.*)",
@@ -24,4 +25,3 @@
       }
     ]
   }
-  

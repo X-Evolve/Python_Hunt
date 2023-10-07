@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure--p5p3yys6xd^6tda3$wry)y4$h3$1v13wb38u)m63*imxfww0i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app','127.0.0.1','.now.sh']
 
 
 # Application definition
@@ -123,7 +123,7 @@ STATICFILES_DIRS = [
 os.path.join(BASE_DIR,'producthunt/static/')
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 STATIC_URL = '/static/'
 
 # Default primary key field type
