@@ -1,7 +1,5 @@
-
-</head>
 <body>
-<img src="HacktoberFest2023_Resources/05_logo_set/hf10_horizontal_logos/cmyk/hf10_horz_fcl_cmyk.png" alt="My Image">
+<img src="HacktoberFest2023_Resources/05_logo_set/hf10_horizontal_logos/cmyk/hf10_horz_fcl_cmyk.png" alt="My Image"/>
   <h1>Python Hunt is an OpenSoure Website 💙</h1>
    <p>Hello opensource developers! We have initiated a website called Python Hunt to make learning python even more easier. This is a Django project where you can contribute web pages explaining various concepts in python as mentioned in issues. Make sure that the templates must have same kind of design everywhere to maintain uniformity. Please refer the below documentation for running the website on your system.</p>
  
@@ -61,11 +59,7 @@
       <pre><code>git clone https://github.com/X-Evolve/Python_Hunt.git && producthunt_pro</code></pre>
     </li>
      <li>
-      <h3>Next, use this command for migrating stuffs for the models</h3>
-      <pre><code>python manage.py migrate</code></pre>
-    </li>
-    <li>
-      <h3>Next, use this command for migrating stuffs for the models</h3>
+      <h3>Next, use this command for migrating changes to the models</h3>
       <pre><code>python manage.py migrate</code></pre>
     </li>
     <li>
@@ -81,21 +75,42 @@
   
   <p>Congratulations! You have successfully setup your Django Web Server on your local host. You are now ready to contribute!</p>
 
- <h2>Getting Started with Contribution</h2>
+ <h2>Getting Started with Contributions</h2>
   <ol>
     <li>
       <h3>Checkout to a new branch to work on an issue</h3>
       <pre><code>git checkout -b new_work</code></pre>
     </li>
      <li>
-      <h3>Once you are done with the coding, then open a PR</h3>
+      <h3>Once you have completed coding, then open a Pull Request(PR)</h3>
        <p>From the root of the project, Run the following commands:</p>
-      <pre><code>git add .</code></pre>
-       <pre><code>git commit -m "Description of your work (short one is preferred)"</code></pre>
-       <pre><code>git push origin new_work</code></pre>
+        <ul>
+                <li>
+                        <p> Add your contributions to the branch</p>
+                        <pre><code>git add .</code></pre>
+                </li>
+                <li>
+                        <p> Commit the contributions you made to the branch</p>
+                        <pre><code>git commit -m "prefix: Description of your work (short one is preferred)"</code></pre>
+                        <p>
+                          Add the following prefixes depending on your contributions:
+                          <ul>
+                            <li>fix: A bug fix</li>
+                            <li>feat: A new feature</li>
+                            <li>docs: Documentation changes</li>
+                            <li>chore: Miscellaneous changes that do not match any of the above.</li>
+                          </ul>
+                        </p>
+                </li>
+                <li> 
+                        <p> Push your contributions to your branch:</p>
+                        <pre><code>git push origin new_work</code></pre>
+                </li>
+        </ul>
        <p>Open your forked repository in your browser and then raise a Pull Request (PR) to the main branch of this repository!</p>
     </li>
   </ol>
+
   
   <h2>How to Add your files in the project</h2>
   <p>If you want to add CSS or Javascript or Image files in this project, add it in static folder:</p>
@@ -125,8 +140,10 @@
     <li>
       <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django">Django Tutorial by Mozilla</a>: This tutorial by Mozilla provides a beginner-friendly introduction to Django.
     </li>
+    <li>
+      <a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a>: This website provides a detailed description of how to write proper commits.
+    </li>
   </ul>
 
   <p>Happy coding with Django!</p>
 </body>
-</html>
