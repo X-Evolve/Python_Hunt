@@ -8,5 +8,6 @@ urlpatterns = [
     path('keywords/',views.keywords, name='keywords'),
     path('datatypes/',views.datatypes, name='datatypes'),
     path('sets/',views.sets, name='sets'),
+    path('tuples/', views.tuples, name='tuples')
     
 ]

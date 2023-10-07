@@ -21,3 +21,6 @@ def datatypes(request):
 
 def sets(request):
     return render(request, 'products/index.html')
+
+def tuples(request):
+    return render(request, 'products/tuples.html')
