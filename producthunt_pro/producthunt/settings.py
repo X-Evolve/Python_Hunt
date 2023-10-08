@@ -12,12 +12,19 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import dotenv
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
+
+# Environment file import
+dotenv_file = os.path.join(BASE_DIR, ".env")
+if os.path.isfile(dotenv_file):
+    dotenv.load_dotenv(dotenv_file)
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure--p5p3yys6xd^6tda3$wry)y4$h3$1v13wb38u)m63*imxfww0i'
@@ -25,7 +32,7 @@ SECRET_KEY = 'django-insecure--p5p3yys6xd^6tda3$wry)y4$h3$1v13wb38u)m63*imxfww0i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app','127.0.0.1','.now.sh','*']
 
 
 # Application definition
@@ -74,15 +81,9 @@ WSGI_APPLICATION = 'producthunt.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse('postgres://myuser:HiiXTz858S4dLJWtSKMC9KzTHEnQ1WeW@dpg-ckgjdva12bvs73fcs140-a.singapore-postgres.render.com/mydatabase_g2uk')
 }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -123,7 +124,7 @@ STATICFILES_DIRS = [
 os.path.join(BASE_DIR,'producthunt/static/')
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 STATIC_URL = '/static/'
 
 # Default primary key field type

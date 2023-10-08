@@ -1,0 +1,17 @@
+asgiref==3.7.2
+attrs==23.1.0
+click==8.0.3
+Django==4.2.5
+dj-database-url==2.1.0
+django-crispy-forms==1.12.0
+django-environ==0.7.0
+djangorestframework==3.14.0
+numpy==1.21.3
+pandas==2.0.3
+Pillow==10.0.0
+psycopg2-binary==2.9.1
+PyYAML==5.4.1
+python-dotenv==1.0.0
+sqlparse==0.4.4
+typing_extensions==4.8.0
+tzdata==2023.3

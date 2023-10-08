@@ -5,7 +5,7 @@ def home(request):
     return render(request,'products/home.html')
 
 def basicpy(request):
-    return render(request,'products/basicpython.html')
+    return render(request,'products/index.html')
 
 def installpy(request):
     return render(request,'products/installation.html')
@@ -18,9 +18,14 @@ def keywords(request):
 
 def datatypes(request):
     return render(request, 'products/python_data_types.html')
-
+  
+def statements(request):
+    return render(request, 'products/statements.html')
+  
 def sets(request):
     return render(request, 'products/index.html')
 
 def tuples(request):
     return render(request, 'products/tuples.html')
+
+
