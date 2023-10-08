@@ -27,7 +27,7 @@ if os.path.isfile(dotenv_file):
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = 'django-insecure--p5p3yys6xd^6tda3$wry)y4$h3$1v13wb38u)m63*imxfww0i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -82,9 +82,8 @@ WSGI_APPLICATION = 'producthunt.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.parse('postgres://myuser:HiiXTz858S4dLJWtSKMC9KzTHEnQ1WeW@dpg-ckgjdva12bvs73fcs140-a.singapore-postgres.render.com/mydatabase_g2uk')
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
