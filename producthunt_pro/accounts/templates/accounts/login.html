@@ -14,7 +14,7 @@
 <div class='center'>
   <h1 class='display-6'>Login!</h1>
 <form method="POST" action="{% url 'login' %}">
-<!-- {% csrf_token %} -->
+{% csrf_token %}
 <br>
 Username:
 <br>
@@ -34,4 +34,4 @@ Password:
 <br>
 <h6 align='center'>Don't have an account? <a href='{% url "signup" %}'>Signup!</a></h6>
 
-<!-- {% endblock %} -->
+{% endblock %} 
