@@ -7,5 +7,7 @@ urlpatterns = [
     path('aboutpython/',views.aboutpython,name='aboutpython'),
     path('keywords/',views.keywords, name='keywords'),
     path('datatypes/',views.datatypes, name='datatypes'),
+    path('sets/',views.sets, name='sets'),
     path('statements/',views.statements, name='statements'),
+    path('tuples/', views.tuples, name='tuples')
 ]
