@@ -1,6 +1,6 @@
 <body>
 <img src="HacktoberFest2023_Resources/05_logo_set/hf10_horizontal_logos/cmyk/hf10_horz_fcl_cmyk.png" alt="My Image"/>
-  <h1>Python Hunt is an OpenSoure Website 💙</h1>
+  <h1>Python Hunt is an OpenSource Website 💙</h1>
    <p>Hello opensource developers! We have initiated a website called Python Hunt to make learning python even more easier. This is a Django project where you can contribute web pages explaining various concepts in python as mentioned in issues. Make sure that the templates must have same kind of design everywhere to maintain uniformity. Please refer the below documentation for running the website on your system.</p>
  
   <p>Add your HTML Pages here: </p>
@@ -10,7 +10,39 @@
  <p>Kindly consider leaving a ⭐ if you like the repository</p>
 <p>Happy Coding!</p>
 
-  
+ <h2>Folder Structure of the project</h2>
+
+  ```producthunt_pro/
+|-- accounts/
+|-- producthunt/
+|   |-- __init__.py
+|   |-- settings.py
+|   |-- urls.py
+|   |-- asgi.py
+|   `-- wsgi.py
+|-- manage.py
+|-- products/
+|   |-- __init__.py
+|   |-- admin.py
+|   |-- apps.py
+|   |-- migrations/
+|   |   `-- __init__.py
+|   |-- models.py
+|   |-- templates/products
+|   |   `-- Add your HTML files here.
+|   |-- tests.py
+|   `-- views.py
+|-- static/
+|   |-- css/
+|   |   `-- styles.css
+|   |-- js/
+|   |   `-- script.js
+|   `-- img/
+|       `-- logo.png
+|-- .gitignore
+|-- requirements.txt
+|-- README.md
+```
   <h2>Prerequisites</h2>
 
   <p>Before installing Django, ensure that you have the following prerequisites installed on your system:</p>
@@ -19,6 +51,7 @@
     <li>Python (version 3.6 or higher)</li>
     <li>pip (Python package installer)</li>
   </ul>
+
 
   <h2>Installation Steps</h2>
 
