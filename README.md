@@ -5,6 +5,8 @@
  
   <p>Add your HTML Pages here: </p>
    <pre><code>producthunt_pro/products/templates/products/</code></pre>
+   
+ [To know more about how to add the pages, click here!](#how-to-add-your-files-in-the-project)
  <p>Kindly consider leaving a ⭐ if you like the repository</p>
 <p>Happy Coding!</p>
 
@@ -119,14 +121,28 @@
   <p>Import them into the code by using this: </p>
   
   (On the top of the HTML File)
-  <pre><code>{% load static %}</code></pre>
-  
+  <pre><code>#Imports the base template
+{% extends 'base.html' %} 
+{% block content %} 
+    
+#Load the static files added in the folder above
+{% load static %}</code></pre>
   (When you want to use your CSS / Javascript file)
   <pre><code>href = "{% static 'name of the file' %}"</code></pre> 
   
   (When you want to use your image file)
   <pre><code>src = "{% static 'name of the file' %}"</code></pre> 
+
+  (After you have finished your HTML page, add the below code at the end of the file)
+  <pre><code>{% endblock %}</code></pre> 
+  <b>Notes: 
+  <ul>
+   <li> Do design your HTML pages with respect to the base template.<br>
+  For more reference, check the other pages designed so far.</li>
+    <li> The importance of including the base template is that it has the default navbar and footer which makes it easier to navigate through the pages.</li>
+  </ul></b>
   </div>
+
 
   <h2>Additional Resources</h2>
 
