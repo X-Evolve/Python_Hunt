@@ -18,6 +18,14 @@ def keywords(request):
 
 def datatypes(request):
     return render(request, 'products/python_data_types.html')
-
+  
 def statements(request):
     return render(request, 'products/statements.html')
+  
+def sets(request):
+    return render(request, 'products/index.html')
+
+def tuples(request):
+    return render(request, 'products/tuples.html')
+
+
