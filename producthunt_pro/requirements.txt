@@ -8,7 +8,7 @@ django-environ==0.7.0
 djangorestframework==3.14.0
 numpy==1.21.3
 pandas==2.0.3
-Pillow==10.0.0
+Pillow==10.0.1
 psycopg2-binary==2.9.1
 PyYAML==5.4.1
 python-dotenv==1.0.0
