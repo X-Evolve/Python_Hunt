@@ -1,121 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&display=swap');
-
-
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&display=swap");
 .container {
   width: 90%;
   margin: auto;
   text-align: center;
   margin-bottom: 10%;
 }
-
 table {
   width: 800px;
   border-collapse: collapse;
   overflow: hidden;
 }
-
 th,
 td {
   padding: 15px;
   text-align: left;
 }
-
-
 tbody td:hover::before {
   content: "";
   position: absolute;
   background-color: #f1f1f1;
   z-index: -1;
 }
-
 .heading {
   display: flex;
   justify-content: center;
   align-items: center;
-
   margin-top: 2%;
-
   font-size: 14px;
   font-style: normal;
-  font-family: "Droid Sans Mono", "Inconsolata", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier", monospace;
+  font-family: "Droid Sans Mono", "Inconsolata", "Menlo", "Consolas",
+    "Bitstream Vera Sans Mono", "Courier", monospace;
 }
-
-.codes{
-  width: 92%;
-  margin: 3% 4%;
+.codes {
+  width: min(92%, 1200px);
+  margin: 3% auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
-
-
 .code-snippet {
   padding: 10px;
   font-size: 14px;
   overflow-x: auto;
   font-style: normal;
-  font-family: "Droid Sans Mono", "Inconsolata", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier", monospace;
+  font-family: "Droid Sans Mono", "Inconsolata", "Menlo", "Consolas",
+    "Bitstream Vera Sans Mono", "Courier", monospace;
   background-color: #141b29;
   color: white;
   padding: 40px;
   border-radius: 10px;
-  margin: 0rem 4rem 2rem 1rem;
   font-size: large;
 }
-
 table {
   width: 100%;
   border-collapse: collapse;
 }
-
 th,
 td {
   border: 1px solid black;
   padding: 10px;
 }
-
 tr:nth-child(odd) {
   background-color: rgba(0, 0, 0, 0.731);
-
 }
-
 tr:nth-child(even) {
   background-color: #000000;
 }
-
 td {
   font-size: large;
-  font-family: 'Lobster', cursive;
-  font-family: 'Montserrat', sans-serif;
-  font-family: 'Tilt Prism', cursive;
+  font-family: "Lobster", cursive;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Tilt Prism", cursive;
 }
-
 .code-font {
   font-size: large;
   color: #abb2bf;
 }
-
 thead {
   font-size: xx-large;
 }
-
-
-
 .details {
   padding: 3rem;
   border-radius: 10px;
-  font-family: 'Noto Naskh Arabic', serif;
+  font-family: "Noto Naskh Arabic", serif;
   margin: 4rem auto;
   font-size: large;
   max-width: 70rem;
   width: 90%;
-  border-style:solid;
-  border-radius:3rem;
-
+  border-style: solid;
+  border-radius: 3rem;
 }
-
 @media (min-width: 768px) {
   .details {
     width: 70%;
     /* Adjust width for larger screens */
   }
+  .codes {
+    grid-template-columns: 1fr 1fr;
+    /* Switch to double column on larger screens */
+  }
 }
-
