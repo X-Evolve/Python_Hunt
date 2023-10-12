@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Variables</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #0074D9;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+            border: 1px solid #d1d1d1;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Python Variables</h1>
+        <p>
+            <strong>1. Explain what are variables in Python</strong><br>
+            In Python, variables are used to store data. They act as containers for values, allowing you to manipulate and work with data in your programs.
+        </p>
+
+        <p>
+            <strong>2. How to create a variable in Python</strong><br>
+            You can create a variable in Python by assigning a value to a name. For example:
+            <code>my_variable = 42</code>
+        </p>
+
+        <p>
+            <strong>3. Casting the type of variable</strong><br>
+            Python allows you to change the data type of a variable. This is known as type casting. For example, to convert a number to a string:
+            <code>num = 42</code><br>
+            <code>num_str = str(num)</code>
+        </p>
+
+        <p>
+            <strong>4. Explain about case sensitivity of variables in Python</strong><br>
+            Python is case-sensitive, meaning variable names like <code>my_var</code> and <code>my_Var</code> are treated as different variables. It's essential to use consistent casing when referencing variables.
+        </p>
+    </div>
+</body>
+</html>
