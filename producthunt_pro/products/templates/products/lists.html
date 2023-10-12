@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<!-- INTRODUCTION SECTION-->
+
+  <div class="px-4 pt-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold text-body-emphasis">List in Python</h1>
+    <br>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">A list is a versatile and fundamental data structure in Python. It is used to store and manage collections of values, which can be of any data type, such as numbers, strings, or even other lists. Lists have the following important characteristics:</p>
+      <p class="lead mb-4">
+        <ul style="list-style-type: circle;">
+            <li>Ordered Sequence: Lists contain multiple values that are logically related. These values are stored in a specific order, which means you can access elements based on their positions within the list.</li>
+            <li>Mutable: Lists are mutable, meaning you can change their content after creation. You can add, remove, or modify elements as needed.</li>
+            <li>Indexing: Each element in a list is assigned a numerical position known as an index. Python lists are zero-indexed, meaning the first element is at index 0, the second at index 1, and so on.</li>
+            <li>Slicing: You can extract a portion of a list, known as a slice, by specifying a range of indices. This allows you to work with a subset of the list as needed.</li>
+            <li>Operations: Lists support various operations, such as appending elements, extending lists, multiplying a list by an integer (which replicates the elements), and checking for the presence of an item in the list.</li>
+            <li>Built-in Functions: Python provides built-in functions to make working with lists more convenient. You can find the length of a list using the len() function. You can also use functions like max() and min() to find the largest and smallest elements in a list, respectively.</li>
+        </ul>
+       
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+      </div>
+    </div>
+  </div>
+
+<!-- TYPES  -->
+
+<div class="container px-4 py-5" id="hanging-icons">
+  <h2 class="pb-2 border-bottom"> Working with List </h2>
+  <br>
+  <div class="row g-4 row-cols-1 row-cols-lg-3">
+    <div class="col d-flex align-items-start">
+      <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+      </div>
+      <div>
+        <h3 class="fs-2 text-body-emphasis"> 1️⃣Creating a list</h3>
+        <p><b> Creating an empty list</b></p>
+        <pre>
+            <code>
+                listname = []
+            </code>
+        </pre>
+        <p><i>Example:</i><br> 
+            L1 = []<br>
+            MyList = []<br>
+            Books = []
+        </p>
+        <p><b>Creating a list with items</b></p>
+        <pre>
+            <code>
+                listname = [item1, item2, item3, item4] 
+            </code>
+        </pre>
+        <p><i>Example:</i><br> 
+            Marks = [100, 99.8, 103, 102]<br>
+            MyL = [1,2,3,4]<br>
+            Subjects = ['Phy','Mat','Chem','Bio','Comp']
+        </p>
+        
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <div>
+        <h3 class="fs-2 text-body-emphasis"> 2️⃣Updating Elements </h3>
+        <br>
+        <p>Update an element in list using index</p>
+        <pre>
+          <code>
+            >>>L1 = [1, 2, 3, 4, 5, 6]
+            >>>L1[2] = 111
+            >>>L1
+               [1, 2, 111, 4, 5, 6]
+          </code>
+        </pre>
+        <br>
+        <a href="#featured-2" class="btn btn-primary">
+          Know more 
+        </a>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <div>
+        <h3 class="fs-2 text-body-emphasis">3️⃣ Deleting Elements </h3>
+        <br>
+        <p>Delete an element in list using index</p>
+        <pre>
+          <code>
+            >>>L1 = [1, 2, 3, 4, 5, 6]
+            >>>del (L1(4))
+            >>>L1
+               [1, 2, 3, 4, 6]
+          </code>
+        </pre>
+        <p>We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+        <p>The iterative statement includes for and while.</p>
+        <br>
+        <a href="#featured-3" class="btn btn-primary">
+          Know more 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+
+<!-- <div class="container px-4 " id="featured-1">
+  <h2 class="pb-2 border-bottom">Conditional Statements </h2>
+  <br>  
+  <div class="row g-4 row-cols-1 row-cols-lg-3">
+    <div class="feature col">
+      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+      </div>
+      <h3 class="fs-2 text-body-emphasis">If Statement</h3>
+      <p>The if statement is used to test a condition. If the condition is true, the indented block of code beneath it is executed. If the condition is false, the code block is skipped.</p>
+      
+    </div>
+    <div class="feature col">
+      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+      </div>
+      <h3 class="fs-2 text-body-emphasis">Else Statement</h3>
+      <p>The else statement is used in conjunction with an if statement. If the if condition is false, the code block under else is executed..</p>
+      <p>
+
+      </p>
+    </div>
+    <div class="feature col">
+      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+      </div>
+      <h3 class="fs-2 text-body-emphasis">Elif Statement</h3>
+      <p>The elif statement allows you to check multiple conditions in sequence. It is used when you have more than two possible outcomes.</p>
+      <p>
+      </p>
+    </div>
+  </div>
+  <hr>
+</div>
+
+
+<div class="container px-4" id="featured-2">
+  <h2 class="pb-2 border-bottom"> Tranfer Statements </h2>
+  <br>
+  <div class="row g-4 row-cols-1 row-cols-lg-3">
+    <div class="feature col">
+      <br>
+      <h3 class="fs-2 text-body-emphasis">Break Statement</h3>
+      <p>The break statement is used to exit a loop prematurely. It is commonly used in both for and while loops to terminate the loop and continue with the next statement after the loop.</p>  
+    </div>
+    <div class="feature col">
+      <br>
+      <h3 class="fs-2 text-body-emphasis">Continue Statement </h3>
+      <p>The continue statement is used to skip the rest of the code inside a loop for the current iteration and move on to the next iteration. It is commonly used in both for and while loops.</p>
+    </div>
+    <div class="feature col">
+      <br>
+      <h3 class="fs-2 text-body-emphasis"> Pass Statement</h3>
+      <p>The pass statement is a no-operation statement. It serves as a placeholder where syntactically some code is required but where no action is desired or necessary. It is often used as a stub or a placeholder for future code.</p>
+    </div>
+  </div>
+  <hr>  
+</div>
+
+
+<div class="container px-4 py-5" id="featured-3">
+  <h2 class="pb-2 border-bottom"> Iterative Statements </h2>
+  <br>
+  <div class="row g-4 row-cols-1 row-cols-lg-3">
+    <div class="feature col">
+      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+      </div>
+      <h3 class="fs-2 text-body-emphasis">For loop </h3>
+      <p> The for loop is used to iterate over a sequence (such as a list, tuple, string, or range) or other iterable objects. </p>
+    </div>
+    <div class="feature col">
+      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+      </div>
+      <h3 class="fs-2 text-body-emphasis"> While loop </h3>
+      <p>The while loop is used to repeatedly execute a block of code as long as a given condition is true.</p>
+    </div>
+    <hr>
+</div> -->
+
+{% endblock %}
+
+
