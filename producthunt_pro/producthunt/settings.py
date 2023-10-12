@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['.vercel.app','127.0.0.1','.now.sh','*']
 INSTALLED_APPS = [
     'products.apps.ProductsConfig',
     'accounts.apps.AccountsConfig',
+    'code_editor.apps.CodeEditorConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

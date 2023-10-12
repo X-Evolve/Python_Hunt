@@ -12,6 +12,7 @@ urlpatterns = [
     path('', products.views.home, name='home'),
     path('accounts/', include('accounts.urls')),
     path('products/', include('products.urls')),
+    path('editor/', include('code_editor.urls')), # For Text Editor
 ]
 
 # Serve media and static files during development
