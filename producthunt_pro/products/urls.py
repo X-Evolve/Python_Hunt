@@ -9,5 +9,7 @@ urlpatterns = [
     path('datatypes/',views.datatypes, name='datatypes'),
     path('sets/',views.sets, name='sets'),
     path('statements/',views.statements, name='statements'),
-    path('tuples/', views.tuples, name='tuples')
+    path('tuples/', views.tuples, name='tuples'),
+    path('lists/', views.lists, name='lists')
+
 ]
