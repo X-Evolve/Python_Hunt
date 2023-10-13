@@ -327,11 +327,11 @@
 x = 10
 
 if x > 10:
-print("x is greater than 10")
+    print("x is greater than 10")
 elif x == 10:
-print("x is 10")
+    print("x is 10")
 else:
-print("x is less than 10")
+    print("x is less than 10")
 </code>
 </pre>
 </div>
@@ -342,28 +342,28 @@ print("x is less than 10")
 fruits = ['apple', 'banana', 'cherry']
 
 for fruit in fruits:
-print(fruit)
+    print(fruit)
 </code>
 </pre>
 </div>
-<div class="code-snippet"><h2>3.While</h2>
+<div class="code-snippet"><h2>3. While</h2>
 <pre>
 <code class="code-font">
 count = 0
 
 while count < 5:
-print(count)
-count += 1
+    print(count)
+    count += 1
 
 </code>
 </pre>
 </div>
 <div class="code-snippet">
-<h2>4.def</h2>
+<h2>4. def</h2>
 <pre>
 <code class="code-font">
 def greet(name):
-print("Hello, " + name)
+    print("Hello, " + name)
 
 greet("Alice")
 
@@ -371,11 +371,11 @@ greet("Alice")
 </pre>
 </div>
 <div class="code-snippet">
-<h2>5.return</h2>
+<h2>5. return</h2>
 <pre>
 <code class="code-font">
 def add(a, b):
-return a + b
+    return a + b
 
 result = add(3, 5)
 print(result)  # Output: 8
@@ -384,29 +384,29 @@ print(result)  # Output: 8
 </pre>
 </div>
 <div class="code-snippet">
-<h2>6.try, except, finally:</h2>
+<h2>6. try, except, finally:</h2>
 <pre>
 <code class="code-font">
 try:
-result = 10 / 0
+    result = 10 / 0
 except ZeroDivisionError:
-print("Cannot divide by zero!")
+    print("Cannot divide by zero!")
 finally:
-print("Execution completed.")
+    print("Execution completed.")
 
 </code>
 </pre>
 </div>
 <div class="code-snippet">
-<h2>7.class</h2>
+<h2>7. class</h2>
 <pre>
 <code class="code-font">
 class Person:
-def __init__(self, name):
-self.name = name
-
-def greet(self):
-print("Hello, " + self.name)
+    def __init__(self, name):
+    self.name = name
+    
+    def greet(self):
+    print("Hello, " + self.name)
 
 person = Person("John")
 person.greet()
@@ -415,7 +415,7 @@ person.greet()
 </pre>
 </div>
 <div class="code-snippet">
-<h2>8.import</h2>
+<h2>8. import</h2>
 <pre>
 <code class="code-font">
 import math
@@ -426,19 +426,19 @@ print(math.sqrt(16))  # Output: 4.0
 </pre>
 </div>
 <div class="code-snippet">
-<h2>9.async and await</h2>
+<h2>9. async and await</h2>
 <pre>
 <code class="code-font">
 import asyncio
 
 async def async_function():
-print("Async function started")
-result = await some_async_operation()
-print("Async function ended with result:", result)
+    print("Async function started")
+    result = await some_async_operation()
+    print("Async function ended with result:", result)
 
 async def some_async_operation():
-await asyncio.sleep(2)
-return "Async operation result"
+    await asyncio.sleep(2)
+    return "Async operation result"
 
 asyncio.run(async_function())
 
@@ -446,20 +446,20 @@ asyncio.run(async_function())
 </pre>
 </div>
 <div class="code-snippet">
-<h2>10.break and continue:</h2>
+<h2>10. break and continue:</h2>
 <pre>
 <code class="code-font">
 # BREAK
 for i in range(10):
-if i == 5:
-break  # Exit the loop when i is 5
-print(i)
+    if i == 5:
+        break  # Exit the loop when i is 5
+    print(i)
 
 #CONTINUE
 for i in range(10):
-if i == 5:
-continue  # Skip this iteration when i is 5
-print(i)
+    if i == 5:
+        continue  # Skip this iteration when i is 5
+    print(i)
 
 </code>
 </pre>
