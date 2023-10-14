@@ -1,15 +1,15 @@
-{% load static %}
+{% extends 'base.html' %}
+{% block content %}
 
-<!DOCTYPE html>
-<html>
+{% load static %}
 
 <head>
     <title>Python Data Types</title>
     <link rel="stylesheet" href="{% static 'Python_Keywords/style.css' %}">
 </head>
 
-<body>
-    <h1>Python Data Types</h1>
+<div class="container">
+    <h1 class="display-4 fw-bold text-body-emphasis">Python Data Types</h1>
     <div class="flowchart">
         <div class="box number">
             <h2>Number</h2>
@@ -52,8 +52,8 @@
         </div>
     </div>
 
-    <h2>Introduction</h2>
-    <p>
+    <h2 class="pb-2 border-bottom">Introduction</h2>
+    <p class="lead mb-4">
         In programming, a data type is an attribute of a variable that determines the type of data it can store. It
         helps the computer understand the nature of the data and how to process it. Understanding data types is crucial
         in programming as it affects the behavior and operations that can be performed on variables.
@@ -122,6 +122,6 @@
         print("Numbers:", numbers)
         print("Names:", names)
     </code></pre>
-</body>
+</div>
 
-</html>
+{% endblock %}
