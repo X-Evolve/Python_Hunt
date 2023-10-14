@@ -1,17 +1,21 @@
-{% load static %}
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html>
+{% block content %}
+{% load static %}
   <head>
     <title>Tuples in Python</title>
     <link rel="stylesheet" href="{% static 'Python_Keywords/style.css' %}" />
   </head>
 
-  <body>
-    <h1>Tuples in Python</h1>
+  <div class="container">
+    <h1 class="display-4 fw-bold text-body-emphasis">Tuples in Python</h1>
+
+    <div class="container px-5 d-flex justify-content-center">
+      <img src="{% static 'tuple.png' %}" height="200px">
+    </div>
 
     <h2>Introduction</h2>
-    <p>
+    <p class="lead mb-4">
       A tuple is a built-in data type in Python. It represents an ordered sequence of comma separated items enclosed in parentheses (). It is quite similar to a Python list, except for the fact that a tuple is immutable. This means that once a tuple is created, the elements within it cannot be changed. Tuples are typically used for storing data related to dates, coordinates, or other fixed collections of items.
     </p>
     <pre><code>
@@ -23,7 +27,7 @@
     </code></pre>
     
     <h2>Creating a Tuple</h2>
-    <p>
+    <p class="lead mb-4">
       A tuple can be created by placing a sequence of values separated by a ‘comma’ with the use of parentheses. We can have any number of items and they may be of different types (integer, float, tuple, string, etc.). A tuple can also have no items in it, which is called an empty tuple.
     </p>
     <pre><code>
@@ -46,7 +50,7 @@
     </code></pre>
 
     <h2>Accessing Tuple Elements</h2>
-    <p>
+    <p class="lead mb-4">
       There are various ways in which we can access the orgainzed elements of a tuple, but just like with the Python list data type, the most common way to access tuple elements is to use the square bracket [] operator. Let us look several examples in detail.
     </p>
     <pre><code>
@@ -156,5 +160,7 @@
         tuple1 = ('app', 'Apple', 'ball', 'Bermuda')
         print("Maximum value in tuple1:", max(tuple1, key=len))
     </code></pre>
-  </body>
-</html>
+  </div>
+
+{% endblock %}
+
