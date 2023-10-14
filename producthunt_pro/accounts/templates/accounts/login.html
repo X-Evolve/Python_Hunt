@@ -6,13 +6,14 @@
   <div class="center">
     <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{% static 'plogo1.png' %}">
   </div>
-  {% if error %}
-  <div class="alert alert-danger d-flex align-items-center" role="alert">
-     <div>{{error}}</div> 
-  </div>
-  {% endif %}
+
   
   <div class="auth-form">
+    {% if error %}
+    <div class="alert alert-danger d-flex align-items-center" role="alert">
+       <div>{{error}}</div> 
+    </div>
+    {% endif %}
     <h3 class='text-center'>Log in to python hunt!</h1>
     <form method="POST" action="{% url 'login' %}">
     {% csrf_token %}
