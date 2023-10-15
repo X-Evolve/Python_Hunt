@@ -2,36 +2,35 @@
 
 {% block content %}
 {% load static %}
-<p align='center'>
-<img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{% static 'plogo1.png' %}">
-</p>
-{% if error %}
-<h6 class='display-6' align='center'>{{error}}</h6>
-<br>
-<br>
-{% endif %}
+<div class="d-flex flex-column auth justify-content-center">
+  <div class="center">
+    <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{% static 'plogo1.png' %}">
+  </div>
 
-<div class='center'>
-  <h1 class='display-6'>Login!</h1>
-<form method="POST" action="{% url 'login' %}">
-{% csrf_token %}
-<br>
-Username:
-<br>
-<input type="text" name="username" />
-<br>
-<br>
-Password:
-<br>
-<input type="password" name="password" />
-<br>
-<br>
+  
+  <div class="auth-form">
+    {% if error %}
+    <div class="alert alert-danger d-flex align-items-center" role="alert">
+       <div>{{error}}</div> 
+    </div>
+    {% endif %}
+    <h3 class='text-center'>Log in to python hunt!</h1>
+    <form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Username</label>
+      <input type="text" name="username" class="form-control" id="exampleFormControlInput1" required/>
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+      <input type="password" name="password" class="form-control" required/>
+    </div>
+    
+    <input class='btn btn-primary' type='submit' value='Log in!'>
+    </form>
+  </div>
+  
+  <h6 align='center'>Don't have an account? <a href='{% url "signup" %}' class="">Signup!</a></h6>
 
-<input class='btn btn-primary' type='submit' value='Log in!'>
-
-  </form>
 </div>
-<br>
-<h6 align='center'>Don't have an account? <a href='{% url "signup" %}'>Signup!</a></h6>
-
-{% endblock %}
+{% endblock %} 

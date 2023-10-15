@@ -1,14 +1,48 @@
 <body>
 <img src="HacktoberFest2023_Resources/05_logo_set/hf10_horizontal_logos/cmyk/hf10_horz_fcl_cmyk.png" alt="My Image"/>
-  <h1>Python Hunt is an OpenSoure Website 💙</h1>
+  <h1>Python Hunt is an OpenSource Website 💙</h1>
    <p>Hello opensource developers! We have initiated a website called Python Hunt to make learning python even more easier. This is a Django project where you can contribute web pages explaining various concepts in python as mentioned in issues. Make sure that the templates must have same kind of design everywhere to maintain uniformity. Please refer the below documentation for running the website on your system.</p>
  
   <p>Add your HTML Pages here: </p>
    <pre><code>producthunt_pro/products/templates/products/</code></pre>
+   
+ [To know more about how to add the pages, click here!](#how-to-add-your-files-in-the-project)
  <p>Kindly consider leaving a ⭐ if you like the repository</p>
 <p>Happy Coding!</p>
 
-  
+ <h2>Folder Structure of the project</h2>
+
+  ```producthunt_pro/
+|-- accounts/
+|-- producthunt/
+|   |-- __init__.py
+|   |-- settings.py
+|   |-- urls.py
+|   |-- asgi.py
+|   `-- wsgi.py
+|-- manage.py
+|-- products/
+|   |-- __init__.py
+|   |-- admin.py
+|   |-- apps.py
+|   |-- migrations/
+|   |   `-- __init__.py
+|   |-- models.py
+|   |-- templates/products
+|   |   `-- Add your HTML files here.
+|   |-- tests.py
+|   `-- views.py
+|-- static/
+|   |-- css/
+|   |   `-- styles.css
+|   |-- js/
+|   |   `-- script.js
+|   `-- img/
+|       `-- logo.png
+|-- .gitignore
+|-- requirements.txt
+|-- README.md
+```
   <h2>Prerequisites</h2>
 
   <p>Before installing Django, ensure that you have the following prerequisites installed on your system:</p>
@@ -17,6 +51,7 @@
     <li>Python (version 3.6 or higher)</li>
     <li>pip (Python package installer)</li>
   </ul>
+
 
   <h2>Installation Steps</h2>
 
@@ -119,14 +154,28 @@
   <p>Import them into the code by using this: </p>
   
   (On the top of the HTML File)
-  <pre><code>{% load static %}</code></pre>
-  
+  <pre><code>#Imports the base template
+{% extends 'base.html' %} 
+{% block content %} 
+    
+#Load the static files added in the folder above
+{% load static %}</code></pre>
   (When you want to use your CSS / Javascript file)
   <pre><code>href = "{% static 'name of the file' %}"</code></pre> 
   
   (When you want to use your image file)
   <pre><code>src = "{% static 'name of the file' %}"</code></pre> 
+
+  (After you have finished your HTML page, add the below code at the end of the file)
+  <pre><code>{% endblock %}</code></pre> 
+  <b>Notes: 
+  <ul>
+   <li> Do design your HTML pages with respect to the base template.<br>
+  For more reference, check the other pages designed so far.</li>
+    <li> The importance of including the base template is that it has the default navbar and footer which makes it easier to navigate through the pages.</li>
+  </ul></b>
   </div>
+
 
   <h2>Additional Resources</h2>
 

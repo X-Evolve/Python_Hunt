@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+  <head>
+    <title>Tuples in Python</title>
+    <link rel="stylesheet" href="{% static 'Python_Keywords/style.css' %}" />
+  </head>
+
+  <div class="container">
+    <h1 class="display-4 fw-bold text-body-emphasis">Tuples in Python</h1>
+
+    <div class="container px-5 d-flex justify-content-center">
+      <img src="{% static 'tuple.png' %}" height="200px">
+    </div>
+
+    <h2>Introduction</h2>
+    <p class="lead mb-4">
+      A tuple is a built-in data type in Python. It represents an ordered sequence of comma separated items enclosed in parentheses (). It is quite similar to a Python list, except for the fact that a tuple is immutable. This means that once a tuple is created, the elements within it cannot be changed. Tuples are typically used for storing data related to dates, coordinates, or other fixed collections of items.
+    </p>
+    <pre><code>
+        # Examples of Python tuples
+        () - an empty tuple
+        ('Sam', 'Maxwell', 'Mary', 'Bethany') - a tuple containing four strings objects
+        (1.0, 2.9, 30) - a tuple containing three numeric objects
+        ('2', False, 99) - a tuple containing a string, a boolean, and an integer (mixed data types)
+    </code></pre>
+    
+    <h2>Creating a Tuple</h2>
+    <p class="lead mb-4">
+      A tuple can be created by placing a sequence of values separated by a ‘comma’ with the use of parentheses. We can have any number of items and they may be of different types (integer, float, tuple, string, etc.). A tuple can also have no items in it, which is called an empty tuple.
+    </p>
+    <pre><code>
+        # Example code for creating a tuple
+        # Empty tuple
+        my_tuple = ()
+        print(my_tuple)
+
+        # Tuple having integers
+        my_tuple = (1, 2, 3)
+        print(my_tuple)
+
+        # tuple with mixed datatypes
+        my_tuple = (1, "Hello", 3.4)
+        print(my_tuple)
+
+        # nested tuple
+        my_tuple = ("mouse", [8, 4, 6], (1, 2, 3))
+        print(my_tuple)
+    </code></pre>
+
+    <h2>Accessing Tuple Elements</h2>
+    <p class="lead mb-4">
+      There are various ways in which we can access the orgainzed elements of a tuple, but just like with the Python list data type, the most common way to access tuple elements is to use the square bracket [] operator. Let us look several examples in detail.
+    </p>
+    <pre><code>
+        # Example code for accessing tuple elements
+        my_tuple = ('p','e','r','m','i','t')
+
+        # Output: 'p'
+        print(my_tuple[0])
+
+        # Output: 't'
+        print(my_tuple[5])
+
+        # index must be in range
+        # IndexError: tuple index out of range
+        # print(my_tuple[6])
+
+        # index must be an integer
+        # TypeError: tuple indices must be integers or slices, not float
+        # my_tuple[2.0]
+
+        # nested tuple
+        n_tuple = ("mouse", [8, 4, 6], (1, 2, 3))
+
+        # nested index
+        # Output: 's'
+        print(n_tuple[0][3])
+
+        # nested index
+        # Output: 4
+        print(n_tuple[1][1])
+    </code></pre>
+
+    <h2>Tuple Functions</h2>
+    <p> 
+        Python provides several built-in functions which help us to manipulate tuples. Let us learn about some of these tuple functions in detail.
+    </p>
+
+    <h3>1. tuple() Function</h3>
+    <p>
+      We can use the tuple() constructor to create a tuple. It can create a tuple with the arguments that are passed to it, or create an empty tuple if we give no arguments.
+    </p>
+    <pre><code>
+        # Example code for tuple()
+        # Creating an empty tuple
+        tuple1 = tuple()
+        print("tuple1:", tuple1)
+
+        # Creating a tuple by providing arguments
+        tuple2 = tuple((1, 2, '3')) # Note the double round-brackets
+        print("tuple2:", tuple2)
+    </code></pre>
+
+    <h3>2. len() Function</h3>
+    <p>
+      This function takes a tuple as an argument and returns the number of elements present in a tuple.
+    </p>
+    <pre><code>
+        # Example code for len()
+        tuple1 = (1, 2, 3, 4, 5)
+        print("Length of tuple1:", len(tuple1))
+    </code></pre>
+
+    <h3>3. count() Function</h3>
+    <p>
+      This function takes an element as an argument and returns the number of times it is present in a tuple. Since tuples can have elements with different data types, the data type of the element we provide to the count() function matters. ("1" is not the same as 1)
+    </p>
+    <pre><code>
+        # Example code for count()
+        tuple1 = (1, 2, 3, 4, 5, 1, 2, 3, 1, 2)
+        print("Number of times 1 is present in tuple1:", tuple1.count(1))
+    </code></pre>
+
+    <h3>4. index() Function</h3>
+    <p>
+      This function takes an element as an argument and returns the index of the first occurrence of that element in a tuple.
+    </p>
+    <pre><code>
+        # Example code for index()
+        tuple1 = (1, 2, 3, 4, 5, 1, 2, 3, 1, 2)
+        print("Index of 3 in tuple1:", tuple1.index(3))
+    </code></pre>
+
+    <h3>5. min() Function</h3>
+    <p>
+      This function will give us the minimum value present in a tuple. Additionally, a key can be provided with the min() function to specify the criteria for finding the minimum value.
+    </p>
+    <pre><code>
+        # Example code for min()
+        tuple1 = (5, 4, 3, 2, 1)
+        print("Minimum value in tuple1:", min(tuple1))
+
+        # Example code for min() with key
+        tuple1 = ('app', 'Apple', 'ball', 'Bermuda')
+        print("Minimum value in tuple1:", min(tuple1, key=len))
+    </code></pre>
+
+    <h3>6. max() Function</h3>
+    <p>
+      This function will give us the maximum value present in a tuple. Just like with the min() function, a key can also be provided to specify the criteria for finding the maximum value.
+    </p>
+    <pre><code>
+        # Example code for max()
+        tuple1 = (5, 4, 3, 2, 1)
+        print("Maximum value in tuple1:", max(tuple1))
+
+        # Example code for max() with key
+        tuple1 = ('app', 'Apple', 'ball', 'Bermuda')
+        print("Maximum value in tuple1:", max(tuple1, key=len))
+    </code></pre>
+  </div>
+
+{% endblock %}
+

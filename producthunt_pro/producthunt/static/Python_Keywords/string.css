@@ -1,0 +1,31 @@
+pre{
+    background:beige;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    border: 1px solid black;
+    padding: 10px;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.731);
+  
+  }
+  
+  tr:nth-child(even) {
+    background-color: #000000;
+  }
+  
+  /* td {
+    font-size: large;
+    font-family: 'Lobster', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Tilt Prism', cursive;
+  } */
+  

@@ -1,169 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&display=swap');
-
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-
-  font-family: sans-serif;
-  background-color: #282c34;
-  font-weight: 100;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&display=swap");
 .container {
   width: 90%;
   margin: auto;
   text-align: center;
   margin-bottom: 10%;
-  border-style: solid;
-  border-color: #ffffff7c;
-  border-width: 5px;
-  box-shadow: 2rem 2rem 100rem rgba(255, 255, 255, 0.696);
 }
-
 table {
   width: 800px;
   border-collapse: collapse;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
-
 th,
 td {
   padding: 15px;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
   text-align: left;
 }
-
-thead th {
-  background-color: #8080809c;
-}
-
 tbody td:hover::before {
   content: "";
   position: absolute;
   background-color: #f1f1f1;
   z-index: -1;
 }
-
 .heading {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2%;
-  background-color: #f1f1f1;
-  border: 1px solid #ccc;
-  padding: 10px;
+  margin-top: 2%;
   font-size: 14px;
-  overflow-x: auto;
   font-style: normal;
-  font-family: "Droid Sans Mono", "Inconsolata", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier", monospace;
-  background-color: #282c34;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  max-width: 30rem;
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 1rem;
-  box-shadow: 0 0 20px #61afef ;
-  margin-top: 2rem;
+  font-family: "Droid Sans Mono", "Inconsolata", "Menlo", "Consolas",
+    "Bitstream Vera Sans Mono", "Courier", monospace;
 }
-
-
+.codes {
+  width: min(92%, 1200px);
+  margin: 3% auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
 .code-snippet {
-  background-color: #f1f1f1;
-  border: 1px solid #ccc;
   padding: 10px;
   font-size: 14px;
   overflow-x: auto;
   font-style: normal;
-  font-family: "Droid Sans Mono", "Inconsolata", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier", monospace;
+  font-family: "Droid Sans Mono", "Inconsolata", "Menlo", "Consolas",
+    "Bitstream Vera Sans Mono", "Courier", monospace;
   background-color: #141b29;
   color: white;
-  padding: 20px;
+  padding: 40px;
   border-radius: 10px;
-  /* margin-bottom: 20px; */
-  box-shadow: 0 8px 10px rgba(255, 254, 254, 0.522);
-  margin: 0rem 4rem 2rem 1rem;
   font-size: large;
 }
-
-
-
 table {
   width: 100%;
   border-collapse: collapse;
 }
-
 th,
 td {
   border: 1px solid black;
   padding: 10px;
 }
-
 tr:nth-child(odd) {
   background-color: rgba(0, 0, 0, 0.731);
-
 }
-
 tr:nth-child(even) {
   background-color: #000000;
 }
-
 td {
-  color: #d8d9dd;
-  font-size: x-large;
-  font-family: 'Lobster', cursive;
-  font-family: 'Montserrat', sans-serif;
-  font-family: 'Tilt Prism', cursive;
+  font-size: large;
+  font-family: "Lobster", cursive;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Tilt Prism", cursive;
 }
-
 .code-font {
-  font-size: x-large;
-  font-family: 'Exo', sans-serif;
-  font-family: 'Lobster', cursive;
-  font-family: 'Montserrat', sans-serif;
-  font-family: 'Tilt Prism', cursive;
+  font-size: large;
   color: #abb2bf;
 }
-
 thead {
   font-size: xx-large;
 }
-
-th {
-  color: #36bfa4;
-}
-
-
 .details {
-  background-color: #0b193578;
-  color: rgb(236, 231, 164);
   padding: 3rem;
   border-radius: 10px;
-  box-shadow: 0rem 2rem 10rem #13419d;
-  font-family: 'Noto Naskh Arabic', serif;
+  font-family: "Noto Naskh Arabic", serif;
   margin: 4rem auto;
-  font-size: x-large;
+  font-size: large;
   max-width: 70rem;
   width: 90%;
-  border-style:solid;
-  border-radius:3rem;
-  border-color: #405b92;
+  border-style: solid;
+  border-radius: 3rem;
 }
-
 @media (min-width: 768px) {
   .details {
     width: 70%;
     /* Adjust width for larger screens */
   }
+  .codes {
+    grid-template-columns: 1fr 1fr;
+    /* Switch to double column on larger screens */
+  }
 }
-
