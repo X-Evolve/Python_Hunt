@@ -1,0 +1,570 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'Python_Keywords/string.css' %}">
+
+<br>
+
+<div style="margin-left: 20px;">
+<div>
+    <h2>Python String</h2>
+    <p>A String is a data structure in Python that represents a sequence of characters. It is an immutable data type, meaning that once you have created a string, you cannot change it.
+        Python does not have a character data type, a single character is simply a string with a length of 1.
+    </p>
+</div>
+
+<div>
+    <h2>Creating String</h2>
+    <p>String can be created using single,double,triple quotes</p>
+    <div>
+        <h5>String with single Quote</h5>
+        <pre>
+       
+            <code>
+                String1='hello'
+                print(String1) #hello
+            </code>
+        
+        </pre>
+        <h5>String with double Quote</h5>
+        <p>
+        <pre>
+            <code>
+                String2="I'm a Student "
+                print(String2) #I'm a Student
+            </code>
+        </pre>
+        </p> 
+        <h5>String with Triple Quote</h5>
+        <p>
+        <pre>
+            <code>
+                String3='''interested in learning "python" '''
+                print(String3)//interested in learning "python"
+            </code>
+        </pre>
+        </p>
+    </div>
+</div>
+
+<div>
+<h2>Operations on String</h2>
+<p>there are different operations that can be performed on a string such as Concatenation,Repetition,Indexing,Slicing etc.</p>
+</div>
+
+<div>
+    <h5>String Concatenation</h5>
+    <p>String Concatenation is to combine multiple strings</p>
+    <p>Consider the following Example to understand String Concatenation</p>
+    <pre>
+        <code>
+            String1="hi "
+            String2="Good Morning"
+            String3=String1+String2
+            print(String3) #hi Good Morning
+        </code>
+    </pre>
+    
+
+    <h5>String Repitation</h5>
+    <p>In Python, the repetition operation on a string allows you to create a new string by repeating the original string a specified number of times. This is achieved using the * operator. </p>
+    <p>Consider the following Example to understand String Repitation</p>
+    <pre>
+        <code>
+            original_string="hi "
+            new_string=original_string*3
+            print(new_string) # hihihi
+        </code>
+    </pre>
+
+    <h5>Indexing</h5>
+    <p>In Python, string indexing allows you to access individual characters in a string. Strings are sequences of characters, and each character in a string has a position or index associated with it. String indexing is zero-based, which means that the index of the first character is 0, the second character is at index 1, and so on. You can also use negative indexing to access characters from the end of the string, where -1 represents the last character.</p>
+    <p>Consider the following Example to understand Indexing</p>
+    <pre>
+        <code>
+            my_string="Python"
+            first_character = my_string[0]  # Access the first character ('P')
+            second_character = my_string[1]  # Access the second character ('y')
+            last_character = my_string[-1]  # Access the first character ('n')
+            lastSecond_character = my_string[-2]  # Access the second character ('o')
+           
+        </code>
+    </pre>
+
+    <h5>String Slicing in Python</h5>
+    <p>In Python, string slicing allows you to extract a portion of a string, creating a new string that includes a specified range of characters from the original string. String slicing is done by specifying the start and end indices within square brackets []. The format is string[start:end], where start is the index of the first character you want to include, and end is the index of the character just after the last character you want to include. The resulting sliced string includes all characters from the start index up to, but not including, the end index.</p>
+    <p>Consider the following Example to understand String Slicing</p>
+    
+    <pre>
+        <code>
+            my_string="Python Programming"
+            substring = my_string[7:15] 
+            print(substring) # The result will be Program
+
+            my_string="Hello, World"
+            substring = my_string[:5] 
+            print(substring) # The result will be Hello
+
+            my_string="Hello, World"
+            substring = my_string[7:] 
+            print(substring) # The result will be World
+        </code>
+    </pre>
+
+</div>
+
+<h3>String Methods</h3>
+<div class="container">
+    <table style="width: 100%;" class="table table-hover ">
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Information</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>len()</td>
+                <td>returns length of the string</td>
+                <td>
+                        <p>
+                        var1="Python"
+                        </p>
+                        <p>
+                        print(var1.len()) # result is 6
+                        </p>
+
+                </td>
+            </tr>
+            <tr>
+                <td>lower() and upper()</td>
+                <td>lower() converts the string to lowerCase and upper() converts string to upperCase</td>
+                <td> 
+                   <p>var1="python"</p>
+                   <p>print(var1.upper()) # result is PYTHON</p> 
+                </td>
+            </tr>
+            <tr>
+                <td>capitalize()</td>
+                <td>Capitalize first character of string</td>
+                <td> 
+                    <p>var1="python world"</p>
+                    <p>print(var1.capitalize()) # result is Python</p>
+                    
+                </td>
+            </tr>
+
+            <tr>
+                <td>title()</td>
+                <td>Capitalize each word of string</td>
+                <td> 
+                    <p>
+                       var1="python world"
+                    </p>
+                    <p>print(var1.title()) # result is Python World</p>
+                   
+                </td>
+            </tr>
+
+            <tr>
+                <td>strip(character)</td>
+                <td>Removes the specified characters from both the beginning and end of the string. If the characters argument is not provided, it will remove leading and trailing whitespace by default</td>
+                <td>
+                    <p>
+                        text = "   Hello, World!   "   
+                    </p>
+                    <p>print(text.strip()) # result is Hello, World</p>
+                    <p>text = ">>>Hello, World!<<<"</p> 
+                    <p> print(text.strip("><")) #"Hello, World!"</p>
+               
+                    
+                </td>
+            </tr>
+
+            <tr>
+                <td>lstrip(character)</td>
+                <td> Removes the specified characters (or whitespace by default) from the left (beginning) of the string.</td>
+                <td>
+                    
+                        <p>
+                            var1=" Python"
+                        </p>
+                        <p>  print(var1.lstrip()) #Python</p>
+                    
+                </td>
+            </tr>
+
+            <tr>
+                <td>rstrip(character)</td>
+                <td>Removes the specified characters (or whitespace by default) from the right (end) of the string.</td>
+                <td>
+                    
+                        <p>
+                            var1=" Python"
+                        </p>
+                        <p>print(var1.rstrip()) #Python</p>
+                    
+                </td>
+            </tr>
+
+            <tr>
+                <td>split(delimeter)</td>
+                <td>In Python, the split() method is used to split a string into a list of substrings based on a specified delimiter (separator). By default, it splits the string using whitespace characters as the delimiter, but you can specify a custom delimiter as an argument</td>
+                
+                   <td> <p>
+                    text = "This is a sample sentence."
+                   
+                </p>
+                <p>print(text.split(' ')) # ['This', 'is', 'a', 'sample', 'sentence.']</p></td>
+                       
+                    
+                </td>
+            </tr>
+
+            <tr>
+                <td>join(string)</td>
+                <td>In Python, you can use the join(string) method to concatenate a list of strings into a single string, using a specified delimiter to separate the elements in the list. The join() method is called on a string that you want to use as the delimiter, and you pass the list of strings as an argument to the method.</td>
+                <td>
+                    
+                        <p>
+                            myTuple = ("John", "Peter", "Vicky")
+                            
+                        </p>
+                        <p>x = "-".join(myTuple) #John-Peter-Vicky</p>
+                    
+                </td>
+            </tr>
+
+            <tr>
+                <td>replace(old,new,count)</td>
+                <td>In Python, the replace(old,new,count) method is used to replace all occurrences of a specified substring with another substring in a given string. The replace() method operates on a string and returns a new string with the replacements made. count argument is optional as it specifies the number of times you want to replace the old substring with the new substring. </td>
+                <td> 
+                    
+                        <p>
+                            var1="I like cats, but I don't like dogs"
+                            
+                        </p>
+                        <p>print(var1.replace("cats","dogs")) # I like dogs, but I don't like dogs.</p>
+                    
+                </td>
+            </tr>
+
+            <tr>
+                <td>find(substring,start,end)</td>
+                <td>In Python, the find(substring,start,end) method is used to search for a specified substring within a string and return the index (position) of the first occurrence of that substring. If the substring is not found, it returns -1</td>
+                <td> 
+                    <p>
+                        text = "Hello, world! This is a simple example." </p>
+                   
+                        <p>print(text.find("world")) # Output: 7</p>
+                        <p>#Search for the first occurrence of "is" starting from index 10</p>
+                        <p>print(text.find("is",10)) # Output: 19</p>
+
+                        <p>Search for the first occurrence of "is" between indices 10 and 20</p>
+                        <p>>print(text.find("is",10,20)) # Output: -1(not found within range)</p>
+                    </td>
+                    
+               
+                    
+                
+            </tr>
+
+            <tr>
+                <td>index(substring,start,end)</td>
+                <td>In Python, the index() method is similar to the find() method, but it's used to find the index (position) of the first occurrence of a specified substring within a string. If the substring is not found, the index() method raises a ValueError instead of returning -1. </td>
+                <td> 
+                    
+                        <p>
+                            text = "Hello, world! This is a simple example."
+                            
+                        </p>
+                        <p>print(text.index("world")) # result is 7</p>
+                   
+                </td>
+            </tr>
+
+            <tr>
+                <td>count(substring,start,end)</td>
+                <td>In Python, the count() method is used to count the number of non-overlapping occurrences of a substring within a given string. The method takes the substring as an argument and returns the count of how many times that substring appears in the original string.</td>
+                <td>
+                    
+                        <p>
+                            text = "The quick brown fox jumps over the lazy dog. The dog is brown."
+                            
+                        </p>
+                        <p>print(text.count("brown")) # result is 2</p>
+                    
+                </td>
+            </tr>
+
+            <tr>
+                <td>startswitch() and endswitch()</td>
+                <td>this methods are used to check if a string starts with or ends with a specified substring. These methods return a Boolean value, indicating whether the string meets the condition.</td>
+                <td>
+                   
+                        <p>
+                            string = "Hello, world!"
+                        </p>
+                            <p>stringStart=string.startswith("Hello")</p>
+                            <p>print(stringStart) #true</p>
+                        
+                    
+                </td>
+            </tr>
+
+            <tr>
+                <td>isdigit(), isalpha() etc</td>
+                <td>these methods helps to check whether a string consists of only digits(isdigit()) , only alphabets(isalpha()) and returns boolean values</td>
+                <td>
+                   
+                        <p>
+                            var1="Python"
+                            
+                        </p>
+                        <p>print(var1.isalpha()) # result is true</p>
+                    
+                </td>
+            </tr>
+
+            <tr>
+                <td>encode()</td>
+                <td>The encode() method is used to convert a string into bytes with a specified character encoding.</td>
+                <td> 
+                    <p>
+                        text = "Hello, world!"
+                    </p>
+                        <p>print(text.encode("utf-8")) #  b'Hello, world!'</p>
+                        <p># In this example, we encoded the string text using the UTF-8 encoding, and the result is a bytes object.</p>
+                    
+                </td>
+            </tr>
+
+            <tr>
+                <td>decode()</td>
+                <td>The decode() method is used to convert a byte sequence back into a string using a specified character encoding.</td>
+                <td>
+                    
+                        <p>
+                            bytes_data = b'Hello, world!'
+                        </p>
+                            <p>print(bytes_data.decode("utf-8")) # result is Hello, world!</p>
+                            <p> In this example, we decoded the bytes object bytes_data using the UTF-8 encoding, and the result is the original string.</p>
+                        
+                    
+                </td>
+            </tr>
+
+
+
+            
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <h3>Escape characters</h3>
+    <table style="width: 100%;" class="table table-hover">
+        <thead>
+            <tr>
+                <th>Character</th>
+                <th>Information</th>
+                <th>Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>\\</td>
+                <td>Represents a literal backslash</td>
+                <td>print("This is a backslash: \\") #This is a backslash: \</td>
+            </tr>
+
+            <tr>
+                <td>\"</td>
+                <td>Represents a double quote.</td>
+                <td>print("She said, \"Hello!\"") #She said, "Hello!"</td>
+            </tr>
+
+            <tr>
+                <td>\'</td>
+                <td>Represents single quote</td>
+                <td>print("She said, \'Hello!\'") #She said, 'Hello!'</td>
+            </tr>
+
+            <tr>
+                <td>\n</td>
+                <td>Represents a newline character</td>
+                <td>print("This is the first line.\nThis is the second line.") <p>Output:This is the first line. </p> <p>This is the second line.</p></td>
+            </tr>
+
+            <tr>
+                <td>\t</td>
+                <td>Represents a tab character</td>
+                <td>print("Column 1\tColumn 2\tColumn 3") #Column 1        Column 2        Column 3</td>
+            </tr>
+
+
+
+        </tbody>
+    </table>
+</div>
+
+
+<div class="conatiner">
+    <h3>String Comparison</h3>
+    <p>In Python, you can compare strings using various comparison operators to determine their relationship. Here are some common string comparison methods and operators:</p>
+    <p><b>1. Equality (==):</b> You can use the double equals (==) operator to check if two strings are equal.</p>
+    <pre>
+        <code>
+            string1 = "Hello"
+            string2 = "Hello"
+            
+            if string1 == string2:
+                print("The strings are equal")
+            else:
+                print("The strings are not equal")
+            #Output: The strings are equal
+        </code>
+    </pre>
+
+    <p><b>2. Inequality (!=):</b> The inequality operator (!=) checks if two strings are not equal.</p>
+    <pre>
+        <code>
+            string1 = "Hello"
+            string2 = "World"
+
+            if string1 != string2:
+                print("The strings are not equal")
+            else:
+                print("The strings are equal")
+            #Output: The strings are not equal
+        </code>
+    </pre>
+
+    <p><b>3. Less Than (<) and Greater Than (>):</b> You can use the less than (<) and greater than (>) operators to compare strings lexicographically. This comparison is based on the order of characters in the Unicode character set.</p>
+    <pre>
+        <code>
+            string1 = "apple"
+            string2 = "banana"
+            if string1< string2:
+                print("string1 comes before string2")
+            else:
+                print("string1 comes after or is equal to string2")
+            #Output: string1 comes before string2
+
+        </code>
+    </pre>
+
+    <p><b>4. Less Than or Equal To (<=) and Greater Than or Equal To (>=):</b> These operators compare strings and include the case where the strings are equal.</p>
+    <pre>
+        <code>
+            string1 = "apple"
+            string2 = "banana"
+            if string1 <= string2:
+                print("string1 comes before or is equal to string2")
+            else:
+                print("string1 comes after string2")
+            #Output: string1 comes before or is equal to string2
+        </code>
+    </pre>
+
+</div>
+
+<div class="conatiner">
+    <h3>Immutable Nature Of String</h3>
+    <p>In Python, strings are considered immutable. This means that once you create a string object, you cannot change its content. Instead, if you want to modify a string, you must create a new string with the desired changes. The original string remains unchanged.. Here are some key points that illustrate the immutable nature of strings in Python:</p>
+    <p> <b>1.Cannot Be Modified In-Place:</b> You cannot change the characters of an existing string by accessing them via indexing or slicing. For example, the following code will result in an error</p>
+    <pre>
+        <code>
+            s = "Hello"
+            s[0] = 'h'  # This will raise a TypeError because strings are immutable
+        </code>
+    </pre>
+    <p><b>2.Creating New Strings:</b> When you perform operations on strings, such as concatenation or substitution, you create new string objects rather than modifying the original string.</p>
+    <pre>
+        <code>
+            s = "Hello"
+            new_s = s + ", World!"  # Creates a new string(Hello, World!) 
+        </code>
+    </pre>
+    <p><b>3.Hashing:</b> Because strings are immutable, they can be used as keys in dictionaries and elements in sets. This immutability ensures that the hash value of a string remains constant.</p>
+    <p><b>4.Thread Safety:</b> Immutability makes strings thread-safe. In a multithreaded environment, multiple threads can safely access and share string objects without concerns about concurrent modifications.</p>
+    <p><b>5.String Operations Return New Strings:</b> Most string methods and operations return new string objects, which is in line with the principle of immutability. For example:</p>
+    <pre>
+        <code>
+            original = "Hello, World!"
+            modified = original.replace("World", "Python")
+            print(original)  # "Hello, World!"
+            print(modified)  # "Hello, Python!"
+        </code>
+    </pre>
+
+</div>
+
+<div class="conatiner">
+    <h3>String Concatenation VS Joining</h3>
+    <b>1. String Concatenation</b>
+    <ul>
+        <li><b>Method</b>: In string concatenation, you use the + operator to combine multiple strings.</li>
+        <li><b>Usage</b>: String concatenation is typically used when you need to join a small number of strings, and the strings are already known and provided as separate variables or literals.</li>
+        <li><b>Example:</b></li>
+        <pre>
+            <code>
+                first_name = "John"
+                last_name = "Doe"
+                full_name = first_name + " " + last_name
+            </code>
+        </pre>
+        <li><b>Pros:</b>
+            <ul>
+                <li>Simplicity: Easy to understand and use.</li>
+                <li>Flexibility: You can concatenate strings with various delimiters or include other data types directly.</li>
+                <li>Can perform operations within concatenation (e.g., string formatting).</li>
+            </ul>
+        </li>
+        <li><b>Cons:</b>
+            <ul>
+                <li>Inefficiency: String concatenation can be less efficient when joining a large number of strings because it creates new string objects each time.
+                </li>
+            
+            </ul>
+        </li>
+    </ul>
+
+    <b>2. String Joining</b>
+    <ul>
+        <li><b>Method:</b> String joining involves using a join method or function (e.g., str.join()) to concatenate a list of strings with a specified delimiter.</li>
+        <li><b>Usage:</b> String joining is suitable when you have a list or iterable of strings to combine, and you want to specify a separator or delimiter between them.</li>
+        <li><b>Example:</b></li>
+        <pre>
+            <code>
+                words = ["Hello", "world", "Python"]
+                sentence = " ".join(words)
+                print(sentence) # Hello world Python
+            </code>
+        </pre>
+        <li><b>Pros:</b>
+            <ul>
+                <li>Efficiency: String joining is more efficient when joining a large number of strings because it avoids creating multiple intermediate string objects.</li>
+                <li>Cleaner code: It provides a cleaner and more readable way to join strings from an iterable.</li>
+            </ul>
+        </li>
+        <li><b>Cons:</b>
+            <ul>
+                <li>Requires a list or iterable: You need to have a list or iterable of strings to use the join method effectively.</li>
+            </ul>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+
+
+
+
+{% endblock %}

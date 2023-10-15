@@ -1,0 +1,178 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+
+  <!--NAVBAR -->
+
+    <header class="pb-3 mb-4 border-bottom " >
+      <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
+        <img src="/3_Open source/Python_Hunt/producthunt_pro/producthunt/static/plogo1.png" alt="logo" height = 70px width="70px">
+        <span class="fs-4">PYTHON HUNT</span>
+      </a>
+    </header>
+  
+  <!-- INTRODUCTION SECTION-->
+
+    <div class="px-4 pt-5 text-center border-bottom">
+      <h1 class="display-4 fw-bold text-body-emphasis">What are Dictionaries in Python ?</h1>
+      <br>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">A key-value pair is a combination of a unique identifier (key) and an associated value. The key is used to access the corresponding value.</p>
+        <p class="lead mb-4">Dictionaries in Python are unordered, meaning there's no guarantee that elements will be in a specific order. This is different from lists or tuples where elements are ordered by index.</p>
+      </div>
+      <img src="/3_Open source/Python_Hunt/producthunt_pro/producthunt/static/dictionary.png" alt="dictionary" height ="300"  width="600" >
+      </div>
+    </div>
+
+  <!-- FEATURES OF DICTIONARIES  -->
+
+  <div class="container px-4 py-5">
+    <h2 class="pb-2 border-bottom">Features Of Dictionaries </h2>
+
+    <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+      <div class="col d-flex flex-column align-items-start gap-2">
+        <h2 class="fw-bold text-body-emphasis">Dictionaries is one  of the most important data structures of python </h2>
+        <p class="text-body-secondary">The features are liste here ➡️.</p>
+      </div>
+
+      <div class="col">
+        <div class="row row-cols-1 row-cols-sm-2 g-4">
+          <div class="col d-flex flex-column gap-2">
+            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+              <svg class="bi" width="1em" height="1em">
+                <use xlink:href="#collection"></use>
+              </svg>
+            </div>
+            <h4 class="fw-semibold mb-0 text-body-emphasis"> 1️⃣ Mutability </h4>
+            <p class="text-body-secondary">Dictionaries are mutable, which means their content can be changed after creation. You can add, modify, or delete key-value pairs..</p>
+          </div>
+
+          <div class="col d-flex flex-column gap-2">
+            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+              <svg class="bi" width="1em" height="1em">
+                <use xlink:href="#gear-fill"></use>
+              </svg>
+            </div>
+            <h4 class="fw-semibold mb-0 text-body-emphasis">2️⃣ Hashing </h4>
+            <p class="text-body-secondary">Dictionaries use a hashing function to map keys to their corresponding values. This allows for efficient retrieval of values based on their keys.</p>
+          </div>
+
+          <div class="col d-flex flex-column gap-2">
+            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+              <svg class="bi" width="1em" height="1em">
+                <use xlink:href="#speedometer"></use>
+              </svg>
+            </div>
+            <h4 class="fw-semibold mb-0 text-body-emphasis">3️⃣ Immutability of keys </h4>
+            <p class="text-body-secondary">Keys in a dictionary must be of an immutable data type (e.g., strings, numbers, tuples). This is because the key needs to be hashable.</p>
+          </div>
+
+          <div class="col d-flex flex-column gap-2">
+            <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+              <svg class="bi" width="1em" height="1em">
+                <use xlink:href="#table"></use>
+              </svg>
+            </div>
+            <h4 class="fw-semibold mb-0 text-body-emphasis"> 4️⃣ Unique keys </h4>
+            <p class="text-body-secondary">Each key in a dictionary must be unique. If you try to add a key that already exists, the existing value will be overwritten.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Methods Section -->
+
+  <div class="container px-4 " id="icon-grid">
+    <h2 class="pb-2 border-bottom">Methods in Dictionaries </h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+      <div class="col d-flex align-items-start">
+        <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"></use></svg>
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">1️⃣ In Operator:</h3>
+          <br>
+          <p>The in operator allows you to check if a specific key exists in the dictionary. For example, key in my_dict will return True if key is present.</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#cpu-fill"></use></svg>
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">2️⃣ Length:</h3>
+          <br>
+          <p>You can find the number of key-value pairs in a dictionary using the len() function.</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#calendar3"></use></svg>
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">3️⃣ Comprehensions:</h3>
+          <br>
+          <p>Like lists, dictionaries can be created using comprehensions, which provide a concise way to construct dictionaries.</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#home"></use></svg>
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">4️⃣ Nested Dictionaries:</h3>
+          <br>
+          <p>Dictionaries can contain other dictionaries as values. This allows for more complex data structures.</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#speedometer2"></use></svg>
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">5️⃣ Default Values:</h3>
+          <br>
+          <p>The get() method allows you to provide a default value if the key is not found in the dictionary. This prevents a KeyError.</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#toggles2"></use></svg>
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">6️⃣ Copying Dictionaries:</h3>
+          <br>
+          <p>Dictionaries can be copied using methods like copy(). Be careful when copying as it creates a new reference, not a new copy of the dictionary</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#geo-fill"></use></svg>
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">7️⃣ Dictionary View Objects:</h3>
+          <br>
+          <p>dict.keys(), dict.values(), and dict.items() return view objects that provide a dynamic view on the dictionary's keys, values, and key-value pairs respectively.</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#tools"></use></svg>
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis"> 8️⃣Dictionary Merging:</h3>
+          <br>
+          <p>The update() method can be used to merge two dictionaries. If there are overlapping keys, the values from the second dictionary overwrite the values from the first.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Footer-->
+    
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-body-secondary">© 2023 X-Evolve</span>
+        </div>
+      </footer>
+    </div>
+
+  <!-- JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+  </html>
