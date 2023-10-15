@@ -28,4 +28,7 @@ def sets(request):
 def tuples(request):
     return render(request, 'products/tuples.html')
 
+def string(request):
+    return render(request,'products/string.html')
+
 
