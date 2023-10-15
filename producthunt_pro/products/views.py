@@ -34,4 +34,7 @@ def lists(request):
 def string(request):
     return render(request,'products/string.html')
 
+def dicts(request):
+    return render(request,'products/dictionaries.html')
+
 

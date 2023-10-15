@@ -12,6 +12,7 @@ urlpatterns = [
     path('statements/',views.statements, name='statements'),
     path('tuples/', views.tuples, name='tuples'),
     path('string/',views.string,name='string'),
-    path('lists/', views.lists, name='lists')
+    path('lists/', views.lists, name='lists'),
+    path('dicts/', views.dicts, name='dicts'),
 
 ]
