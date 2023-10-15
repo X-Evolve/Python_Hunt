@@ -31,4 +31,7 @@ def tuples(request):
 def lists(request):
     return render(request, 'products/lists.html')
 
+def string(request):
+    return render(request,'products/string.html')
+
 

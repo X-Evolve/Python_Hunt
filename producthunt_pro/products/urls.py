@@ -11,6 +11,7 @@ urlpatterns = [
     path('sets/',views.sets, name='sets'),
     path('statements/',views.statements, name='statements'),
     path('tuples/', views.tuples, name='tuples'),
+    path('string/',views.string,name='string'),
     path('lists/', views.lists, name='lists')
 
 ]
