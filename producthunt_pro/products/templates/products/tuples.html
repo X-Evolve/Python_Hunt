@@ -4,7 +4,7 @@
 {% load static %}
   <head>
     <title>Tuples in Python</title>
-    <link rel="stylesheet" href="{% static 'Python_Keywords/style.css' %}" />
+    <!-- <link rel="stylesheet" href="{% static 'Python_Keywords/style.css' %}" /> -->
   </head>
 
   <div class="container">
@@ -30,8 +30,10 @@
     <p class="lead mb-4">
       A tuple can be created by placing a sequence of values separated by a ‘comma’ with the use of parentheses. We can have any number of items and they may be of different types (integer, float, tuple, string, etc.). A tuple can also have no items in it, which is called an empty tuple.
     </p>
-    <pre><code>
-        # Example code for creating a tuple
+    <div class="code-container">
+      <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+        <pre><code>
+          # Example code for creating a tuple
         # Empty tuple
         my_tuple = ()
         print(my_tuple)
@@ -47,13 +49,23 @@
         # nested tuple
         my_tuple = ("mouse", [8, 4, 6], (1, 2, 3))
         print(my_tuple)
-    </code></pre>
+        </code>
+      </pre>
+      </div>
+      <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #005eff; color: white; border: none; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; margin-top: 5px;" onmouseover="this.style.backgroundColor='#003db3'" onmouseout="this.style.backgroundColor='#005eff'">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="16" height="16" viewBox="0 0 448 512">
+            <path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/>
+        </svg>
+    </button>
+    </div>
 
     <h2>Accessing Tuple Elements</h2>
     <p class="lead mb-4">
       There are various ways in which we can access the orgainzed elements of a tuple, but just like with the Python list data type, the most common way to access tuple elements is to use the square bracket [] operator. Let us look several examples in detail.
     </p>
-    <pre><code>
+    <div class="code-container">
+      <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+        <pre><code>
         # Example code for accessing tuple elements
         my_tuple = ('p','e','r','m','i','t')
 
@@ -81,8 +93,15 @@
         # nested index
         # Output: 4
         print(n_tuple[1][1])
-    </code></pre>
-
+      </code>
+    </pre>
+    </div>
+    <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #005eff; color: white; border: none; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; margin-top: 5px;" onmouseover="this.style.backgroundColor='#003db3'" onmouseout="this.style.backgroundColor='#005eff'">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="16" height="16" viewBox="0 0 448 512">
+          <path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/>
+      </svg>
+  </button>
+  </div>
     <h2>Tuple Functions</h2>
     <p> 
         Python provides several built-in functions which help us to manipulate tuples. Let us learn about some of these tuple functions in detail.
