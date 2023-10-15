@@ -1,0 +1,429 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<!-- INTRODUCTION SECTION-->
+
+<div class="px-4 pt-5 text-center border-bottom">
+  <h1 class="display-4 fw-bold text-body-emphasis">List in Python</h1>
+  <br>
+  <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">A list is a versatile and fundamental data structure in Python. It is used to store and manage collections of values, which can be of any data type, such as numbers, strings, or even other lists. Lists have the following important characteristics:</p>
+      <ul style="list-style-type: circle; text-align: left;">
+          <li>Ordered Sequence: Lists contain multiple values that are logically related. These values are stored in a specific order, which means you can access elements based on their positions within the list.</li>
+          <li>Mutable: Lists are mutable, meaning you can change their content after creation. You can add, remove, or modify elements as needed.</li>
+          <li>Indexing: Each element in a list is assigned a numerical position known as an index. Python lists are zero-indexed, meaning the first element is at index 0, the second at index 1, and so on.</li>
+          <li>Slicing: You can extract a portion of a list, known as a slice, by specifying a range of indices. This allows you to work with a subset of the list as needed.</li>
+          <li>Operations: Lists support various operations, such as appending elements, extending lists, multiplying a list by an integer (which replicates the elements), and checking for the presence of an item in the list.</li>
+          <li>Built-in Functions: Python provides built-in functions to make working with lists more convenient. You can find the length of a list using the len() function. You can also use functions like max() and min() to find the largest and smallest elements in a list, respectively.</li>
+      </ul>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+      </div>
+  </div>
+</div>
+
+
+<!-- TYPES  -->
+<div class="container px-4 py-5" id="hanging-icons">
+  <h2 class="pb-2 border-bottom"> Working with List </h2>
+  <br>
+  <div class="row g-4 row-cols-1 row-cols-lg-3">
+    <div class="col d-flex align-items-start">
+      <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+      </div>
+      <div>
+        <h3 class="fs-2 text-body-emphasis"> 1️⃣ Creating a list</h3>
+        <br>
+        <p><b>Creating an empty list</b></p>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white;padding: 10px; border-radius: 10px;">
+            <code>
+listname = []
+            </code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px;height: 20px;font-size: 10px;">Copy</button>
+        </div>
+        <br>
+        <p><i>Example:</i><br> 
+          L1 = []<br>
+          MyList = []<br>
+          Books = []
+        </p>
+        <p><b>Creating a list with items</b></p>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white;padding: 10px; border-radius: 10px;">
+            <code>
+listname = [item1, item2, item3, item4] 
+            </code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px; height: 20px;font-size: 10px;">Copy</button>
+        </div>
+        <br>
+        <p><i>Example:</i><br> 
+          Marks = [100, 99.8, 103, 102]<br>
+          MyL = [1,2,3,4]<br>
+          Subjects = ['Phy','Mat','Chem','Bio','Comp']
+        </p>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <div>
+        <h3 class="fs-2 text-body-emphasis"> 2️⃣Updating Elements </h3>
+        <br>
+        <p><b>Update an element in list using index</b></p>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+            <code>
+              >>>L1 = [1, 2, 3, 4, 5, 6]<br>
+              >>>L1[2] = 111<br>
+              >>>L1<br>
+                      [1, 2, 111, 4, 5, 6]
+            </code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px; height: 20px; margin-right: 150px;font-size: 10px;">Copy</button>
+        </div>
+        <br>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">  
+      <div>
+        <h3 class="fs-2 text-body-emphasis">3️⃣ Deleting Elements </h3>
+        <br>
+        <p><b>Delete an element in list using index</b></p>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+            <code>
+              >>>L1 = [1, 2, 3, 4, 5, 6] <br>
+              >>>del (L1(4)) <br>
+              >>>L1 <br>
+                 [1, 2, 3, 4, 6]
+            </code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px; height: 20px; margin-right: 150px;font-size: 10px;">Copy</button>
+        </div>
+        <br>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">  
+      <div>
+        <h3 class="fs-2 text-body-emphasis">4️⃣ Accessing Elements </h3>
+        <br>
+        <p><b>Using index or indices</b></p>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+            <code>
+              >>>L = [1, 2, 3, 4, 5, 6] <br>
+              >>>print (L[3]) #indexing <br>
+              >>>4 <br>
+              >>>print (L[2:5]) #slicing <br>
+              >>>[3, 4, 5]
+            </code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px; height: 20px; margin-right: 150px;font-size: 10px;">Copy</button>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="container px-4 py-5" id="hanging-icons">
+  <h2 class="pb-2 border-bottom"> Basic Operations in List </h2>
+  <br>
+  <div class="row g-4 row-cols-1 row-cols-lg-3">
+    <div class="col d-flex align-items-start">
+      <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+      </div>
+      <div>
+        <h3 class="fs-2 text-body-emphasis"> 1️⃣ Length</h3>
+        <br>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white;padding: 10px; border-radius: 10px; width: 325px;">
+            <code>
+              >>> len([1, 2, 3])       <br> 
+              3
+            </code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px;height: 20px;font-size: 10px;">Copy</button>
+        </div>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <div>
+        <h3 class="fs-2 text-body-emphasis"> 2️⃣ Concatenation </h3>
+        <br>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+            <code>
+              >>> [1, 2, 3] + [4, 5, 6]             <br> 
+	                [1, 2, 3, 4, 5, 6] 
+            </code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px; height: 20px; margin-right: 150px;font-size: 10px;">Copy</button>
+        </div>
+        <br>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">  
+      <div>
+        <h3 class="fs-2 text-body-emphasis">3️⃣ Repitition </h3>
+        <br>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+            <code>
+              >>> ['Ai!'] * 4                 <br> 
+                  ['Ai!', 'Ai!', 'Ai!', 'Ai!']
+            </code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px; height: 20px; margin-right: 150px;font-size: 10px;">Copy</button>
+        </div>
+        <br>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">  
+      <div>
+        <h3 class="fs-2 text-body-emphasis">4️⃣ Some other operations </h3>
+        <br>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px; width: 425px;">
+            <code>
+            >>> str([1, 2]) + "54"   <i>#Same as "[1, 2]"+"54"</i><br>
+	                  '[1, 2]54' <br>
+                  <br>
+            >>> [1, 2] + list("54")  <i>#Same as [1, 2] + ["5", "4"]</i><br>
+                    [1, 2, '5', '4‘]
+            </code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px; height: 20px; margin-right: 150px;font-size: 10px;">Copy</button>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<!-- till basic operations -->
+<div class="container px-4 " id="featured-1">
+  <h2 class="pb-2 border-bottom">Iterations & Comprehensions </h2>
+  <br>  
+  <div class="row g-4 row-cols-1 row-cols-lg-3">
+    <div class="feature col">
+      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+      </div>
+      <h3 class="fs-2 text-body-emphasis">List Iteration</h3>
+      <div class="code-container">
+        <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+          <code>
+        >>> 2 in [1, 2, 3]            <br>
+		          True <br>
+        >>> for x in [1, 2, 3]: <br>
+			              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(x, end=' ')      <br>            
+                # Iteration (prints x)... 1 2 3
+          </code>
+        </div>
+        <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px; height: 20px; margin-right: 150px;font-size: 10px;">Copy</button>
+      </div>
+    </div>
+    <div class="feature col">
+      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+      </div>
+      <h3 class="fs-2 text-body-emphasis">List Comprehensions</h3>
+      <div class="code-container">
+        <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+          <code>
+        >>> res = [c * 4 for c in 'ABCD']  <br>
+          # List comprehensions 
+          >>> res <br>
+			    ['AAAA', 'BBBB', 'CCCC', 'DDDD'] 
+          </code>
+        </div>
+        <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px; height: 20px; margin-right: 150px;font-size: 10px;">Copy</button>
+      </div>
+      <br>
+      <p>An expression is functionally equivalent to a for loop that builds up a list of results manually. However, list comprehensions are simpler to code and likely faster to run today.</p>
+    </div>
+    <div class="feature col">
+      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+      </div>
+      <h3 class="fs-2 text-body-emphasis">&nbsp;</h3>
+      <div class="code-container">
+        <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px; width: 425px;">
+          <code>
+            # List comprehension equivalent ... <br>
+            >>> res = [] <br>
+            >>> for c in 'ABCD': <br>                        
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; res.append(c * 4) <br>
+            >>> res <br>
+            ['AAAA', 'BBBB', 'CCCC', 'DDDD'] 
+          </code>
+        </div>
+        <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px; height: 20px; margin-right: 150px;font-size: 10px;">Copy</button>
+      </div>
+    </div>
+  </div>
+  <hr>
+</div>
+
+
+<div class="container px-4" id="featured-2">
+  <h2 class="pb-2 border-bottom"> Indexing & Slicing </h2>
+  <br>
+  <div class="row g-4 row-cols-1 row-cols-lg-3">
+    <div class="feature col">
+      <div class="code-container">
+        <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+          <code>
+            >>> L = ['abcd', 'ABCD', 'ABCD!'] <br>
+            >>> L[2]               # Offsets start at zero <br> 
+            'ABCD!'  
+          </code>
+        </div>
+        <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px; height: 20px; margin-right: 150px;font-size: 10px;">Copy</button>
+      </div>
+    </div>
+    <div class="feature col">
+      <div class="code-container">
+        <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+          <code>
+          >>> L[−2]             # Negative: count from right <br>
+            'ABCD'             
+          </code>
+        </div>
+        <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px; height: 20px; margin-right: 150px;font-size: 10px;">Copy</button>
+      </div>
+    </div><div class="feature col">
+      <div class="code-container">
+        <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+          <code>
+            >>> L[1:]               # Slicing fetches sections <br>
+            ['ABCD', 'ABCD!']                         
+          </code>
+        </div>
+        <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px; height: 20px; margin-right: 150px;font-size: 10px;">Copy</button>
+      </div>
+    </div>
+</div>
+<hr>
+<div class="container py-5" id="featured-3">
+  <h2 class="pb-2 border-bottom">Updation in Lists </h2>
+  <br>
+  <div class="row g-4 row-cols-1 row-cols-lg-3">
+    <div class="feature col">
+      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+      </div>
+
+      <h3 class="fs-2 text-body-emphasis"> Replacement </h3>
+      <div class="feature col">
+        <h3 class="fs-2 text-body-emphasis">&nbsp;</h3>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+            <code>
+              >>> L[1:2] = [4, 5]        <br>
+              >>> L <br>
+              [1, 4, 5, 3]              
+            </code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px; height: 20px; margin-right: 150px;font-size: 10px;">Copy</button>
+        </div>
+      </div>
+    </div>
+    <div class="feature col">
+      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+      </div>
+      <h3 class="fs-2 text-body-emphasis"> Insertion </h3>
+      <div class="feature col">
+        <h3 class="fs-2 text-body-emphasis">&nbsp;</h3>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+            <code>
+              >>> L[1:1] = [6, 7]    <br>
+              >>> L <br>
+              [1, 6, 7, 4, 5, 3] 
+            </code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px; height: 20px; margin-right: 150px;font-size: 10px;">Copy</button>
+        </div>
+      </div>
+    </div>
+    <div class="feature col">
+      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+      </div>
+      <h3 class="fs-2 text-body-emphasis"> Deletion </h3>
+      <div class="feature col">
+        <h3 class="fs-2 text-body-emphasis">&nbsp;</h3>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+            <code>
+              >>> L[1:2] = []    <br>
+              >>> L <br>
+              [1, 7, 4, 5, 3] 
+            </code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px; height: 20px; margin-right: 150px;font-size: 10px;">Copy</button>
+        </div>
+      </div>
+    </div>
+</div> 
+<hr>
+<br>
+<div class="container py-4 " id="featured-1">
+  <h2 class="pb-2 border-bottom">Method Calls </h2>
+  <br>  
+  <div class="row g-4 row-cols-1 row-cols-lg-3">
+    <div class="feature col">
+      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+      </div>
+      <h3 class="fs-2 text-body-emphasis">append()</h3>
+      <div class="code-container">
+        <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+          <code>
+            >>> L = ['ear', 'nose', 'mouth'] <br>
+            >>> L.append('please')               <br> 
+            # Append method call: add item at end <br>
+            >>> L <br>
+            ['ear', 'nose', 'mouth', 'please'] 
+              </code>
+        </div>
+        <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px; height: 20px; margin-right: 150px;font-size: 10px;">Copy</button>
+      </div>
+    </div>
+    <div class="feature col">
+      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+      </div>
+      <h3 class="fs-2 text-body-emphasis">sort()</h3>
+      <div class="code-container">
+        <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+          <code>
+            >>> L.sort()                   <br>
+            >>> L <br>
+            ['ear', 'nose', 'mouth', 'please']            
+          </code>
+        </div>
+        <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px; height: 20px; margin-right: 150px;font-size: 10px;">Copy</button>
+      </div>
+    </div>
+    <div class="feature col">
+      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+      </div>
+      <h3 class="fs-2 text-body-emphasis">pop()</h3>
+      <div class="code-container">
+        <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px; width: 425px;">
+          <code>
+            >>> L [1, 2, 3, 4, 5] <br>
+            >>> L.pop() # Delete and return last item <br> 
+            5 
+          </code>
+        </div>
+        <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #007bff; color: #fff; width: 50px; height: 20px; margin-right: 150px;font-size: 10px;">Copy</button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <p>There are many more method calls which can help you while using Lists in Python.</p>
+  <br>
+  <hr>
+</div>
+
+{% endblock %}
+
+

@@ -29,6 +29,19 @@
          <a class="btn btn-primary" href="{% url 'login' %}" role="button">Start your Learning!</a>
          {% endif %}
       </div>
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="{% static 'pylogo.jpg' %}" class="d-block mx-lg-auto img-fluid" width="800" height="600" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Play With the Web Integrated Python IDE!</h1>
+        <p class="lead">Python Hunt uses excellent editor from Brython where you can practice codes</p>
+
+         {% if user.is_authenticated %}
+         <a class="btn btn-primary" href="{% url 'editor' %}" role="button">Code Now!</a>
+         {% else %}
+         <a class="btn btn-primary" href="{% url 'login' %}" role="button">Code Now!</a>
+         {% endif %}
+      </div>
     </div>
   </div>
 

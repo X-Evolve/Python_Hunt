@@ -1,7 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: rgb(214, 255, 214);
+    background-color: rgb(255, 255, 255) !important;
 }
 
 h1 {
@@ -12,6 +10,11 @@ h1 {
 h2,
 h3 {
     color: #333;
+}
+
+.container {
+    margin-top: 20px;
+    width: 100vw;
 }
 
 .flowchart {

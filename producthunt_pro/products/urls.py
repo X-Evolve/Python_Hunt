@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path,include
 from . import views
+
 urlpatterns = [
     path('basicpy/',views.basicpy,name='basicpy' ),
     path('installpy/',views.installpy,name='installpy'),
@@ -10,5 +11,7 @@ urlpatterns = [
     path('sets/',views.sets, name='sets'),
     path('statements/',views.statements, name='statements'),
     path('tuples/', views.tuples, name='tuples'),
-    path('string/',views.string,name='string')
+    path('string/',views.string,name='string'),
+    path('lists/', views.lists, name='lists')
+
 ]

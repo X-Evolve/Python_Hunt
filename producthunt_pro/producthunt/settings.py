@@ -12,19 +12,12 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-import dotenv
 import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
-# Environment file import
-dotenv_file = os.path.join(BASE_DIR, ".env")
-if os.path.isfile(dotenv_file):
-    dotenv.load_dotenv(dotenv_file)
-
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure--p5p3yys6xd^6tda3$wry)y4$h3$1v13wb38u)m63*imxfww0i'
@@ -40,6 +33,7 @@ ALLOWED_HOSTS = ['.vercel.app','127.0.0.1','.now.sh','*']
 INSTALLED_APPS = [
     'products.apps.ProductsConfig',
     'accounts.apps.AccountsConfig',
+    'code_editor.apps.CodeEditorConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

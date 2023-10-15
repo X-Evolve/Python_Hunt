@@ -2,41 +2,42 @@
 
 {% block content %}
 {% load static %}
-<p align='center'>
-<img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{% static 'plogo1.png' %}">
-</p>
-{% if error %}
-<br>
-<h6 class='display-6' align='center'>{{error}}</h6>
-<br>
-<br>
-{% endif %}
-<div class='center'>
-  <h1 class='display-6'>Signup!</h1>
-<form method="POST" action="{% url 'signup' %}">
-{% csrf_token %}
-<br>
-Username:
-<br>
-<input type="text" name="username" />
-<br>
-<br>
-Password:
-<br>
-<input type="password" name="passwd" />
-<br>
-<br>
-Confirm Password:
-<br>
-<input type="password" name="cpasswd" />
-<br>
-<br>
-<input class='btn btn-primary' type='submit' value='Sign up!'>
+<div class="d-flex flex-column auth justify-content-center">
+  <div class="center">
+    <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{% static 'plogo1.png' %}">
+  </div>
 
-  </form>
+  <div class="auth-form">
+    {% if error %}
+    <div class="alert alert-danger d-flex align-items-center" role="alert">
+       <div>{{error}}</div> 
+    </div>
+    {% endif %}
+    
+    <h3 class='text-center'>Sign up to Python Hunt!</h1>
+    <form method="POST" action="{% url 'signup' %}">
+    {% csrf_token %}
+  
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Username</label>
+      <input type="text" name="username" class="form-control" id="exampleFormControlInput1" required/>
+    </div>
+  
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+      <input type="password" name="passwd" class="form-control" required/>
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Confirm Password</label>
+      <input type="password" name="cpasswd" class="form-control" required/>
+    </div>
+    <input class='btn btn-primary' type='submit' value='Sign up!'>
+      </form>
+  </div>
+  
+  <h6 align='center'>Don't have an account? <a href='{% url "login" %}'>Log in!</a></h6>
+
 </div>
-<br>
-<h6 align='center'>Don't have an account? <a href='{% url "login" %}'>Log in!</a></h6>
-
 
 {% endblock %}
