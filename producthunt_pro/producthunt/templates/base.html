@@ -43,6 +43,10 @@
       margin-left: 5%;
     }
 
+    .offcanvas{
+      overflow: auto;
+    }
+
     @media (min-width: 768px) {
       .bd-placeholder-img-lg {
         font-size: 3.5rem;
@@ -50,6 +54,10 @@
       .auth{
         width: 50%;
         margin: 0 25%;
+      }
+      .auth-form{
+        width: 60%;
+        margin: 15px 20%;
       }
     }
     </style>
@@ -142,26 +150,20 @@
   </nav>
 
 {% if user.is_authenticated %}
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Python Hunt</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<div class="offcanvas offcanvas-start flex-column align-items-stretch flex-shrink-0 bg-white" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
+    <span class="fs-5 fw-semibold">Python Hunt</span>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body list-group">
-      <li class="list-group-item"> <a href="{% url 'basicpy' %}">Basics of Python  </a></li>
-      <li class="list-group-item"> <a href="{% url 'installpy' %}">Installing Python </a></li>
-      <li class="list-group-item"> <a href="{% url 'aboutpython' %}">About Python </a></li>
-      <li class="list-group-item"> <a href="{% url 'keywords' %}">Keywords </a></li>
-      <li class="list-group-item"> <a href="{% url 'datatypes' %}">Datatypes </a></li>
-      <li class="list-group-item"> <a href="{% url 'statements' %}">Statements </a></li>
-      <li class="list-group-item"> <a href="{% url 'string' %}">String</a></li>
-      <li class="list-group-item"> <a href="{% url 'lists' %}">Lists </a></li>
-      <li class="list-group-item"> <a href="{% url 'tuples' %}">Tuples </a></li>
-      <li class="list-group-item"> <a href="{% url 'dicts' %}">Dictionary </a></li>
-      
-      
-      
-
+  
+  <div class="list-group list-group-flush border-bottom px-2">
+    {% for key,value in urls.items %}
+    <a href='/products/{{key}}' class="list-group-item list-group-item-action py-2 lh-tight" aria-current="true">
+      <div class="d-flex w-100 align-items-center justify-content-between">
+        <strong class="mb-1">{{value}}</strong>
+      </div>
+    </a>
+    {% endfor %}
   </div>
 </div>
 {% endif %}
