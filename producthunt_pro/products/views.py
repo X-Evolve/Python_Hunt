@@ -13,7 +13,8 @@ urls = {
     'tuples/': 'Tuples',
     'string/': 'Strings',
     'lists/': 'Lists',
-    'dicts/': 'Dictionaries'
+    'dicts/': 'Dictionaries',
+    'PythonLoops/':'Loops'
 }
 context = {
     'urls' : urls
@@ -54,5 +55,8 @@ def string(request):
 
 def dicts(request):
     return render(request,'products/dictionaries.html', context)
+
+def PythonLoops(request):
+    return render(request,'products/PythonLoops.html', context)
 
 
