@@ -13,35 +13,306 @@
  <h2>Folder Structure of the project</h2>
 
   ```producthunt_pro/
-|-- accounts/
-|-- producthunt/
-|   |-- __init__.py
-|   |-- settings.py
-|   |-- urls.py
-|   |-- asgi.py
-|   `-- wsgi.py
-|-- manage.py
-|-- products/
-|   |-- __init__.py
-|   |-- admin.py
-|   |-- apps.py
-|   |-- migrations/
-|   |   `-- __init__.py
-|   |-- models.py
-|   |-- templates/products
-|   |   `-- Add your HTML files here.
-|   |-- tests.py
-|   `-- views.py
-|-- static/
-|   |-- css/
-|   |   `-- styles.css
-|   |-- js/
-|   |   `-- script.js
-|   `-- img/
-|       `-- logo.png
+|-- HacktoberFest2023_Resources/
+|   |-- 05_logo_set/
+|   |   |-- hf10_horizontal_logos/
+|   |   |   |-- cmyk/
+|   |   |   |   |-- .DS_Store
+|   |   |   |   |-- hf10_horz_fcd_cmyk.png
+|   |   |   |   |-- hf10_horz_fcl_cmyk.png
+|   |   |   |   |-- hf10_horz_scd_cmyk.png
+|   |   |   |   `-- hf10_horz_scl_cmyk.png 
+|   |   |   |-- rgb/
+|   |   |   |   |-- .DS_Store
+|   |   |   |   |-- hf10_horz_fcd_rgb.png
+|   |   |   |   |-- hf10_horz_fcl_rgb.png
+|   |   |   |   |-- hf10_horz_scd_rgb.png
+|   |   |   |   `-- hf10_horz_scl_rgb.png 
+|   |   |   `-- .DS_Store
+|   |   |-- hf10_logomark_icon/
+|   |   |   |-- cmyk/
+|   |   |   |   |-- .DS_Store
+|   |   |   |   |-- hf10_icon_fcd_cmyk.png
+|   |   |   |   |-- hf10_icon_fcl_cmyk.png
+|   |   |   |   |-- hf10_icon_scd_cmyk.png
+|   |   |   |   `-- hf10_icon_scl_cmyk.png 
+|   |   |   |-- rgb/
+|   |   |   |   |-- .DS_Store
+|   |   |   |   |-- hf10_icon_fcd_rgb.png
+|   |   |   |   |-- hf10_icon_fcl_rgb.png
+|   |   |   |   |-- hf10_icon_scd_rgb.png
+|   |   |   |   `-- hf10_icon_scl_rgb.png 
+|   |   |   `-- .DS_Store
+|   |   |-- hf10_vertical_logos/
+|   |   |   |-- cmyk/
+|   |   |   |   |-- .DS_Store
+|   |   |   |   |-- hf10_vert_fcd_cmyk.png
+|   |   |   |   |-- hf10_vert_fcl_cmyk.png
+|   |   |   |   |-- hf10_vert_scd_cmyk.png
+|   |   |   |   `-- hf10_vert_scl_cmyk.png 
+|   |   |   |-- rgb/
+|   |   |   |   |-- .DS_Store
+|   |   |   |   |-- hf10_vert_fcd_rgb.png
+|   |   |   |   |-- hf10_vert_fcl_rgb.png
+|   |   |   |   |-- hf10_vert_scd_rgb.png
+|   |   |   |   `-- hf10_vert_scl_rgb.png 
+|   |   |   `-- .DS_Store
+|   |   `-- .DS_Store
+|   |-- 06_banners/
+|   |   |-- hf10_banner/
+|   |   |   |-- .DS_Store
+|   |   |   |-- hf10_banner_1032x600.png
+|   |   |   `-- hf10_banner_sponsors_1032x600.png
+|   |   |-- hf10_email_assets/
+|   |   |   |-- .DS_Store
+|   |   |   |-- hf10_email_header_600x360px.jpg
+|   |   |   `-- hf10_email_header_600x360px.png
+|   |   |-- hf10_logo_wall/
+|   |   |   |-- .DS_Store
+|   |   |   |-- hf10_logo_wall_1920x1080.jpg
+|   |   |   `-- hf10_logo_wall_1920x1080.png
+|   |   `-- .DS_Store
+|   |-- .DS_Store
+|   `-- GitHub_Cheat_Sheet.pdf
+|-- producthunt_pro/
+|   |-- accounts/
+|   |   |-- migrations/
+|   |   |   `-- __init__.py
+|   |   |-- templates/
+|   |   |   `-- accounts/
+|   |   |       |--login.html
+|   |   |       `-- signup.html
+|   |   |-- __init__.py
+|   |   |-- admin.py
+|   |   |-- apps.py
+|   |   |-- models.py
+|   |   |-- tests.py
+|   |   |-- urls.py
+|   |   `-- views.py
+|   |-- code_editor/
+|   |   |-- migrations/
+|   |   |   `-- __init__.py
+|   |   |-- static/
+|   |   |   `-- code_editor/
+|   |   |       `-- script.js
+|   |   |-- templates/
+|   |   |   `-- code_editor/
+|   |   |       `-- editor.html
+|   |   |-- __init__.py
+|   |   |-- admin.py
+|   |   |-- apps.py
+|   |   |-- models.py
+|   |   |-- tests.py
+|   |   |-- urls.py
+|   |   `-- views.py
+|   |-- producthunt/
+|   |   |-- static/
+|   |   |   |-- Python_Keywords/
+|   |   |   |   |-- Keywords.css
+|   |   |   |   |-- doc.css
+|   |   |   |   |-- string.css
+|   |   |   |   `-- style.css
+|   |   |   |-- Django_Logo.png
+|   |   |   |-- Django_Logo2.png
+|   |   |   |-- IntegratedHTML_CSS.png
+|   |   |   |-- Plogo.png
+|   |   |   |-- coverpython.png
+|   |   |   |-- dictionary.png
+|   |   |   |-- function.jpg
+|   |   |   |-- keywords.jpg
+|   |   |   |-- plogo1.png
+|   |   |   |-- py3version.png
+|   |   |   |-- pylogo.jpg
+|   |   |   |-- python-flow-control-statements.webp
+|   |   |   |-- step1.jpg
+|   |   |   |-- step2.jpg
+|   |   |   |-- step3.jpg
+|   |   |   |-- step4.jpg
+|   |   |   |-- tuple.png
+|   |   |   `-- variables.jpg
+|   |   |-- templates/
+|   |   |   `-- base.html
+|   |   |-- __init__.py
+|   |   |-- asgi.py
+|   |   |-- settings.py
+|   |   |-- urls.py
+|   |   `-- wsgi.py
+|   |-- products/
+|   |   |-- migration/
+|   |   |   `-- __init__.py 
+|   |   |-- templates/
+|   |   |   `-- products/
+|   |   |       |-- Keywords.html
+|   |   |       |-- Pythin_Intro.html
+|   |   |       |-- comments.html
+|   |   |       |-- dictionaries.html
+|   |   |       |-- home.html
+|   |   |       |-- index.html
+|   |   |       |-- installation.html
+|   |   |       |-- lists.html
+|   |   |       |-- python_data_types.html
+|   |   |       |-- statements.html
+|   |   |       |-- strings.html
+|   |   |       `-- tupels.html
+|   |   |-- __init__.py
+|   |   |-- admin.py
+|   |   |-- apps.py
+|   |   |-- models.py
+|   |   |-- tests.py
+|   |   |-- urls.py
+|   |   `-- views.py
+|   |-- static/
+|   |   `-- admin/
+|   |       |-- css/
+|   |       |   |-- vendor/
+|   |       |   |   `-- select2/
+|   |       |   |       |-- LICENSE-SELECT2.md
+|   |       |   |       |-- select2.css
+|   |       |   |       `-- select2.min.css
+|   |       |   |-- autocomplete.css
+|   |       |   |-- base.css
+|   |       |   |-- changelists.css
+|   |       |   |-- dashboard.css
+|   |       |   |-- fonts.css
+|   |       |   |-- forms.css
+|   |       |   |-- login.css
+|   |       |   |-- nav_sidebar.css
+|   |       |   |-- responsive.css
+|   |       |   |-- responsive_rtl.css
+|   |       |   |-- rtl.css
+|   |       |   `-- widgets.css
+|   |       |-- fonts/
+|   |       |   |-- LICENSE.txt
+|   |       |   |-- README.txt
+|   |       |   |-- Roboto-Bold-webfont.woff
+|   |       |   |-- Roboto-Light-webfont.woff
+|   |       |   `-- Roboto-Regular-webfont.woff
+|   |       |-- img/
+|   |       |   |-- gis/
+|   |       |   |   |-- move_vertex_off.svg
+|   |       |   |   `-- move_vertex_on.svg
+|   |       |   |-- LICENSE
+|   |       |   |-- README.txt
+|   |       |   |-- calender-icons.svg
+|   |       |   |-- icon-addlink.svg
+|   |       |   |-- icon-alert.svg
+|   |       |   |-- icon-calender.svg
+|   |       |   |-- icon-changelink.svg
+|   |       |   |-- icon-clock.svg
+|   |       |   |-- icon-deletelink.svg
+|   |       |   |-- icon-no.svg
+|   |       |   |-- icon-unknown-alt.svg
+|   |       |   |-- icon-unknown.svg
+|   |       |   |-- icon-viewlink.svg
+|   |       |   |-- icon-yes.svg
+|   |       |   |-- inline-delete.svg
+|   |       |   |-- search.svg
+|   |       |   |-- selector-icons.svg
+|   |       |   |-- sorting-icons.svg
+|   |       |   |-- tooltag-add.svg
+|   |       |   `-- tooltag-arrowright.svg
+|   |       `-- js/
+|   |           |-- admin/
+|   |           |   |-- DateTimeShortcuts.js
+|   |           |   `-- RelatedObjectLookups.js
+|   |           |-- vendor/
+|   |           |   |-- jquery.js/
+|   |           |   |   |-- LICENSE.txt
+|   |           |   |   |-- jquery.js
+|   |           |   |   `-- jquery.min.js
+|   |           |   |-- select2.js/
+|   |           |   |   |-- i18n/
+|   |           |   |   |   |-- af.js
+|   |           |   |   |   |-- ar.js
+|   |           |   |   |   |-- az.js
+|   |           |   |   |   |-- bg.js
+|   |           |   |   |   |-- bn.js
+|   |           |   |   |   |-- bs.js
+|   |           |   |   |   |-- ca.js
+|   |           |   |   |   |-- cs.js
+|   |           |   |   |   |-- da.js
+|   |           |   |   |   |-- de.js
+|   |           |   |   |   |-- dsb.js
+|   |           |   |   |   |-- el.js
+|   |           |   |   |   |-- en.js
+|   |           |   |   |   |-- es.js
+|   |           |   |   |   |-- et.js
+|   |           |   |   |   |-- eu.js
+|   |           |   |   |   |-- fa.js
+|   |           |   |   |   |-- fi.js
+|   |           |   |   |   |-- fr.js
+|   |           |   |   |   |-- gl.js
+|   |           |   |   |   |-- he.js
+|   |           |   |   |   |-- hi.js
+|   |           |   |   |   |-- hr.js
+|   |           |   |   |   |-- hsb.js
+|   |           |   |   |   |-- hu.js
+|   |           |   |   |   |-- hy.js
+|   |           |   |   |   |-- id.js
+|   |           |   |   |   |-- is.js
+|   |           |   |   |   |-- it.js
+|   |           |   |   |   |-- ja.js
+|   |           |   |   |   |-- ka.js
+|   |           |   |   |   |-- km.js
+|   |           |   |   |   |-- ko.js
+|   |           |   |   |   |-- lt.js
+|   |           |   |   |   |-- lv.js
+|   |           |   |   |   |-- mk.js
+|   |           |   |   |   |-- ms.js
+|   |           |   |   |   |-- nb.js
+|   |           |   |   |   |-- ne.js
+|   |           |   |   |   |-- nl.js
+|   |           |   |   |   |-- pl.js
+|   |           |   |   |   |-- ps.js
+|   |           |   |   |   |-- pt-BR.js
+|   |           |   |   |   |-- pt.js
+|   |           |   |   |   |-- ro.js
+|   |           |   |   |   |-- ru.js
+|   |           |   |   |   |-- sk.js
+|   |           |   |   |   |-- sl.js
+|   |           |   |   |   |-- sq.js
+|   |           |   |   |   |-- sr-Ctrl.js
+|   |           |   |   |   |-- sr.js
+|   |           |   |   |   |-- sv.js
+|   |           |   |   |   |-- th.js
+|   |           |   |   |   |-- tk.js
+|   |           |   |   |   |-- tr.js
+|   |           |   |   |   |-- uk.js
+|   |           |   |   |   |-- vi.js
+|   |           |   |   |   |-- zh-CN.js
+|   |           |   |   |   `-- zh-TW.js
+|   |           |   |   |-- LICENSE.md
+|   |           |   |   |-- select2.full.js
+|   |           |   |   `-- select2.full.min.js
+|   |           |   `-- xregexp.js/
+|   |           |       |-- LICENSE.txt
+|   |           |       |-- xregexp.js
+|   |           |       `-- xregexp.min.js
+|   |           |-- SelectBox.js
+|   |           |-- SelectFilter2.js
+|   |           |-- actions.js
+|   |           |-- autocomplete.js
+|   |           |-- calendar.js
+|   |           |-- cancel.js
+|   |           |-- change_form.js
+|   |           |-- collapse.js
+|   |           |-- core.js
+|   |           |-- inlines.js
+|   |           |-- jquery.init.js
+|   |           |-- nav_sidebar.js
+|   |           |-- popup_response.js
+|   |           |-- prepopulate.js
+|   |           `-- urlify.js   
+|   |-- build_files.sh
+|   |-- db.sqlite3
+|   |-- manage.py
+|   |-- package-lock.json
+|   |-- requirements.txt
+|   `-- vercel.json 
 |-- .gitignore
-|-- requirements.txt
-|-- README.md
+|-- CONTRIBUTING.md
+`-- README.md
+
 ```
   <h2>Prerequisites</h2>
 
