@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+      <!-- INTRODUCTION SECTION-->
+
+      <div class="px-4 pt-5 text-center border-bottom">
+        <h1 class="display-4 fw-bold text-body-emphasis">What are Sets in Python ?</h1>
+        <br>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">A set is an unordered collection of unique elements. It is defined by placing a comma-separated sequence of elements inside curly braces {}.</p>
+          <p class="lead mb-4">Sets are similar to lists or dictionaries, but they cannot have duplicate elements. The order of elements in a set is undefined, and sets do not support indexing or slicing operations.</p>
+        </div>
+        <img src="/3_Open source/Python_Hunt/producthunt_pro/producthunt/static/sets.png" alt="" height ="100"  width="400">
+        </div>
+      </div>
+  
+    <!-- FEATURES OF DICTIONARIES  -->
+  
+    <div class="container px-4 py-5">
+      <h2 class="pb-2 border-bottom">Features Of Dictionaries </h2>
+  
+      <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+        <div class="col d-flex flex-column align-items-start gap-2">
+          <h2 class="fw-bold text-body-emphasis">Sets are one  of the most important data structures of python </h2>
+          <p class="text-body-secondary">The features are liste here ➡️.</p>
+        </div>
+  
+        <div class="col">
+          <div class="row row-cols-1 row-cols-sm-2 g-4">
+            <div class="col d-flex flex-column gap-2">
+              <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                <svg class="bi" width="1em" height="1em">
+                  <use xlink:href="#collection"></use>
+                </svg>
+              </div>
+              <h4 class="fw-semibold mb-0 text-body-emphasis"> 1️⃣ Mutability </h4>
+              <p class="text-body-secondary">Sets are mutable, meaning you can add and remove elements after the set is created.This eases the user to work with the sets.</p>
+            </div>
+  
+            <div class="col d-flex flex-column gap-2">
+              <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                <svg class="bi" width="1em" height="1em">
+                  <use xlink:href="#gear-fill"></use>
+                </svg>
+              </div>
+              <h4 class="fw-semibold mb-0 text-body-emphasis">2️⃣ Dynamic Size: </h4>
+              <p class="text-body-secondary">Sets can grow or shrink in size as elements are added or removed. There is no need to preallocate space for a set which avoid memory wastage.</p>
+            </div>
+  
+            <div class="col d-flex flex-column gap-2">
+              <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                <svg class="bi" width="1em" height="1em">
+                  <use xlink:href="#speedometer"></use>
+                </svg>
+              </div>
+              <h4 class="fw-semibold mb-0 text-body-emphasis">3️⃣ Comprehension </h4>
+              <p class="text-body-secondary">Similar to list comprehensions, set comprehensions allow concise creation of sets using a single line of code.</p>
+            </div>
+  
+            <div class="col d-flex flex-column gap-2">
+              <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+                <svg class="bi" width="1em" height="1em">
+                  <use xlink:href="#table"></use>
+                </svg>
+              </div>
+              <h4 class="fw-semibold mb-0 text-body-emphasis"> 4️⃣ Unique Elements </h4>
+              <p class="text-body-secondary">Sets cannot contain duplicate elements. If you try to add an element that is already in the set, it won't create a duplicate.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Operation Section -->
+  
+    <div class="container px-4 " id="icon-grid">
+      <h2 class="pb-2 border-bottom">Operations on Sets </h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#calendar3"></use></svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">1️⃣ Creating a Set:</h3>
+            <br>
+            <p>A set can be created using the following syntax :</p>
+            <p>my_set = {1, 2, 3}</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#cpu-fill"></use></svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">2️⃣ Adding Elements:</h3>
+            <br>
+            <p>A element can be be added to a set using the following syntax :</p>
+            <p>my_set.add(4)</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#calendar3"></use></svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">3️⃣ Removing Elements:</h3>
+            <br>
+            <p>A element can be be deleted from a set using the following syntax :</p>
+            <p>my_set.remove(2)</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#home"></use></svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">4️⃣ Checking Membership:</h3>
+            <br>
+            <p>A element in a set can be verifed using the following syntax :</p>
+            <p>print(3 in my_set)</p>
+          </div>
+        </div>
+      </div>
+      {% endblock %}
