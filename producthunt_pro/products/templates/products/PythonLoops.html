@@ -1,0 +1,225 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'Python_Keywords/Loops.css' %}">
+
+<div style="margin-left: 20px;">
+<div>
+    <h1>Loops In Python</h1>
+    <p>Python programming language provides the following types of loops to handle looping requirements.</p>
+</div>
+
+<div>
+    <h3>1. While Loop in Python</h3>
+<p>
+    In python, a while loop is used to execute a block of statements repeatedly until a given condition is satisfied. And when the condition becomes false, the line immediately after the loop in the program is executed.
+</p>
+<b>Syntax</b>
+</div>
+
+<div>
+    <pre>
+        <code>
+            while expression:
+                statement(s)
+            # Python uses indentation as its method of grouping statements. 
+        </code>
+    </pre>
+</div>
+
+<b>Example of Python While Loop </b>
+<div>
+    <pre>
+        <code>
+            a = 0
+            while (a < 3):
+                a = a + 1
+                print("Hi")
+            #<b>Output:</b> Hi 
+                     Hi
+                     Hi
+        </code>
+    </pre>
+</div>
+
+<b>While Loop with else Condition</b>
+<div>
+<pre>
+    <code>
+            a = 0
+            while (a < 3):
+                a = a + 1
+                print("Hi")
+            else:
+                print("In Else")
+            #<b>Output:</b> Hi 
+                     Hi
+                     Hi
+                     In Else
+    </code>
+</pre>
+</div>
+
+<b>Infinite While Loop in Python</b>
+<div>
+<pre>
+    <code>
+        count = 0
+        while (count == 0):
+            print("Hello Geek")
+        #It is not Recommended to use Infinite Loop as you may need to forcefully terminate the compiler
+    </code>
+</pre>
+</div>
+
+
+<div>
+    <h3>2. For Loop in Python</h3>
+    <p>In Python, a for loop is used to iterate over a sequence, which can be a list, tuple, string, dictionary, or any other iterable object. The for loop allows you to perform a set of operations on each item in the sequence.</p>
+</div>
+
+<div>
+    <b>Syntax</b>
+    <pre>
+        <code>
+            for var in sequence:
+                statements(s)
+        </code>
+    </pre>
+</div>
+
+<div>
+    <p>Here are some examples of using for loops in Python:</p>
+    
+    <b>1. Looping through a List:</b>
+    <pre>
+        <code>
+            fruits = ["apple", "banana", "cherry"]
+            for fruit in fruits:
+                print(fruit)
+            
+            # <b>Output:</b>apple
+                     banana
+                     cherry
+        </code>
+    </pre>
+    <b>2. Looping through a String:</b>
+    <pre>
+        <code>
+            text = "Hello"
+            for char in text:
+                print(char)
+            # <b>Output:</b>H
+                     e
+                     l
+                     l
+                     o
+                
+        </code>
+    </pre>
+    <b>3.  Looping through a Range:</b>
+    <pre>
+        <code>
+            # You can also use the range() function to create a sequence of numbers and loop through it.
+            for i in range(5):  # Loops from 0 to 4
+                print(i)
+            # <b>Output:</b>0
+                     1
+                     2
+                     3
+                     4
+
+        </code>
+    </pre>
+    <b>4. Looping through a Dictionary:</b>
+    <pre>
+        <code>
+            # When iterating through a dictionary, you can access both keys and values using the .items() method.
+            person = {"name": "John", "age": 30, "city": "New York"}
+            for key, value in person.items():
+                print(f"{key}: {value}")
+            # <b>Output:</b>name:John
+                     age:30
+                     city:New York
+        </code>
+    </pre>
+    <b>5. Nested for Loops:</b>
+    <pre>
+        <code>
+            # You can nest for loops to loop through multiple sequences, creating a loop within a loop.
+            for i in range(2):
+                for j in range(2):
+                    print(f"({i}, {j})")
+            # <b>Output:</b>(0,0)
+                     (0,1)
+                     (1,0)
+                     (1,1)
+        </code>
+    </pre>
+    
+</div>
+
+<div>
+    <h3>Loop Control Statements</h3>
+    <p>In Python, loop control statements allow you to control the flow of loops (e.g., for and while loops). There are three main loop control statements:</p>
+    
+        
+            <b>1. break Statement</b>
+            <p>The break statement is used to exit a loop prematurely. When a break statement is encountered within a loop, it immediately terminates the loop, and control is passed to the code following the loop. This is useful when you want to exit a loop based on a certain condition.</p>
+            <b>Example</b>
+            <pre>
+                <code>
+                    for number in range(1, 11):
+                        if number == 5:
+                            break  # Exit the loop when number is 5
+                        print(number)
+                    # <b>Output:</b>1
+                             2
+                             3
+                             4
+                </code>
+            </pre>
+
+        
+        
+            <b>2. continue Statement:</b>
+            <p>The continue statement is used to skip the current iteration of a loop and move on to the next iteration. It is often used when you want to avoid executing some code in a particular iteration but continue with the loop.</p>
+            <b>Example</b>
+            <pre>
+                <code>
+                    for number in range(1, 6):
+                        if number == 3:
+                            continue  # Skip number 3
+                        print(number)
+                    # <b>Output:</b>1
+                             2
+                             4
+                             5
+                </code>
+            </pre>
+
+        
+       
+            <b>3. pass Statement:</b>
+            <p>The pass statement is a placeholder statement that does nothing. It is often used when a statement is syntactically required but you don't want to execute any code. It is commonly used when you are designing a function or class and want to add the implementation later.</p>
+            <b>Example</b>
+            <pre>
+                <code>
+                    for letter in 'geeksforgeeks':
+                        pass
+                    print('Last Letter :', letter)
+
+                    # <b>Output: </b>s
+                </code>
+            </pre>
+
+    
+</div>
+</div>
+
+
+
+
+
+{% endblock %}

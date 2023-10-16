@@ -15,4 +15,5 @@ urlpatterns = [
     path('string/',views.string,name='string'),
     path('lists/', views.lists, name='lists'),
     path('dicts/', views.dicts, name='dicts'),
+    path('PythonLoops/',views.PythonLoops,name='PythonLoops'),
 ]
