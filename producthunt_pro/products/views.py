@@ -7,6 +7,7 @@ urls = {
     'installpy/': 'Install Python',
     'aboutpython/': 'About Python',
     'keywords/': 'Keywords',
+    'variables/': 'Variables',
     'datatypes/': 'Data Types',
     'sets/': 'Sets',
     'statements/': 'Statements',
@@ -52,7 +53,9 @@ def lists(request):
 def string(request):
     return render(request,'products/string.html', context)
 
+def variables(request):
+    return render(request,'products/variables.html', context)
+
 def dicts(request):
     return render(request,'products/dictionaries.html', context)
-
 
