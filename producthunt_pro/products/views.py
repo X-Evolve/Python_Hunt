@@ -43,7 +43,7 @@ def statements(request):
     return render(request, 'products/statements.html', context)
   
 def sets(request):
-    return render(request, 'products/index.html', context)
+    return render(request, 'products/sets.html', context)
 
 def tuples(request):
     return render(request, 'products/tuples.html', context)
