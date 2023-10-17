@@ -1,132 +1,89 @@
-{% extends 'base.html' %}
-
-{% block content %}
-{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Python Variables</title>
-    <style>
-        .variables {
-            font-family: 'Arial', sans-serif;
-            background-color: #f5f5f5;
-            margin: 0 20%;
-            padding: 0;
-            width: 60%;
-            
-        }
-
-        .header-v {
-            background-color: #0074D9;
-            color: #fff;
-            text-align: center;
-            padding: 40px 0;
-        }
-
-        .container1 {
-            background-color: #fff;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .content-eg, .content {
-            margin-bottom: 20px;
-        }
-        .content-eg{
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-        }
-        .content-eg > div{
-            padding: 1%;
-        }
-
-        .var-title {
-            font-size: 24px;
-        }
-
-        .var-p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .var-img {
-            max-width: 100%;
-            border: 1px solid #d1d1d1;
-            border-radius: 10px;
-            text-align: center;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"rel="stylesheet" 
+  integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">  
 </head>
+<body>
+    <!-- INTRODUCTION SECTION-->
 
-<div class="variables">
-    
-    <div class="header-v">
-        <h1 class="var-title">Python Variables</h1>
-    </div>
-    <div class="container1">
-        <div class="content">
-            <h2 class="var-title">Introduction</h2>
-            <p class=".var-p">
-                Python variables are essential components in Python programming. They serve as containers for data, allowing you to store various types of information in your programs. Python's dynamic typing system automatically determines the data type based on the value you assign to the variable, providing flexibility and ease of use.
-            </p>
+    <div class="px-4 pt-5 text-center border-bottom">
+        <h1 class="display-4 fw-bold text-body-emphasis">What are Variables in Python ?</h1>
+        <br>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">Python variables are essential components in Python programming. They serve as containers for data, allowing you to store various types of information in your programs. </p>
+          <p class="lead mb-4">Python's dynamic typing system automatically determines the data type based on the value you assign to the variable, providing flexibility and ease of use.</p>
         </div>
-        <div class="content">
-            <h2 class="var-title">Type Casting</h2>
-            <p class=".var-p">
+        <img src="/3_Open source/Python_Hunt/producthunt_pro/producthunt/static/variables_main.jpg" alt="dictionary" height ="300"  width="600" >
+        </div>
+      </div>
+<div class = "container">
+    <!-- TYPE CASTING -->
+  
+    <div class="my-5">
+        <div class="p-5 text-center bg-body-tertiary">
+          <div class="container py-5">
+            <h1 class="text-body-emphasis">Type Cating </h1>
+            <p class="col-lg-8 mx-auto lead">
                 Type casting, also known as data type conversion, is the process of changing the data type of a variable. Python provides functions to facilitate type casting. Let's look at an example where we convert an integer into a string using the <code>str()</code> function.
             </p>
-            <pre>
-                <code>
-num = 42
+            <p>
+                num = 42
 num_str = str(num)
-                </code>
-            </pre>
+            </p>
+          </div>
         </div>
-        <div class="content">
-            <h2 class="var-title">Case Sensitivity</h2>
-            <p class=".var-p">
+      </div>
+
+
+    <!-- CASE SENSITIVITY-->
+
+    <div class="my-5">
+        <div class="p-5 text-center bg-body-tertiary">
+          <div class="container">
+            <h1 class="text-body-emphasis">Case Sensitivity </h1>
+            <p class="col-lg-8 mx-auto lead">
                 Python is case-sensitive, meaning it distinguishes between lowercase and uppercase letters in variable names. This sensitivity results in different variables when capitalization varies. For instance, <code>my_var</code> and <code>my_Var</code> are considered as two separate variables.
             </p>
+          </div>
         </div>
-        <div class="content-eg">
-            <div class="content">
-                <h2>Example Code</h2>
-                <p class=".var-p">
-                    Let's explore Python variables with some example code:
-                </p>
-                <pre>
-                    <code>
-    name = "John"
-    age = 30
-    is_student = False
-    
-    print("Name:", name)
-    print("Age:", age)
-    print("Is Student:", is_student)
-    
-    # Type Casting: Changing an Integer to a String
-    num = 42
-    num_str = str(num)
-    
-    # Case-Sensitive Variable Names
-    my_var = "Hello"
-    my_Var = "World"
-    
-    print(my_var)  # Outputs: "Hello"
-    print(my_Var)  # Outputs: "World"
-                    </code>
-                </pre>
-            </div>
-            <div class="content">
-                <img class="var-img" src="https://th.bing.com/th/id/OIP.2LpNFMnp-mMN1alw_653igHaEK?pid=ImgDet&rs=1" alt="Python Variables in Action">
-            </div>
-        </div>
-    </div>
+      </div>
 </div>
+<!---->
 
-{% endblock %}
+<div class="container col-xxl-8 px-4 ">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="https://th.bing.com/th/id/OIP.2LpNFMnp-mMN1alw_653igHaEK?pid=ImgDet&rs=1" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Example code </h1>
+        <p class="lead">Let's explore Python variables with some example code:</p>
+
+    <h6>name = "John"</h6>
+    <h6>age = 30</h6>
+    <h6>is_student = False</h6>
+    
+    <h6>print("Name:", name)</h6>
+    <h6>print("Age:", age)</h6>
+    <h6>print("Is Student:", is_student)</h6>
+    
+    <h6># Type Casting: Changing an Integer to a String</h6>
+    <h6>num = 42</h6>
+    <h6>num_str = str(num)</h6>
+    
+    <h6># Case-Sensitive Variable Names</h6>
+    <h6>my_var = "Hello"</h6>
+    <h6>my_Var = "World"</h6>
+    
+    <h6>print(my_var)  # Outputs: "Hello"</h6>
+    <h6>print(my_Var)  # Outputs: "World"</h6>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
