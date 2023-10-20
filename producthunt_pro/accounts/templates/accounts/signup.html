@@ -8,9 +8,13 @@
   </div>
 
   <div class="auth-form">
-    {% if error %}
+    {% if errors %}
     <div class="alert alert-danger d-flex align-items-center" role="alert">
-       <div>{{error}}</div> 
+      <ul style="margin: 0;">
+          {% for error_message in errors %}
+            <li>{{ error_message }}</li>
+          {% endfor %}
+      </ul> 
     </div>
     {% endif %}
     
