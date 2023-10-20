@@ -1,0 +1,987 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'Python_Keywords/Loops.css' %}">
+<div style="margin-left: 20px;">
+<div>
+<h1>File Handling</h1>
+<p>File handling in Python is accomplished through built-in functions and libraries. Python provides a straightforward and powerful way to work with files</p>
+</div>
+
+<div>
+<h3>Opening and Closing of File</h3>
+<p>To open a file in Python, you can use the built-in open() function. It takes two arguments: the file's path and the mode in which the file should be opened. The basic modes include:</p>
+<ul>
+    <li> <b>"r"</b>:Read (default mode).</li>
+    <li> <b>"w"</b>:Write (creates a new file or overwrites an existing file).</li>
+    <li> <b>"a"</b>:Append (writes to the end of an existing file).</li>
+    <li> <b>"b</b>:Binary mode.</li>
+    <li> <b>"t</b>:Text mode (default).</li>
+</ul>
+
+<p>Example of opening a file for reading:</p>
+<div>
+    <pre>
+        <code>
+            file = open("example.txt", "r")
+            # perform the operation
+            # After you're done with the file, it's crucial to close it using the close() method:
+            file.close()
+        </code>
+    </pre>
+</div>
+</div>
+
+<div>
+    <h3>Reading from Files</h3>
+    <p>You can read the content of a file using methods like read(), readline(), or readlines().</p>
+    <p>Example of reading the entire file:</p>
+    <div>
+        <ul>
+            <li>
+                <b>Using read() function:</b>
+                <pre>
+                    <code>
+                        with open("example.txt", "r") as file:
+                            content = file.read()
+                            print(content)
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <b>Using readline() function:</b>
+                <p>The readline() method reads and returns one line from the file each time it's called. You can use a loop to read lines one by one until the end of the file is reached.</p>
+                <pre>
+                    <code>
+                        with open("example.txt", "r") as file:
+                            line = file.readline()
+                            while line:
+                                print(line, end='')  # Use end='' to avoid extra newlines
+                                line = file.readline()
+                        #In this example, readline() is used to read and print lines from the file "example.txt" until there are no more lines to read.
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <b>Using readlines() function:</b>
+                <p>The readlines() method reads all the lines from a file and returns them as a list of strings, with each string representing a line of text.</p>
+                <pre>
+                    <code>
+                        with open("example.txt", "r") as file:
+                            lines = file.readlines()
+                            for line in lines:
+                                print(line, end='')
+                    </code>
+                </pre>
+            </li>
+        </ul>
+       
+    </div>
+</div>
+
+<div>
+    <h3>Writing to files</h3>
+    <p>To write to a file, open it in write or append mode</p>
+    <ul>
+        <li>
+            <b>Using write() function:</b>
+            <p>The write() method is used to write a single string to a file. You can open the file in write mode ("w") or append mode ("a") and then use write() to add content to the file.</p>
+            <pre>
+                <code>
+                    with open("example.txt", "w") as file:
+                        file.write("This is a line of text.\n")
+                        file.write("This is another line of text.\n")
+                </code>
+            </pre>
+        </li>
+        <li>
+            <b>Using writelines():</b>
+            <p>The writelines() method is used to write a list of strings to a file. Each string in the list represents a line of text.</p>
+            <pre>
+                <code>
+                    lines_to_write = ["Line 1\n", "Line 2\n", "Line 3\n"]
+                    with open("example.txt", "w") as file:
+                        file.writelines(lines_to_write)
+                </code>
+            </pre>
+        </li>
+    </ul>
+</div>
+
+<div>
+    <h3>Appending to file</h3>
+    <p>If you want to append data to an existing file, you should open the file in append mode ("a") and use the write() method or writelines() method</p>
+    <p>Example:</p>
+    <div>
+        <pre>
+            <code>
+                with open("example.txt", "a") as file:
+                    file.write("This is additional content.\n")
+                # In this example, we open the file "example.txt" in append mode and use the write() method to add new content to the end of the file.
+            </code>
+        </pre>
+    </div>
+</div>
+
+<div>
+    <h3>File Modes</h3>
+    <p>File modes in Python determine the purpose and permissions of opening a file</p>
+    <p>Common File Modes:</p>
+    <ol type="1">
+        <li>
+            <b>"r": Read (default mode)</b>
+            <ul>
+                <li>Opens the file for reading</li>
+                <li>Raises an error if the file doesn't exist.</li>
+                <li>
+                    <b>Example:</b>
+                    <pre>
+                        <code>
+                            with open("example.txt", "r") as file:
+                                content = file.read()
+                        </code>
+                    </pre>
+                </li>
+            </ul>
+        </li>
+        <li><b>"w": Write</b>
+            <ul>
+                <li>Opens the file for writing.</li>
+                <li>Creates a new file if it doesn't exist.</li>
+                <li>Overwrites the file if it already exists.</li>
+                <li><b>Example:</b>
+                <pre>
+                    <code>
+                        with open("output.txt", "w") as file:
+                            file.write("This is a new file.")
+                    </code>
+                </pre></li>
+            </ul></li>
+        <li>
+            <b>"a": append</b>
+            <ul>
+                <li>Opens the file for writing, but does not overwrite existing content.</li>
+                <li>Creates a new file if it doesn't exist.</li>
+                <li>Appends data to the end of the file.</li>
+                <li><b>Example:</b>
+                <pre>
+                    <code>
+                        with open("existing.txt", "a") as file:
+                            file.write("This content will be appended")
+                    </code>
+                </pre></li>
+            </ul></li>
+        </li>
+        <li>
+            <b>"b": Binary</b>
+            <ul>
+                <li>Used in combination with other modes to open a file in binary mode. For example, "rb" for reading a binary file.</li>
+                <li>Binary mode is typically used when working with binary files, such as images, audio, or other non-text files. In binary mode, data is read and written as raw bytes.</li>
+                <li><b>Example:</b>
+                    <pre>
+                        <code>
+                            # Reading a Binary File:
+                            with open("image.jpg", "rb") as file:
+                                binary_data=file.read()
+                            
+                            # Writing to a Binary File
+                            binary_data = b'\x48\x45\x4C\x4C\x4F'  # Binary data (e.g., "HELLO" in ASCII)
+                                with open("binary_data.bin", "wb") as file:
+                                    file.write(binary_data)
+
+                            # Binary data to append (in this case, some bytes representing binary data)
+                            binary_data_to_append = b'\x01\x02\x03\x04\x05'   
+                            # Open the binary file in append mode ("ab")
+                            with open("binary_data.bin", "ab") as file:
+                                # Append the binary data to the end of the file
+                                file.write(binary_data_to_append)
+                                    
+                            print("Binary data appended successfully.")
+                        </code>
+                    </pre></li>
+                
+            </ul></li>
+        </li>
+        <li>
+            <b>"x": Exclusive creation</b>
+            <ul>
+                <li>Opens a file for exclusive creation, meaning it will fail if the file already exists.</li>
+                <li><b>Example:</b>
+                <pre>
+                    <code>
+                        try:
+                            with open("new_file.txt", "x") as file:
+                                file.write("This is a new file.")
+                        except FileExistsError: 
+                            print("The file already exists.")
+                    </code>
+                </pre></li>    
+            </ul></li>
+        </li>
+    </ol>
+</div>
+
+<div>
+    <h3>File Attribute:</h3>
+    <p>
+        When you open a file in Python using the open() function, the file object has several attributes, including the name and mode attributes. Here's how you can access and use these attributes:
+    </p>
+   <ol type="1">
+    <li><b>name attribute:</b> This attribute contains the name of file,including the path, that you have opened</li>
+    <li><b>mode attribute:</b>This attribute contains the mode in which the file was opened, indicating whether the file is opened for reading, writing, appending, etc.</li>
+    <li><b>Example:</b>
+        <pre>
+            <code>
+                # Open a file in read mode
+                with open("example.txt", "r") as file:
+                    # Access and print the 'name' and 'mode' attributes
+                    print("File Name:", file.name)
+                    print("File Mode:", file.mode)
+
+                    # Perform file operations
+                    content = file.read()
+
+                # The file is automatically closed when exiting the 'with' block
+
+                # Print the name and mode outside of the 'with' block
+                print("Outside 'with' block:")
+                print("File Name:", file.name)  # Name remains the same
+                print("File Mode:", file.mode)  # Mode remains the same
+            </code>
+        </pre>
+    </li>
+   </ol>
+   
+
+</div>
+
+<div>
+    <h3>Navigating Within Files</h3>
+    <p>In Python, you can use the seek() and tell() methods to navigate within a file. seek() is used to move the file pointer to a specific position within the file, and tell() is used to retrieve the current file pointer position. Here's how you can use these methods:</p>
+    <b>Using seek() and tell() functions:</b>
+    <div>
+        <pre>
+            <code>
+                # Open a file in read mode
+                with open("example.txt", "r") as file:
+                    content = file.read()
+                    print("Initial content:")
+                    print(content)
+
+                    # Use the 'tell()' method to get the current position of the file pointer
+                    position = file.tell()
+                    print("Current position:", position)
+
+                    # Move the file pointer to a specific position using 'seek()'
+                    file.seek(10)  # Move to the 10th byte (position is 0-based)
+
+                    # Read from the new position
+                    updated_content = file.read()
+                    print("Updated content:")
+                    print(updated_content)
+
+                    # Get the new position using 'tell()'
+                    new_position = file.tell()
+                    print("New position:", new_position)
+            </code>
+        </pre>
+    </div>
+    <div>
+        <p>In this example:</p>
+        <ol type="1">
+            <li>We initially read the entire content of the file and print it.</li>
+            <li>We use the tell() method to get the current position of the file pointer, which is initially at the end of the file.</li>
+            <li>We then use the seek() method to move the file pointer to the 10th byte (position is 0-based).</li>
+            <li>Finally, we use tell() again to get the new position of the file pointer.</li>
+
+        </ol>
+    </div>
+</div>
+
+<div>
+    <h3>Error Handling with Files</h3>
+    <p>Error handling when working with files in Python is important to ensure that your program gracefully handles exceptions that might occur when performing file operations. Some common exceptions you might encounter when working with files include:</p>
+    <ol type="1">
+        <li><b>FileNotFoundError:</b>Raised when attempting to open or manipulate a file that doesn't exist.</li>
+        <li><b>PermissionError:</b>Raised when the program doesn't have the necessary permissions to access the file.</li>
+        <li><b>IOError:</b>A generic exception for I/O-related errors.</li>
+        <li><b>OSError:</b>A generic exception for operating system-related errors.</li>
+        <li><b>Example:</b>
+            <div>
+                <pre>
+                    <code>
+                        try:
+                            with open("example.txt", "r") as file:
+                                content = file.read()
+                            print("File content:", content)
+                        except FileNotFoundError:
+                            print("The file does not exist.")
+                        except PermissionError:
+                            print("You don't have permission to access the file.")
+                        except IOError as e:
+                            print(f"An I/O error occurred: {e}")
+                        except OSError as e:
+                            print(f"An operating system error occurred: {e}")
+                        except Exception as e:
+                            print(f"An unexpected error occurred: {e}")
+                        else:
+                            print("File was read successfully.")
+                        finally:
+                            print("File handling complete.")
+                    </code>
+                </pre>
+            </div>
+        </li>
+    </ol>
+</div>
+
+<div>
+    <h3>Using With Statement:</h3>
+    <p>Automatic file closing is achieved in Python using the with statement (context manager). When you open a file using the with statement, the file is automatically closed when the block of code is exited. This ensures that you don't have to explicitly call file.close() to close the file, and it helps prevent resource leaks and potential issues associated with forgetting to close a file.</p>
+    <div>
+        <pre>
+            <code>
+                # Open a file using 'with' for automatic closing
+                with open("example.txt", "r") as file:
+                    content = file.read()
+                    print("File content:", content)
+
+                # The file is automatically closed when exiting the 'with' block
+                # You don't need to explicitly call 'file.close()'
+                #In the code above, the file "example.txt" is opened for reading within the with block, and when the block is exited, the file is automatically closed.
+
+                Using the with statement is considered best practice when working with files in Python because it ensures proper file closure and helps maintain code readability and cleanliness.
+            </code>
+        </pre>
+    </div>
+</div>
+
+<div>
+    <h3>Working with Text and Binary Files</h3>
+    <p>Working with text and binary files in Python involves using different modes and methods to read from and write to these types of files. Text files are human-readable files, often composed of text characters, while binary files contain raw data and are not human-readable. Here's how to work with both types of files:</p>
+    <b>Working with Text Files:</b>
+    <ol type="1">
+        <li><b>Opening Text File:</b>
+            To open a text file for reading, you can use "r" mode. To open a text file for writing, you can use "w" mode. For appending to an existing text file, use "a" mode.
+            <div>
+                <pre>
+                    <code>
+                        # Reading from a text file
+                        with open("textfile.txt", "r") as file:
+                            content = file.read()
+                        
+                        # Writing to a text file
+                        with open("output.txt", "w") as file:
+                            file.write("This is a new text file.")   
+                    </code>
+                </pre>
+            </div>
+           
+        </li>
+        <li><b>Reading Text Lines: </b>
+            <div>
+                You can read text lines one at a time or as a list of lines using methods like readline() and readlines():
+            </div>
+            <div>
+                <pre>
+                    <code>
+                        with open("textfile.txt", "r") as file:
+                        line = file.readline()  # Read one line at a time
+                        lines = file.readlines()  # Read all lines into a list
+                    </code>
+                </pre>
+                
+            </div>
+       
+        </li>
+    </ol>
+    <b>Working with Binary Files:</b>
+    <ol type="1">
+        <li><b>Opening Binary Files:</b>
+            <div>
+To open a binary file for reading, use "rb" mode. For writing to a binary file, use "wb" mode. For appending to an existing binary file, use "ab" mode.
+            </div>
+            <div>
+                <pre>
+                    <code>
+                        # Reading from a binary file
+                        with open("binaryfile.bin", "rb") as file:
+                            binary_data = file.read()
+                        
+                        # Writing to a binary file
+                        binary_data = b'\x01\x02\x03'  # Binary data
+                        with open("output.bin", "wb") as file:
+                            file.write(binary_data)
+                    </code>
+                </pre>
+                               
+            </div>
+        </li>
+        <li><b>Writing to Binary File:</b>
+            <div>To write data to a binary file in Python, you need to open the file in binary write mode ("wb") and then use methods like write() to write the binary data</div>
+            <div>
+                <pre>
+                    <code>
+                        # Binary data to write (as bytes)
+                        binary_data = b'\x01\x02\x03\x04\x05'
+                        
+                        # Open a binary file for writing
+                        with open("output_binary.bin", "wb") as file:
+                            # Write the binary data to the file
+                            file.write(binary_data)
+                        
+                        print("Binary data written to the file.")
+                    </code>
+                </pre>
+            </div>
+        </li>
+    </ol>
+</div>
+
+<div>
+    <h3>Working with CSV Files</h3>
+    <p>CSV (Comma-Separated Values) files are a common way to store tabular data. Python provides the csv module to work with CSV files.</p>
+    <ol type="1">
+        <li><b>Reading a CSV File:</b>
+            <pre>
+                <code>
+                    import csv
+
+                    # Reading a CSV file
+                    with open("data.csv", "r") as file:
+                        csv_reader = csv.reader(file)
+                        for row in csv_reader:
+                            print(row)
+                    # Assuming the CSV file "data.csv" contains:
+                    Name, Age
+                    Alice, 25
+                    Bob, 30
+                    Charlie, 22                    
+
+                </code>
+            </pre>
+        </li>
+        <li><b>Writing to a CSV File:</b>
+            <pre>
+                <code>
+                    data = [
+                    ["Name", "Age"],
+                    ["Alice", 25],
+                    ["Bob", 30],
+                    ["Charlie", 22]
+                ]
+                
+                # Writing data to a CSV file
+                with open("output.csv", "w", newline="") as file:
+                    csv_writer = csv.writer(file)
+                    csv_writer.writerows(data)     
+                # This code creates a CSV file called "output.csv" and writes the provided data to it.               
+                </code>
+            </pre>
+        </li>
+    </ol>
+</div>
+
+<div>
+    <h3>Working with JSON File:</h3>
+    <p>JSON (JavaScript Object Notation) is a lightweight data interchange format. Python includes the json module to work with JSON data.</p>
+    <ol type="1">
+        <li><b>Reading a JSON Files:</b>
+            <div>
+                Assuming you have a JSON File named "data.json" containing:
+                <pre>
+                    <code>
+                        {
+                            "Name": "Alice",
+                            "Age": 25
+                        }
+                        # You can read and load the JSON data like this:
+                        import json
+
+                        # Reading a JSON file
+                        with open("data.json", "r") as file:
+                            data = json.load(file)
+                            print(data)
+                            
+                        # This code reads and prints the content of JSON File.
+
+                    </code>
+                </pre>
+            </div>
+        </li>
+        <li><b>Writing to a JSON File:</b>
+            <div>
+                <pre>
+                    <code>
+                        import json
+
+                        data = {
+                            "Name": "Bob",
+                            "Age": 30
+                        }
+                        
+                        # Writing data to a JSON file
+                        with open("output.json", "w") as file:
+                            json.dump(data, file)    
+                        #  This code creates a JSON file named "output.json" and writes the provided data to it.                   
+                    </code>
+                </pre>
+            </div>
+        </li>
+    </ol>
+</div>
+
+<div>
+    <h3>Working with Excel Files:</h3>
+    <p>In Python there are different libraries which are used to work with excel files like openpyxl,pandas,xlrd, xlwt</p>
+    <ol type="1">
+        <li> <p>Python's <b>openpyxl</b> library is commonly used to work with Excel files in the XLSX format. You may need to install it first using pip (pip install openpyxl).</p>
+        <div>
+            <ol type="1">
+                <li><b>Reading an Excel File:</b>
+                    <div>
+                        <pre>
+                            <code>
+                                import openpyxl
+        
+                                # Open an Excel file
+                                workbook = openpyxl.load_workbook("example.xlsx")
+                                
+                                # Select a specific sheet
+                                sheet = workbook["Sheet1"]
+                                
+                                # Access cell values
+                                cell_value = sheet["A1"].value
+                                print(cell_value)    
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+                <li><b>Writing to Excel File:</b>
+                    <div>
+                        <pre>
+                            <code>
+                                import openpyxl
+        
+                                # Create a new Excel workbook and add a sheet
+                                workbook = openpyxl.Workbook()
+                                sheet = workbook.active
+                                
+                                # Write data to cells
+                                sheet["A1"] = "Name"
+                                sheet["B1"] = "Age"
+                                sheet["A2"] = "Alice"
+                                sheet["B2"] = 25
+                                
+                                # Save the workbook to a file
+                                workbook.save("output.xlsx")
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+            </ol>
+        </div>
+       </li>
+       <li>
+        <p><b>Using Pandas library</b></p>
+        <div>
+            <ol type="1">
+                <li><b>Reading Excel File:</b>
+                <div>
+                    <pre>
+                        <code>
+                            import pandas as pd
+
+                            # Reading an Excel file in XLSX format
+                            df = pd.read_excel("example.xlsx")
+                            
+                            # Access and print the DataFrame
+                            print(df)
+                        </code>
+                    </pre>
+                    
+                    
+                </div></li>
+                <li><b>Writing to an Excel File:</b>
+                <div>
+                    <pre>
+                        <code>
+                            import pandas as pd
+
+                            # Create a DataFrame
+                            data = {
+                                "Name": ["Alice", "Bob", "Charlie"],
+                                "Age": [25, 30, 22]
+                            }
+                            
+                            df = pd.DataFrame(data)
+                            
+                            # Write the DataFrame to an Excel file in XLSX format
+                            df.to_excel("output.xlsx", index=False)
+                        </code>
+                    </pre>
+                </div></li>
+            </ol>
+        </div>
+       </li>
+       <li>
+        <p><b>Using xlrd and xlwt Library</b></p>
+        <div>
+            <ol type="1">
+                <li>
+                    <b>Reading an Excel File using xlrd:</b>
+                    <div>
+                        <pre>
+                            <code>
+                                import xlrd
+
+                                # Open an XLS file
+                                workbook = xlrd.open_workbook("example.xls")
+                                
+                                # Select a specific sheet
+                                sheet = workbook.sheet_by_index(0)
+                                
+                                # Access cell values
+                                cell_value = sheet.cell_value(0, 0)
+                                print(cell_value)
+                            </code>
+                        </pre>
+                    </div>
+                </li>
+                <li><b>Writing to an Excel File using xlwt:</b>
+                <div>
+                    <pre>
+                        <code>
+                            import xlwt
+
+                            # Create a new XLS workbook and add a sheet
+                            workbook = xlwt.Workbook()
+                            sheet = workbook.add_sheet("Sheet1")
+                            
+                            # Write data to cells
+                            sheet.write(0, 0, "Name")
+                            sheet.write(0, 1, "Age")
+                            sheet.write(1, 0, "Alice")
+                            sheet.write(1, 1, 25)
+                            
+                            # Save the workbook to a fi
+                        </code>
+                    </pre>
+                </div></li>
+            </ol>
+        </div>
+       </li>
+    </ol>
+   
+   
+</div>
+
+<div>
+    <h3>Working with XML File</h3>
+    <p>Python's built-in xml library allows you to work with XML files.</p>
+    <ol type="1">
+        <li><b>Reading an XML File:</b>
+            <p>Suppose you have an XML file named "data.xml" with the following content</p>
+        <div>
+            <pre>
+                <code>
+                    &lt;root&gt;
+                        &lt;person&gt; 
+                            &lt;name&gt; XYZ &lt;/name&gt;
+                            &lt;age&gt;  18 &lt;/age&gt;
+                        &lt;/person&gt;
+                    &lt;/root&gt;  
+    
+                    # You can read and parse it like this:
+                    import xml.etree.ElementTree as ET
+
+                    # Parse an XML file
+                    tree = ET.parse("data.xml")
+                    root = tree.getroot()
+                    
+                    # Access XML elements
+                    name = root.find("person/name").text
+                    age = root.find("person/age").text
+                    
+                    print("Name:", name)
+                    print("Age:", age)
+                </code>
+            </pre>
+            
+        </div></li>
+        <li>
+            <b>Writing to XML File:</b>
+            <div>
+                <pre>
+                    <code>
+                        import xml.etree.ElementTree as ET
+
+                        # Create an XML structure
+                        root = ET.Element("root")
+                        person = ET.SubElement(root, "person")
+                        name = ET.SubElement(person, "name")
+                        name.text = "Bob"
+                        age = ET.SubElement(person, "age")
+                        age.text = "30"
+                        
+                        # Create an ElementTree
+                        tree = ET.ElementTree(root)
+                        
+                        # Save the XML to a file
+                        tree.write("output.xml")
+                    </code>
+                </pre>
+                
+            </div>
+        </li>
+    </ol>
+</div>
+
+<div>
+    <h3>Managing Directories</h3>
+    <p>The os module in Python provides functions for working with directories and file paths, allowing you to manage directories, create, remove, and list files and directories, and navigate the file system. Here are some common operations for managing directories using the os module:</p>
+    <div>
+        <ol type="1">
+            <li><b>Getting The Current Working Directory:</b>
+            <p>
+                You can use the os.getcwd() function to get the current working directory.
+            </p>
+            <div>
+                <pre>
+                    <code>
+                        import os
+
+                        current_directory = os.getcwd()
+                        print("Current Directory:", current_directory)
+                    </code>
+                </pre>
+            </div>
+            </li>
+            <li><b>Changing the Current Working Directory:</b>
+            <p>You can use the os.chdir() function to change the current working directory to a specified path.</p>
+        <div>
+            <pre>
+                <code>
+                    import os
+
+                    new_directory = "/path/to/new/directory"
+                    os.chdir(new_directory)
+                </code>
+            </pre>
+        </div></li>
+        <li><b>Creating a Directory:</b>
+            <p>Use the os.mkdir() function to create a new directory.</p>
+        <div>
+            <pre>
+                <code>
+                    import os
+
+                    new_directory = "my_new_directory"
+                    os.mkdir(new_directory)
+                </code>
+            </pre>
+        </div></li>
+        <li><b>Creating a Directory and Parent Directories:</b>
+        <p>You can use os.makedirs() to create a directory along with any necessary parent directories.</p>
+    <div>
+        <pre>
+            <code>
+                import os
+
+                new_directory = "parent/child/grandchild"
+                os.makedirs(new_directory)
+            </code>
+        </pre>
+    </div></li>
+    <li><b>Removing a Directory:</b>
+    <p>To remove an empty directory, use os.rmdir(). To remove a directory and its contents, use shutil.rmtree() from the shutil module.</p>
+<div>
+    <pre>
+        <code>
+            import os
+
+            directory_to_remove = "directory_to_remove"
+            os.rmdir(directory_to_remove)
+        </code>
+    </pre>
+</div></li>
+<li><b>Listing Files and Directories in a Directory:</b>
+<p>You can use os.listdir() to get a list of files and directories in a specified directory.</p>
+<div>
+    <pre>
+        <code>
+            import os
+
+            directory_path = "my_directory"
+            contents = os.listdir(directory_path)
+            print("Contents:", contents)
+        </code>
+    </pre>
+</div></li>
+<li><b>Checking if a Path Exists:</b>
+<p>You can check if a file or directory exists using os.path.exists().</p>
+<div>
+    <pre>
+        <code>
+            import os
+
+            path_to_check = "file_or_directory_path"
+            if os.path.exists(path_to_check):
+                print("Path exists.")
+            else:
+                print("Path does not exist.")
+        </code>
+    </pre>
+</div></li>
+<li><b>Checking if a Path Is a Directory or File:</b>
+
+<p>You can check if a path is a directory or a file using os.path.isdir() and os.path.isfile().</p>
+<div>
+    <pre>
+        <code>
+            import os
+
+            path_to_check = "directory_or_file_path"
+            if os.path.isdir(path_to_check):
+                print("It's a directory.")
+            elif os.path.isfile(path_to_check):
+                print("It's a file.")
+            else:
+                print("It's neither a directory nor a file.")
+        </code>
+    </pre>
+</div></li>
+        </ol>
+    </div>
+</div>
+
+<div>
+    <h3>File Metadata</h3>
+    <p>The os.path module in Python provides a variety of functions for retrieving metadata and information about files and directories, such as file size, file creation/modification times, checking if a path exists, and more. Here are some of the common functions and methods from os.path for file-related information:</p>
+    <ol type="1">
+        <li><b>os.path.exists(path):</b>
+        <div>
+            <ul>
+                <li>Checks if the specified path (file or directory) exists.</li>
+                <li>Returns True if the path exists, and False otherwise.</li>
+                <div>
+                    <pre>
+                        <code>
+                            import os
+
+                            path = "example.txt"
+                            if os.path.exists(path):
+                                print(f"{path} exists.")
+                            else:
+                                print(f"{path} does not exist.")
+                        </code>
+                    </pre>
+                </div>
+            </ul>
+        </div></li>
+        <li><b>os.path.isfile(path):</b>
+        <div>
+            <ul>
+                <li>Checks if the specified path is a file.</li>
+                <li>Returns True if the path is a file, and False otherwise.</li>
+                <div>
+                    <pre>
+                        <code>
+                            import os
+
+                            file_path = "example.txt"
+                            if os.path.isfile(file_path):
+                                print(f"{file_path} is a file.")
+                            else:
+                                print(f"{file_path} is not a file.")
+                        </code>
+                    </pre>
+                </div>
+            </ul>
+        </div>
+        </li>
+        <li><b>os.path.isdir(path):</b>
+        <ul>
+            <li>Checks if the specified path is a directory.</li>
+            <li>Returns True if the path is a directory, and False otherwise.</li>
+            <div>
+                <pre>
+                    <code>
+                        import os
+
+                        directory_path = "my_directory"
+                        if os.path.isdir(directory_path):
+                            print(f"{directory_path} is a directory.")
+                        else:
+                            print(f"{directory_path} is not a directory.")
+                    </code>
+                </pre>
+                
+            </div>
+        </ul></li>
+        <li><b>os.path.getsize(path):</b>
+        <ul>
+            <li>Returns the size of the file in bytes.</li>
+            <li>If the path is a directory, it returns the size of the directory itself, not the total size of its contents.</li>
+            <div>
+            <pre>
+                <code>
+                    import os
+
+                    file_path = "example.txt"
+                    file_size = os.path.getsize(file_path)
+                    print(f"Size of {file_path}: {file_size} bytes")
+                </code>
+            </pre>
+            </div>
+        </ul></li>
+        <li><b>os.path.getmtime(path):</b>
+        <p>Returns the last modification time of the file or directory as a timestamp (seconds since the epoch).</p>
+        <div>
+            <pre>
+                <code>
+                    import os
+                    import datetime
+                    
+                    path = "example.txt"
+                    modification_time = os.path.getmtime(path)
+                    formatted_time = datetime.datetime.fromtimestamp(modification_time).strftime('%Y-%m-%d %H:%M:%S')
+                    print(f"Last modification time of {path}: {formatted_time}")
+                </code>
+            </pre>
+        </div>
+    </li>
+
+
+    </ol>
+</div>
+
+<div>
+    <h3>File Handling Best Practices:</h3>
+    <p>Properly handling files in your Python code is essential to prevent resource leaks and ensure your code is maintainable and reliable. Here are some best practices for file handling:Properly handling files in your Python code is essential to prevent resource leaks and ensure your code is maintainable and reliable. Here are some best practices for file handling:</p>
+    <ul>
+        <li>
+            <b>Use the with Statement for Automatic Cleanup:</b>
+            <div>
+                When opening and working with files, use the with statement (context manager). This ensures that the file is properly closed when you're done with it, even if an exception occurs. 
+            </div>
+        </li>
+        <li>
+            <b>Check for the Existence of Files:</b>
+            <div>Before performing operations on files, check if the file exists to avoid errors. You can use os.path.exists() for this purpose.</div>
+        </li>
+        <li>
+            <b>
+                Handle Exceptions Gracefully:
+            </b>
+            <div>
+                When working with files, errors can occur, such as file not found or permission denied. Use try-except blocks to handle exceptions gracefully. Common exceptions to handle include FileNotFoundError and PermissionError.
+            </div>
+        </li>
+    </ul>
+</div>
+
+</div>
+
+{% endblock %}
