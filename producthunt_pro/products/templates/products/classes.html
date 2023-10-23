@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: auto;
+        }
+
+        h1 {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        p {
+            margin: auto;
+            font-size: 20px;
+        }
+
+        img {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Classes in Python</h1>
+        <p>Classes are a fundamental concept in Python, as well as in many other programming languages. They provide a
+            way
+            to
+            create user-defined data types, allowing you to encapsulate data (attributes) and the functions that operate
+            on
+            that
+            data (methods) into a single unit. Classes are the building blocks of Object-Oriented Programming (OOP) in
+            Python,
+            enabling you to model real-world entities and their interactions. This article provides an in-depth look at
+            classes
+            in Python.</p>
+        <p>
+            In Python, a class is defined using the class keyword, followed by the class name and a colon. Here's a
+            simple
+            example of a class definition:
+        </p>
+        <img src="{% static 'classes_example.png' %}" alt="An image of a class in Python" width="500">
+        <p>
+            In this example, we have defined a class called Employee. The __init__ method is a special method called a
+            constructor. It is executed when an object of the class is created. The self parameter refers to the
+            instance of the class, and it is used to access and modify instance variables like role and salary.
+        </p>
+        <h2>Attributes</h2>
+        <p>Attributes are variables that store data within a class. They define the properties of objects created from
+            the class. In the Employee class, role and salary are attributes. They can be accessed and modified using
+            dot
+            notation, like employee.role or employee.salary, where employee is an instance of the Employee class.
+        </p>
+        <h2>Methods</h2>
+        <p>Methods are functions defined within a class. They represent the behavior or actions that objects of the
+            class can perform. Methods are defined similarly to regular functions, but they are associated with a class.
+            Here's an example of a method within the Employee class:</p>
+        <img src="{% static 'methods_example.png' %}" alt="An example of methods" width="500">
+        <p>In this example, the print_info method returns a string that prints the employee's role and salary.</p>
+        <h2>Creating Objects</h2>
+        <p>Once a class is defined, you can create objects (instances) of that class. Objects are instances of the
+            class, and they encapsulate their own data and behavior. Here's how you can create an Employee object:</p>
+        <img src="{% static 'objects_example.png' %}" alt="An example of creating objects">
+        <h2>Conclusion</h2>
+        <p>
+            Classes are a fundamental concept in Python and are essential for implementing Object-Oriented Programming.
+            They allow you to model and structure your code by creating user-defined data types with attributes and
+            methods. Classes provide a way to organize code, promote reusability, and encapsulate data and behavior.
+            Understanding how to create and work with classes is a crucial skill for Python programmers.
+        </p>
+    </div>
+</body>
+
+
+
+
+{% endblock %}
