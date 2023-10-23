@@ -15,6 +15,7 @@ urls = {
     'string/': 'Strings',
     'lists/': 'Lists',
     'dicts/': 'Dictionaries',
+    'inheritance':'Inheritance',
     'PythonLoops/':'Loops',
     'file/':'file'
 }
@@ -39,10 +40,10 @@ def keywords(request):
 
 def datatypes(request):
     return render(request, 'products/python_data_types.html', context)
-  
+
 def statements(request):
     return render(request, 'products/statements.html', context)
-  
+
 def sets(request):
     return render(request, 'products/sets.html', context)
 
@@ -61,10 +62,11 @@ def variables(request):
 def dicts(request):
     return render(request,'products/dictionaries.html', context)
 
+def inheritance(request):
+    return render(request,'products/inheritance.html', context)
+
 def PythonLoops(request):
     return render(request,'products/PythonLoops.html', context)
 
 def file(request):
     return render(request,'products/file.html', context)
-
-

@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<head>
+    <title>Understanding Inheritance in Python</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS styles, if any -->
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="px-4 pt-5 text-center border-bottom">
+        <h1 class="display-4 fw-bold text-body-emphasis">Understanding Inheritance in Python</h1>
+        <br>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Inheritance is a fundamental concept in Object-Oriented Programming (OOP). It allows you to create new classes based on existing classes.</p>
+        </div>
+        <img src="inheritance.png" alt="Inheritance" height="100" width="400">
+    </div>
+    <!-- Parent and Child Classes -->
+    <div class="container px-4 py-5">
+        <h2 class="pb-2 border-bottom">Parent and Child Classes</h2>
+        <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+            <div class="col d-flex flex-column align-items-start gap-2">
+                <h2 class="fw-bold text-body-emphasis">Parent Class</h2>
+                <p class="text-body-secondary">The parent class is the original class that defines attributes and methods.</p>
+            </div>
+            <div class="col d-flex flex-column align-items-start gap-2">
+                <h2 class="fw-bold text-body-emphasis">Child Class</h2>
+                <p class="text-body-secondary">The child class is created based on the parent class. It inherits attributes and methods from the parent and can have its own too.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Code Example -->
+    <div class="container px-4">
+        <h2 class="pb-2 border-bottom">Create a Parent Class</h2>
+        <pre>
+          class Person:
+            def __init__(self, firstname, lastname):
+            self.firstname = firstname
+            self.lastname = lastname
+
+            def printname(self):
+              print(self.firstname, self.lastname)
+        </pre>
+        <p>    <b>self</b> is the conventional and widely accepted name for the first argument in methods of a Python class, representing the object itself. This object can be used to access its own attributes and methods.
+
+    <b>firstname </b> and <b>lastname</b> are the parameters passed when creating a new Person object. They represent the first name and last name of the person.
+    <br></br>
+    self.firstname and self.lastname are instance variables bound to the object. They store the values of firstname and lastname passed when creating the object.
+    <br></br>
+    def printname(self) is a method within the Person class. This method is called to print the person's name. It accesses the instance variables self.firstname and self.lastname to display the name.</p>
+        <p> If want to create a Person and then execute the printname method. We do it like this:
+
+            <br>John = Person("John", "Gillman")</br>
+            <br>John.printname()</br>
+      </p>
+    </div>
+    <div class="container px-4">
+        <h2 class="pb-2 border-bottom">Create a Child Class</h2>
+        <p class="pb-2 border-bottom">If we want the child class to inherit all properties from its parent, we have to use the <b>super</b> keyword.</p>
+        <pre>
+            class Student(Person):
+                def __init__(self, fname, lname):
+                    super().__init__(fname, lname)
+        </pre>
+        <p>In this example, the Studentclass has its own constructor with one additional parameter <b>year</b>. It also inherits all properties from its parent class. Additionally, it has a specific method called `welcome`.</p>
+        <pre>
+            class Student(Person):
+                def __init__(self, firstname, lastname, year):
+                    super().__init__(fname, lname)
+                    self.graduationyear = year
+
+                def welcome(self):
+                    print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)
+            </pre>
+    </div>
+
+    <!-- Benefits of Inheritance -->
+    <div class="container px-4">
+        <h2 class="pb-2 border-bottom">Benefits of Inheritance</h2>
+        <ul>
+            <li class="text-body-secondary">Reusability: Code from the parent class can be reused in the child class.</li>
+            <li class="text-body-secondary">Structure: Inheritance helps in organizing and structuring your code.</li>
+            <li class="text-body-secondary">Extensibility: You can add new features in child classes without modifying the parent class.</li>
+        </ul>
+    </div>
+</body>
+
+
+{% endblock %}
