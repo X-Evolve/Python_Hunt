@@ -16,6 +16,7 @@ urlpatterns = [
     path('lists/', views.lists, name='lists'),
     path('dicts/', views.dicts, name='dicts'),
     path('PythonLoops/',views.PythonLoops,name='PythonLoops'),
-    path('file/',views.file,name='file')
+    path('file/',views.file,name='file'),
+    path('oop/',views.oop,name='oop')
 
 ]

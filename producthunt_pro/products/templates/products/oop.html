@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+  <style>
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .oop-intro {
+      width: 50%;
+      margin: auto;
+    }
+
+    .oop-concepts {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin: auto;
+    }
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    img {
+      margin-top: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>OOP in Python</h1>
+  <div class="oop-intro">
+    <p>
+      Object-Oriented Programming (OOP) is a fundamental programming paradigm that is widely used in Python and many
+      other
+      programming languages. It is a way of organizing and structuring your code to model real-world entities and their
+      interactions. Python, as a versatile and high-level language, provides robust support for OOP concepts.
+    </p>
+  </div>
+  <div class="oop-concepts">
+    <h2>Classes</h2>
+    <div>
+      <p>
+        Classes are the blueprint or template for creating objects (instances). Classes define the structure and
+        behavior of objects by specifying attributes (data) and methods (functions) that the objects created from the
+        class will
+        have.
+      </p>
+      <img src="{% static 'car_class.png' %}" alt="A Car Class">
+      <p>You can see in the class given above. There are five attributes and two methods.
+        The car class has the attributes model, price, engine, is_start and is_stop. While it has two methods
+        start and stop.
+      </p>
+    </div>
+    <h2>Objects</h2>
+    <p>
+      In the context of computer programming and specifically in Object-Oriented Programming (OOP), objects are
+      instances of classes. Objects are fundamental units in OOP, and they represent real-world entities, concepts, or
+      things.
+    </p>
+    <img src="{% static 'objects.png' %}" alt="An objects image" width="500">
+    <p>
+      In the example above, we have an object car of the Car class which we have given attributes as
+      model 2009, price 3000$ and engine 1000cc. We have called the methods start followed by stop
+      for the object. We get the following results if we print them in the terminal.
+    </p>
+    <img src="{% static 'object_result.png' %}" alt="The printed result">
+    <h2>Inheritance</h2>
+    <p>
+      Inheritance is a fundamental concept in Object-Oriented Programming (OOP) and is widely supported in Python.
+      Inheritance allows you to create a new class (called a subclass or derived class) that inherits the attributes and
+      methods of an existing class (called a base class or superclass). This mechanism promotes code reusability and
+      enables you to create specialized classes that extend or modify the behavior of the base class. In Python, you can
+      implement inheritance using the following syntax:
+    </p>
+    <img src="{% static 'honda_inheritance.png' %}" alt="Inheritance example">
+    <p>
+      The Honda class is the Derived class(Child Class) of the Base Class Car(Parent Class). The Honda class has all
+      the attributes of the base class as well as an additional attribute of series.
+    </p>
+    <img src="{% static 'honda_series.png' %}" alt="An object of honda class" width="500">
+    <img src="{% static 'series_attribute.png' %}" alt="An object of honda class" width="500">
+    <h2>Encapsulation</h2>
+    <p>
+      Encapsulation is a concept that focuses on the bundling of data (attributes) and methods (functions) that operate
+      on that data
+      into a single unit, known as a class. Encapsulation promotes data hiding, controlling access to the internal state
+      of an object, and maintaining the integrity of data. It offers several benefits, including improved code
+      organization, security, and maintainability.
+    </p>
+    <img src="{% static 'encapsulation_example.png' %}" alt="An object of honda class" width="500">
+    <p>In this example, the Person class encapsulates the name and age attributes, providing getter and setter methods
+      to access and modify them. The encapsulation ensures that attributes are not directly accessed from outside the
+      class, promoting data integrity and control over attribute access and modification.</p>
+    <h2>Polymorphism</h2>
+    <p>
+      Polymorphism is a fundamental concept in Object-Oriented Programming (OOP) that allows objects of different
+      classes to be treated as objects of a common base class. It enables you to write code that can work with objects
+      based on their common interface or shared behaviors, rather than their specific class or type. Polymorphism
+      simplifies code and promotes reusability.
+      In Python, polymorphism is achieved through method overriding and through the use of inheritance and interfaces
+      (in a loosely-typed way).
+    </p>
+    <img src="{% static 'polymorphism.png' %}" alt="An object of honda class" width="500">
+    <p>In the honda class, you can see that the start method and stop method are given a different
+      implementation from that of in the parent class method. Upon calling the start and stop method
+      for the honda object we shall get the result of implementation written in honda class.
+    </p>
+    <h2>Abstraction</h2>
+    <p>Abstraction is one of the fundamental principles of Object-Oriented Programming (OOP). It involves simplifying
+      complex systems by modeling classes based on the essential properties and behaviors of objects, while hiding or
+      abstracting away the unnecessary details. Abstraction allows you to create a clear and simplified representation
+      of real-world entities and their interactions. The following is an example of abstraction:
+    </p>
+    <img src="{% static 'abstraction_example.png' %}" alt="An object of honda class" width="500">
+    <p>In this example, the Vehicle class defines a level of abstraction for all vehicles by encapsulating common
+      attributes and behaviors. Subclasses like Car and Plane implement specific behaviors, but the common structure
+      provides a level of abstraction for all vehicles.</p>
+  </div>
+</body>
+
+{% endblock %}
