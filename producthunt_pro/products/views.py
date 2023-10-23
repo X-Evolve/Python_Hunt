@@ -16,7 +16,8 @@ urls = {
     'lists/': 'Lists',
     'dicts/': 'Dictionaries',
     'PythonLoops/':'Loops',
-    'file/':'file'
+    'file/':'file',
+    'classes/':'classes'
 }
 context = {
     'urls' : urls
@@ -66,5 +67,8 @@ def PythonLoops(request):
 
 def file(request):
     return render(request,'products/file.html', context)
+
+def classes(request):
+    return render(request,'products/classes.html', context)
 
 
