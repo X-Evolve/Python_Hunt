@@ -16,7 +16,8 @@ urls = {
     'lists/': 'Lists',
     'dicts/': 'Dictionaries',
     'PythonLoops/':'Loops',
-    'file/':'file'
+    'file/':'file',
+    'polymorphism/':'Polymorphism',
 }
 context = {
     'urls' : urls
@@ -66,5 +67,6 @@ def PythonLoops(request):
 
 def file(request):
     return render(request,'products/file.html', context)
-
+def polymorphism(request):
+    return render(request,'products/polymorphism.html', context)
 

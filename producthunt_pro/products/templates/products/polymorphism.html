@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- INTRODUCTION SECTION-->
+
+<div class="container mt-4">
+    <h1 class="display-4 font-weight-bold">Polymorphism</h1>
+    <div class="mt-4">
+        <h2 class="h4 font-weight-bold">What is Polymorphism?</h2>
+        <p>
+            Polymorphism is a fundamental OOPs (Object-oriented programming) concept. It allows the
+            programmer to have multiple functionalities under the same name. The term 'Polymorphism' is derived from the
+            Greek words <strong>'Poly'</strong> (meaning many) and <strong>'morphism'</strong> (meaning forms).
+        </p>
+        <p>
+            Python provides protocols which are polymorphism under the hood. These implement consistent
+            behavior for built-in objects of different types.
+        </p>
+    </div>
+</div>
+
+<div class="container mt-4 mr-2">
+    <h2 class="display-4 font-weight-bold mb-4">Understanding Abstract Class Based Polymorphism</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <p>
+                Polymorphism is a core concept in object-oriented programming.
+            </p>
+            <p>
+                Imagine you have different animals, like a cat, a dog, and a bird. Each of them can make a
+                sound, but they make different sounds:
+            </p>
+            <ul>
+                <li>A cat says "Meow."</li>
+                <li>A dog says "Woof."</li>
+                <li>A bird says "Chirp."</li>
+            </ul>
+            <p>
+                With polymorphism, you can create a common way to ask any animal to make a sound. You don't need to know
+                which
+                specific animal you're dealing with; you can just call the "makeSound" method on any of them.
+            </p>
+            <p>
+                So, when you ask an animal to "makeSound," it will respond with its own unique sound. This is what we
+                call
+                polymorphism - the ability of different objects to respond to the same method in their way.
+            </p>
+            <p>
+                In your code, you can use this polymorphic behavior to interact with objects without worrying about
+                their
+                specific types. This makes your code more flexible and easier to maintain.
+            </p>
+            <p>
+                Here its important to redefine the abstract methods in the subclass. If you don't, you'll get an error
+                when you try to create an instance of the subclass.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <pre style="background-color: #f2f2f2;
+            padding-left: 10px;
+            border-radius: 5px;
+            margin-left: 10px;
+        ">
+                <code>
+class Animal:
+    def make_sound(self):
+        # Common method for all animals
+        pass
+
+class Cat(Animal):
+    def make_sound(self):
+        print("Meow")
+
+class Dog(Animal):
+    def make_sound(self):
+        print("Woof")
+
+class Bird(Animal):
+    def make_sound(self):
+        print("Chirp")
+
+# Create instances of Cat, Dog, and Bird
+cat = Cat()
+dog = Dog()
+bird = Bird()
+
+# Call the make_sound method on instances
+cat.make_sound()
+dog.make_sound()
+bird.make_sound()             </code>
+            </pre>
+        </div>
+    </div>
+</div>
+<div class="container mt-4 mr-2">
+    <h2 class="display-4 font-weight-bold mb-4">Understanding Function Based Polymorphism</h2>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="h4 font-weight-bold">What is Method Overriding?</h2>
+            <p>
+                Method overriding is a key concept in object-oriented programming. It allows a subclass to provide a
+                specific
+                implementation of a method that is already defined in its superclass (base class).
+            </p>
+            <p>
+                In function-based polymorphism, the method in the subclass has the same name, return type, and
+                parameters
+                as the method in the superclass, effectively replacing the superclass method with the subclass
+                implementation.
+            </p>
+            <p>
+                Method overriding is used when you want to provide a specialized implementation of a method in a
+                subclass.
+                This allows each subclass to have its unique behavior while still adhering to a common interface
+                defined
+                in the superclass.
+            </p>
+
+            <p>
+                In this example, the base class "Animal" defines a method "makeSound." Subclasses "Cat" and
+                "Dog" override this method
+                to provide their own unique implementations.
+            </p>
+            <p>
+                When you create instances of "Cat" or "Dog" and call the "makeSound" method on them, each subclass
+                responds with its specific sound.
+                This is the essence of method overriding and function-based polymorphism.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <pre style="background-color: #f2f2f2;
+                padding-left: 10px;
+                border-radius: 5px;
+                margin-left: 10px;
+                ">
+                    <code>
+class Animal:
+def make_sound(self):
+    print("Some generic sound")
+
+class Cat(Animal):
+    def make_sound(self):
+        print("Meow")
+
+class Dog(Animal):
+    def make_sound(self):
+        print("Woof")
+
+# Create instances of Cat and Dog
+cat = Cat()
+dog = Dog()
+
+# Call the make_sound method on instances
+cat.make_sound()
+dog.make_sound()              </code>
+</pre>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+</div>
+<div class="container mt-4 mr-2">
+    <h2 class="display-4 font-weight-bold mb-4">Function Overloading</h2>
+    <p>Method overloading occurs when a class contains many methods with the same name. The types and amount of
+        arguments passed by these overloaded methods vary. Python does not support method overloading or compile-time
+        polymorphism. If there are multiple methods with the same name in a class or Python script, the method specified
+        in the latter one will override the earlier one.
+
+        Python does not use function arguments in method signatures, hence method overloading is <b>not supported.</b>
+    </p>
+</div>
+
+{% endblock %}
