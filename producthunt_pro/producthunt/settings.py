@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-import dj_database_url
+from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,10 +20,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure--p5p3yys6xd^6tda3$wry)y4$h3$1v13wb38u)m63*imxfww0i'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.vercel.app','127.0.0.1','.now.sh','*']
 
@@ -77,8 +77,19 @@ WSGI_APPLICATION = 'producthunt.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 DATABASES = {
-    'default': dj_database_url.parse('postgres://myuser:HiiXTz858S4dLJWtSKMC9KzTHEnQ1WeW@dpg-ckgjdva12bvs73fcs140-a.singapore-postgres.render.com/mydatabase_g2uk')
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': config("DEV_DATABASE_NAME"),
+        'USER': config("DEV_DATABASE_USER"),
+        'PASSWORD': config("DEV_DATABASE_PASSWORD"),
+        'HOST': config("DEV_DATABASE_HOST"),
+        'PORT': config("DEV_DATABASE_PORT"),
+        'OPTIONS': {
+            'sslmode': 'require',
+        },
+    }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
