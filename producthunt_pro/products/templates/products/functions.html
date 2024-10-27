@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<!-- INTRODUCTION SECTION-->
+
+<div class="px-4 pt-5 text-center border-bottom">
+  <h1 class="display-4 fw-bold text-body-emphasis">Functions in Python</h1>
+  <br>
+  <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">A function in Python is a block of reusable code that performs a specific task. Functions help in organizing code, promoting code reuse, and improving the clarity of the program. They can take inputs (arguments), perform computations or operations, and return a result.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+      </div>
+  </div>
+</div>
+
+
+<!-- TYPES  -->
+<div class="container px-4 py-5" id="hanging-icons">
+  <h2 class="pb-2 border-bottom"> Working with Functions </h2>
+  <br>
+  <div class="row g-4 row-cols-1 row-cols-lg-3">
+    <div class="col d-flex align-items-start">
+      <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+      </div>
+      <div>
+        <h3 class="fs-2 text-body-emphasis"> Defining and Calling a function</h3>
+        <ul style="list-style-type: circle; text-align: left;">
+        <li> In Python, functions are defined using the def keyword, followed by the function name, parentheses containing any parameters, and a colon. The function body is indented.</li>
+        <li> Calling a Function: To execute a function, you call it by its name, followed by parentheses. If the function requires arguments, you pass them inside the parentheses.</li>
+        </ul>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white;padding: 10px; border-radius: 10px;">
+            <code>
+<pre>
+def greet(name):
+    """Function to greet a person."""
+    return f"Hello, {name}!"
+                
+# Calling the function
+print(greet("Dheekshith"))  # Output: Hello, Dheekshith!</pre>
+            </code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #005eff; color: white; border: none; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; margin-top: 5px;" onmouseover="this.style.backgroundColor='#003db3'" onmouseout="this.style.backgroundColor='#005eff'">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="16" height="16" viewBox="0 0 448 512">
+                <path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/>
+            </svg>
+        </button>
+        </div>
+      </div>
+    </div>
+</div>
+<hr>
+  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+</div>
+
+{% endblock %}
+
+
