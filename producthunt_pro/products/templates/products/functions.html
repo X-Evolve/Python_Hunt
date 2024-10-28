@@ -131,12 +131,109 @@ print(add(3, 5))  # Output: 8
       </div>
     </p>
     </ul>
-
         <br>
       </div>
   </div>
 </div>
 <hr>
+<div class="container px-4 py-5" id="hanging-icons">
+  <h2 class="pb-2 border-bottom"> Advanced Function Concepts </h2>
+  <br>
+  <div class="row g-4 row-cols-1 row-cols-lg-3">
+    <div class="col d-flex align-items-start">
+      <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+      </div>
+      <div>
+        <h3 class="fs-2 text-body-emphasis"> 1️⃣ Recursive Functions</h3>
+        <br>
+        <p>Recursive functions are functions that call themselves in order to solve a problem. They break down a complex problem into smaller sub-problems of the same type. It is essential to define a base case to prevent infinite recursion.</p>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white;padding: 10px; border-radius: 10px;">
+            <code>
+              <pre>
+def factorial(n):
+  """Function to calculate the factorial of a number recursively."""
+  if n == 0:  # Base case
+    return 1
+  else:
+     return n * factorial(n - 1)  # Recursive call
+
+# Testing the recursive function
+print(factorial(5))  # Output: 120
+              </pre>
+            </code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #005eff; color: white; border: none; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; margin-top: 5px;" onmouseover="this.style.backgroundColor='#003db3'" onmouseout="this.style.backgroundColor='#005eff'">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="16" height="16" viewBox="0 0 448 512">
+                <path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/>
+            </svg>
+        </button>
+        </div>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <div>
+        <h3 class="fs-2 text-body-emphasis"> 2️⃣ Higher-Order Functions</h3>
+        <br>
+        <p>A higher-order function is a function that either takes another function as an argument, returns a function, or both. These functions are useful in functional programming paradigms.</p>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+            <code>
+            <pre>
+def square(x):
+    """Function to return the square of a number."""
+    return x * x
+
+numbers = [1, 2, 3, 4, 5]
+# Using map() to apply the 'square' function to each element in the list
+squared_numbers = list(map(square, numbers))
+
+print(squared_numbers)  # Output: [1, 4, 9, 16, 25]
+            </pre></code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #005eff; color: white; border: none; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; margin-top: 5px;" onmouseover="this.style.backgroundColor='#003db3'" onmouseout="this.style.backgroundColor='#005eff'">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="16" height="16" viewBox="0 0 448 512">
+                <path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/>
+            </svg>
+        </button>       
+       </div>
+        <br>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">  
+      <div>
+        <h3 class="fs-2 text-body-emphasis">3️⃣ Built-in Functions </h3>
+        <br>
+        <p>Python comes with many built-in functions that simplify common tasks. In the below example we use len(), max(), min() functions.</p>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+            <code>
+              <pre>
+words = ["apple", "banana", "cherry"]
+numbers = [10, 20, 30, 40, 50]
+values = [5, 3, 8, 2, 9]
+
+length = len(words)  # Returns the number of elements in the list
+maximum = max(numbers)  # Returns the largest number in the list
+minimum = min(values)  # Returns the smallest number in the list
+
+print(length)  # Output: 3
+print(maximum)  # Output: 50
+print(minimum)  # Output: 2
+              </pre>
+            </code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #005eff; color: white; border: none; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; margin-top: 5px;" onmouseover="this.style.backgroundColor='#003db3'" onmouseout="this.style.backgroundColor='#005eff'">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="16" height="16" viewBox="0 0 448 512">
+                <path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/>
+            </svg>
+        </button>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
 
