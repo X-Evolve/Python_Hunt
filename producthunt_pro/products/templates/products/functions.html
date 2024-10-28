@@ -15,7 +15,7 @@
 </div>
 
 
-<!-- TYPES  -->
+<!-- working  -->
 <div class="container px-4 py-5" id="hanging-icons">
   <h2 class="pb-2 border-bottom"> Working with Functions </h2>
   <br>
@@ -50,9 +50,103 @@ print(greet("Dheekshith"))  # Output: Hello, Dheekshith!</pre>
       </div>
     </div>
 </div>
+<br></br>
 <hr>
   <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
 </div>
+<!-- operations -->
+<div class="container px-4 py-5" id="hanging-icons">
+  <h2 class="pb-2 border-bottom"> Basic Operations with Functions </h2>
+  <br>
+  <div class="row g-4 row-cols-1 row-cols-lg-3">
+    <div class="col d-flex align-items-start">
+      <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+      </div>
+      <div>
+        <ul style="list-style-type: circle; text-align: left;">
+          <li> <b>Return Statement:</b> The <em>return</em> statement is used to return a value from a function. If there is no <em>return</em> statement, the function returns <em>None</em> by default.</li>
+          <li> <b>Parameters and Arguments:</b> <ul>
+            <li><em>Parameters</em> are placeholders defined in the function signature.</li>
+            <li><em>Arguments</em> are the actual values passed when calling the function.
+            </li>
+          </ul></li>
+          <li><b>Default Parameters:</b> You can define default values for parameters, which will be used if no argument is passed.</li>
+          <p>
+            <div class="code-container">
+              <div class="code-block" style="background-color: black; color: white;padding: 10px; border-radius: 10px;">
+                <code>
+                <pre>
+def greet(name, message="Good morning"):
+    """Function to greet with a default message."""
+    return f"{message}, {name}!"
+
+# Calling the function with one argument
+print(greet("Ravin"))  # Output: Good morning, Ravin!
+
+# Calling the function with both arguments
+print(greet("Sriram", "Hello"))  # Output: Hello, Sriram!
+                </pre>
+                </code>
+              </div>
+              <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #005eff; color: white; border: none; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; margin-top: 5px;" onmouseover="this.style.backgroundColor='#003db3'" onmouseout="this.style.backgroundColor='#005eff'">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="16" height="16" viewBox="0 0 448 512">
+                    <path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/>
+                </svg>
+            </button>
+          </div>
+        </p>
+        <li><b>Variable-Length Arguments:</b> Python allows functions to accept a variable number of arguments using <em>*args</em> for positional arguments and <em>**kwargs</em> for keyword arguments.</li>
+        <p>
+          <div class="code-container">
+            <div class="code-block" style="background-color: black; color: white;padding: 10px; border-radius: 10px;">
+              <code>
+              <pre>
+def sum_numbers(*args):
+    """Function to sum all the numbers passed as arguments."""
+    return sum(args)
+            
+# Calling the function with different numbers of arguments
+print(sum_numbers(1, 2, 3))       # Output: 6
+print(sum_numbers(5, 10, 15, 20)) # Output: 50
+              </pre>
+              </code>
+            </div>
+            <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #005eff; color: white; border: none; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; margin-top: 5px;" onmouseover="this.style.backgroundColor='#003db3'" onmouseout="this.style.backgroundColor='#005eff'">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="16" height="16" viewBox="0 0 448 512">
+                  <path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/>
+              </svg>
+          </button>
+        </div>
+      </p>
+      <li><b>Lambda Functions:</b> These are anonymous, single-line functions defined using the <em>lambda</em> keyword. They are useful for small, simple functions.</li>
+      <p>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white;padding: 10px; border-radius: 10px;">
+            <code>
+            <pre>
+# Lambda function to add two numbers
+add = lambda a, b: a + b
+              
+# Calling the lambda function
+print(add(3, 5))  # Output: 8
+            </pre>
+            </code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #005eff; color: white; border: none; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; margin-top: 5px;" onmouseover="this.style.backgroundColor='#003db3'" onmouseout="this.style.backgroundColor='#005eff'">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="16" height="16" viewBox="0 0 448 512">
+                <path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/>
+            </svg>
+        </button>
+      </div>
+    </p>
+    </ul>
+
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
 
 {% endblock %}
 
