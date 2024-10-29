@@ -1,0 +1,240 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<!-- INTRODUCTION SECTION-->
+
+<div class="px-4 pt-5 text-center border-bottom">
+  <h1 class="display-4 fw-bold text-body-emphasis">Functions in Python</h1>
+  <br>
+  <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">A function in Python is a block of reusable code that performs a specific task. Functions help in organizing code, promoting code reuse, and improving the clarity of the program. They can take inputs (arguments), perform computations or operations, and return a result.</p>
+  </div>
+</div>
+
+
+<!-- working  -->
+<div class="container px-4 py-5" id="hanging-icons">
+  <h2 class="pb-2 border-bottom"> Working with Functions </h2>
+  <br>
+  <div class="mb-4">
+      <div>
+        <h3 class="fs-2 text-body-emphasis"> Defining and Calling a function</h3>
+        <ul style="list-style-type: circle; text-align: left;">
+        <li> In Python, functions are defined using the def keyword, followed by the function name, parentheses containing any parameters, and a colon. The function body is indented.</li>
+        <li> Calling a Function: To execute a function, you call it by its name, followed by parentheses. If the function requires arguments, you pass them inside the parentheses.</li>
+        </ul>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white;padding: 10px; border-radius: 10px;">
+            <code>
+<pre>
+def greet(name):
+    """Function to greet a person."""
+    return f"Hello, {name}!"
+                
+# Calling the function
+print(greet("Dheekshith"))  # Output: Hello, Dheekshith!</pre>
+            </code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #005eff; color: white; border: none; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; margin-top: 5px;" onmouseover="this.style.backgroundColor='#003db3'" onmouseout="this.style.backgroundColor='#005eff'">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="16" height="16" viewBox="0 0 448 512">
+                <path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/>
+            </svg>
+        </button>
+        </div>
+      </div>
+</div>
+<br></br>
+<hr>
+  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+</div>
+<!-- operations -->
+<div class="container px-4 py-5" id="hanging-icons">
+  <h2 class="pb-2 border-bottom"> Basic Operations with Functions </h2>
+  <br>
+  <div class="mb-4">
+      <div>
+        <ul style="list-style-type: circle; text-align: left;">
+          <li> <b>Return Statement:</b> The <em>return</em> statement is used to return a value from a function. If there is no <em>return</em> statement, the function returns <em>None</em> by default.</li>
+          <li> <b>Parameters and Arguments:</b> <ul>
+            <li><em>Parameters</em> are placeholders defined in the function signature.</li>
+            <li><em>Arguments</em> are the actual values passed when calling the function.
+            </li>
+          </ul></li>
+          <li><b>Default Parameters:</b> You can define default values for parameters, which will be used if no argument is passed.</li>
+          <p>
+            <div class="code-container">
+              <div class="code-block" style="background-color: black; color: white;padding: 10px; border-radius: 10px;">
+                <code>
+                <pre>
+def greet(name, message="Good morning"):
+    """Function to greet with a default message."""
+    return f"{message}, {name}!"
+
+# Calling the function with one argument
+print(greet("Ravin"))  # Output: Good morning, Ravin!
+
+# Calling the function with both arguments
+print(greet("Sriram", "Hello"))  # Output: Hello, Sriram!
+                </pre>
+                </code>
+              </div>
+              <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #005eff; color: white; border: none; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; margin-top: 5px;" onmouseover="this.style.backgroundColor='#003db3'" onmouseout="this.style.backgroundColor='#005eff'">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="16" height="16" viewBox="0 0 448 512">
+                    <path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/>
+                </svg>
+            </button>
+          </div>
+        </p>
+        <li><b>Variable-Length Arguments:</b> Python allows functions to accept a variable number of arguments using <em>*args</em> for positional arguments and <em>**kwargs</em> for keyword arguments.</li>
+        <p>
+          <div class="code-container">
+            <div class="code-block" style="background-color: black; color: white;padding: 10px; border-radius: 10px;">
+              <code>
+              <pre>
+def sum_numbers(*args):
+    """Function to sum all the numbers passed as arguments."""
+    return sum(args)
+            
+# Calling the function with different numbers of arguments
+print(sum_numbers(1, 2, 3))       # Output: 6
+print(sum_numbers(5, 10, 15, 20)) # Output: 50
+              </pre>
+              </code>
+            </div>
+            <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #005eff; color: white; border: none; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; margin-top: 5px;" onmouseover="this.style.backgroundColor='#003db3'" onmouseout="this.style.backgroundColor='#005eff'">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="16" height="16" viewBox="0 0 448 512">
+                  <path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/>
+              </svg>
+          </button>
+        </div>
+      </p>
+      <li><b>Lambda Functions:</b> These are anonymous, single-line functions defined using the <em>lambda</em> keyword. They are useful for small, simple functions.</li>
+      <p>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white;padding: 10px; border-radius: 10px;">
+            <code>
+            <pre>
+# Lambda function to add two numbers
+add = lambda a, b: a + b
+              
+# Calling the lambda function
+print(add(3, 5))  # Output: 8
+            </pre>
+            </code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #005eff; color: white; border: none; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; margin-top: 5px;" onmouseover="this.style.backgroundColor='#003db3'" onmouseout="this.style.backgroundColor='#005eff'">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="16" height="16" viewBox="0 0 448 512">
+                <path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/>
+            </svg>
+        </button>
+      </div>
+    </p>
+    </ul>
+        <br>
+      </div>
+  </div>
+</div>
+<hr>
+<div class="container px-4 py-5" id="hanging-icons">
+  <h2 class="pb-2 border-bottom"> Advanced Function Concepts </h2>
+  <br>
+  <div class="row g-4 row-cols-1 row-cols-lg-3">
+    <div class="col d-flex align-items-start">
+      <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+      </div>
+      <div>
+        <h3 class="fs-2 text-body-emphasis"> 1️⃣ Recursive Functions</h3>
+        <br>
+        <p>Recursive functions are functions that call themselves in order to solve a problem. They break down a complex problem into smaller sub-problems of the same type. It is essential to define a base case to prevent infinite recursion.</p>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white;padding: 10px; border-radius: 10px;">
+            <code>
+              <pre>
+def factorial(n):
+  """Function to calculate the factorial of a number recursively."""
+  if n == 0:  # Base case
+    return 1
+  else:
+     return n * factorial(n - 1)  # Recursive call
+
+# Testing the recursive function
+print(factorial(5))  # Output: 120
+              </pre>
+            </code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #005eff; color: white; border: none; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; margin-top: 5px;" onmouseover="this.style.backgroundColor='#003db3'" onmouseout="this.style.backgroundColor='#005eff'">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="16" height="16" viewBox="0 0 448 512">
+                <path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/>
+            </svg>
+        </button>
+        </div>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <div>
+        <h3 class="fs-2 text-body-emphasis"> 2️⃣ Higher-Order Functions</h3>
+        <br>
+        <p>A higher-order function is a function that either takes another function as an argument, returns a function, or both. These functions are useful in functional programming paradigms.</p>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+            <code>
+            <pre>
+def square(x):
+    """Function to return the square of a number."""
+    return x * x
+
+numbers = [1, 2, 3, 4, 5]
+# Using map() to apply the 'square' function to each element in the list
+squared_numbers = list(map(square, numbers))
+
+print(squared_numbers)  # Output: [1, 4, 9, 16, 25]
+            </pre></code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #005eff; color: white; border: none; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; margin-top: 5px;" onmouseover="this.style.backgroundColor='#003db3'" onmouseout="this.style.backgroundColor='#005eff'">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="16" height="16" viewBox="0 0 448 512">
+                <path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/>
+            </svg>
+        </button>       
+       </div>
+        <br>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">  
+      <div>
+        <h3 class="fs-2 text-body-emphasis">3️⃣ Built-in Functions </h3>
+        <br>
+        <p>Python comes with many built-in functions that simplify common tasks. In the below example we use len(), max(), min() functions.</p>
+        <div class="code-container">
+          <div class="code-block" style="background-color: black; color: white; padding: 10px; border-radius: 10px;">
+            <code>
+              <pre>
+words = ["apple", "banana", "cherry"]
+numbers = [10, 20, 30, 40, 50]
+values = [5, 3, 8, 2, 9]
+
+length = len(words)  # Returns the number of elements in the list
+maximum = max(numbers)  # Returns the largest number in the list
+minimum = min(values)  # Returns the smallest number in the list
+
+print(length)  # Output: 3
+print(maximum)  # Output: 50
+print(minimum)  # Output: 2
+              </pre>
+            </code>
+          </div>
+          <button onclick="copyToClipboard(this)" class="copy-button" style="background-color: #005eff; color: white; border: none; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; margin-top: 5px;" onmouseover="this.style.backgroundColor='#003db3'" onmouseout="this.style.backgroundColor='#005eff'">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="16" height="16" viewBox="0 0 448 512">
+                <path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/>
+            </svg>
+        </button>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+
