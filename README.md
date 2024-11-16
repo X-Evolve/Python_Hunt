@@ -170,6 +170,6 @@ For any questions or support, reach out to the lead maintainers:
 - [Ravin D](https://github.com/ravin-d-27)
 - [Akshwin T](https://github.com/akshwin)
 - [Sriram R](https://github.com/sriram-ramakrishnan)
-
+- [Vinay Deep Jaiswal](https://github.com/vinay25deep)
   <p>Happy coding with Django!</p>
 </body>
