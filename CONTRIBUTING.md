@@ -1,76 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Hunt Hacktoberfest 2023 Contribution Guidelines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #3498db;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 0.2em 0.4em;
+            border-radius: 5px;
+            font-size: 1em;
+            color: #d14;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
 
-<img src="HacktoberFest2023_Resources/05_logo_set/hf10_horizontal_logos/cmyk/hf10_horz_fcl_cmyk.png" alt="My Image">
+    <img src="HacktoberFest2023_Resources/05_logo_set/hf10_horizontal_logos/cmyk/hf10_horz_fcl_cmyk.png" alt="Hacktoberfest 2023 Logo">
 
+    <h1>Python Hunt Hacktoberfest 2023 Contribution Guidelines 💙</h1>
+    <p>Welcome, open-source enthusiasts! This Django-based <strong>Python Hunt</strong> project provides a platform to create web pages explaining various Python concepts, as outlined in the issues. Follow the guidelines below to contribute effectively!</p>
 
-<h1>Python Hunt Hacktoberfest 2023 Contribution Guidelines 💙</h1>
-   <p>Hello open-source enthusiasts! Welcome to Python Hunt, a platform dedicated to making learning Python even more accessible. This Django project provides a space for contributors to create web pages explaining various Python concepts, as outlined in the existing issues. To maintain a consistent design, please ensure that your templates follow the established style guide. Refer to the documentation below for instructions on running the website on your local system.</p>
-    <p>Don't forget to show your support by leaving a ⭐ if you find this repository helpful!</p>
     <h2>Prerequisites</h2>
-    <p>Before you proceed with the installation, make sure you have the following prerequisites installed on your system:</p>
     <ul>
         <li>Python (version 3.6 or higher)</li>
         <li>pip (Python package installer)</li>
     </ul>
+
     <h2>Installation Steps</h2>
-    <h3>Create a Virtual Environment (Optional)</h3>
-    <p>It's recommended to create a virtual environment to isolate your Django project's dependencies. Open your terminal or command prompt and execute the following command:</p>
+    <h3>1. Create a Virtual Environment (Optional)</h3>
+    <p>It's recommended to create a virtual environment to isolate dependencies:</p>
     <code>python3 -m venv myenv</code>
-    <p>Replace <code>myenv</code> with your desired name for the virtual environment.</p>
-    <h3>Activate the Virtual Environment (Optional)</h3>
-    <p>Activate the virtual environment based on your operating system:</p>
-    <p><strong>Windows:</strong></p>
-    <code>myenv\Scripts\activate</code>
-    <p><strong>Unix or Linux:</strong></p>
-    <code>source myenv/bin/activate</code>
-    <h3>Install Django</h3>
-    <p>With your virtual environment activated, install Django using pip:</p>
+    <p>Replace <code>myenv</code> with your chosen environment name.</p>
+
+    <h3>2. Activate the Virtual Environment (Optional)</h3>
+    <p>Activate based on your OS:</p>
+    <ul>
+        <li><strong>Windows:</strong> <code>myenv\Scripts\activate</code></li>
+        <li><strong>Unix/Linux:</strong> <code>source myenv/bin/activate</code></li>
+    </ul>
+
+    <h3>3. Install Django</h3>
+    <p>Run this command to install Django:</p>
     <code>pip install django</code>
-    <p>This command will download and install the latest stable version of Django.</p>
-    <h3>Verify the Installation</h3>
-    <p>To verify that Django is successfully installed, run the following command:</p>
+    <p>Verify installation with:</p>
     <code>django-admin --version</code>
-    <p>You should see the installed Django version printed in the console.</p>
-    <p>Congratulations! You have successfully installed Django on your system. You are now ready to start building your Django web applications.</p>
-    <h2>Running the System on Your Local System</h2>
+
+    <h2>Running the System Locally</h2>
     <ol>
-        <li>Fork this repository and move inside it:</li>
-        <code>git clone https://github.com/X-Evolve/Python_Hunt.git &amp;&amp; cd Python_Hunt/producthunt_pro</code>
-        <li>Migrate the necessary data for the models:</li>
+        <li>Fork this repository, then clone it locally and move into the directory:</li>
+        <code>git clone https://github.com/X-Evolve/Python_Hunt.git && cd Python_Hunt/producthunt_pro</code>
+        <li>Run migrations:</li>
         <code>python manage.py migrate</code>
-        <li>Run the website on your local host:</li>
+        <li>Start the server:</li>
         <code>python manage.py runserver</code>
-        <li>Click on the URL produced, and it will open in your default browser.</li>
+        <li>Open the provided URL to view the site.</li>
     </ol>
-    <p>Congratulations! You have successfully set up your Django Web Server on your local host. You are now ready to contribute!</p>
+
     <h2>Getting Started with Contribution</h2>
     <ol>
-        <li>Create a new branch to work on an issue:</li>
+        <li>Create a new branch for your work:</li>
         <code>git checkout -b new_work</code>
-        <li>Once you have completed your code, open a Pull Request (PR).</li>
-        <p>From the root of the project, run the following commands:</p>
+        <li>Stage and commit changes:</li>
         <code>git add .</code>
-        <code>git commit -m "Description of your work (short one is preferred)"</code>
+        <code>git commit -m "Description of your work"</code>
         <code>git push origin new_work</code>
-        <li>Open your forked repository in your browser and then raise a Pull Request (PR) to the main branch of this repository!</li>
+        <li>Open your forked repository in your browser, then submit a Pull Request (PR) to the main branch.</li>
     </ol>
-    <h2>How to Add Your Files in the Project</h2>
-    <p>If you want to add CSS, JavaScript, or image files to this project, place them in the static folder:</p>
+
+    <h2>Adding Files</h2>
+    <p>To add CSS, JavaScript, or images, place them in the static folder:</p>
     <code>producthunt_pro/producthunt/static/</code>
-    <p>Import them into the code using the following:</p>
-    <p>(At the top of the HTML File)</p>
+    <p>To use these files, import them as follows:</p>
+    <p>Load static files at the top of HTML:</p>
     <code>{% load static %}</code>
-    <p>(To use your CSS / JavaScript file)</p>
-    <code>href="{% static 'name of the file' %}"</code>
-    <p>(To use your image file)</p>
-    <code>src="{% static 'name of the file' %}"</code>
+    <p>CSS/JavaScript file:</p>
+    <code>href="{% static 'filename' %}"</code>
+    <p>Image file:</p>
+    <code>src="{% static 'filename' %}"</code>
+
     <h2>Additional Resources</h2>
     <ul>
-        <li><a href="https://docs.djangoproject.com/">Django Official Documentation</a>: The official Django documentation provides comprehensive information and tutorials for learning Django.</li>
-        <li><a href="https://www.djangoproject.com/">Django Project Website</a>: The official website of the Django project offers news, updates, and additional resources.</li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django">Django Tutorial by Mozilla</a>: This tutorial by Mozilla provides a beginner-friendly introduction to Django.</li>
+        <li><a href="https://docs.djangoproject.com/">Django Documentation</a></li>
+        <li><a href="https://www.djangoproject.com/">Django Project Website</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django">Mozilla Django Tutorial</a></li>
     </ul>
+    
     <p>Happy coding with Django! 🐍💙</p>
-    <br>
+    <img src="HacktoberFest2023_Resources/06_banners/hf10_logo_wall/hf10_logo_wall_1920x1080.png" alt="Hacktoberfest 2023 Banner">
 
-<img src="HacktoberFest2023_Resources/06_banners/hf10_logo_wall/hf10_logo_wall_1920x1080.png" alt="My Image">
-
+</body>
+</html>
